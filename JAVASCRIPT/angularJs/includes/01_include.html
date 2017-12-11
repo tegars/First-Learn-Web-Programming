@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Includes</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', []);
+	app1.controller('ctrl1', function($scope){
+
+	});
+	// app1.config(function($sceDelegateProvider){
+	// 	$sceDelegateProvider.resourceUrlWhitelist(['http://www.refsnesdata.no/**']);
+	// });
+</script>
+<div ng-include="'header1.html'"></div>
+<hr/>
+<hr/>
+
+
+<!-- <div ng-include="'http://www.refsnesdata.no/angular_include.asp'"></div> -->
+</body>
+</html>

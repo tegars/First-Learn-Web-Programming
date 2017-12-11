@@ -1,0 +1,45 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from teman;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 12 | tatak    | pasuruan     |
+| 13 | ayom     | sidoarjo     |
+| 14 | ari      | blitar       |
+| 15 | arif     | pasuruan     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 20 | tatak    | pasuruan     |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+17 rows in set (0.00 sec)
+
+
+#01
+MariaDB [latihan]> delete from teman where nama='arif';
+Query OK, 1 row affected (0.00 sec)
+
+
+
+#02 - delete + operator
+MariaDB [latihan]> delete from teman where nama='ari' or nama='tatak';
+Query OK, 3 rows affected (0.00 sec)
+
+
+
+#03 - delete all record
+delete from teman;
+atau
+delete * from teman;
+
+

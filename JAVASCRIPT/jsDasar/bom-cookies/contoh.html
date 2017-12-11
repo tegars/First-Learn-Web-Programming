@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bom Cookies</title>
+</head>
+<body>
+	<button onclick="buat()">create Cookie</button>
+	<button onclick="panggil()">Panggil Cookie</button>
+	<button onclick="hapus()">Hapus Cookie</button>
+
+	<hr/>
+	<button onclick="setCookie("nama","swasono");">Create</button>
+	<button onclick="cek()">Cek</button>
+	<button onclick="eraseCookie('nama')">Delete</button>
+	<script type="text/javascript">
+		function buat(){
+			document.cookies="username=tegar";
+
+			//Dengan penjelasan Berakhir
+			//document.cookie="username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+
+			//set default path
+			//document.cookie="username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+		}
+		function panggil(){
+			var x = document.cookie;
+			alert(x);
+		}
+		function hapus(){
+			// document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+			document.cookie = "username=tegar" + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}
+
+		function setCookie(c_name,value) {
+    		document.cookie = c_name + "=" +escape(value);
+    	}
+    	function cek(){
+    		var x = document.cookie;
+			alert(x);
+    	}
+		function eraseCookie(c_name) {
+    		createCookie(cookie_name,"",-1);
+		}
+	</script>
+</body>
+</html>

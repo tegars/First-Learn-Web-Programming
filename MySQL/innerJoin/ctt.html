@@ -1,0 +1,57 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from fakultas;
++--------+------------+
+| id_fak | nama_fak   |
++--------+------------+
+|      1 | saintek    |
+|      2 | ekonomi    |
+|      3 | tarbiyah   |
+|      4 | kedokteran |
+|      5 | syariah    |
+|      6 | psikologi  |
++--------+------------+
+6 rows in set (0.00 sec)
+
+MariaDB [latihan]> select * from mahasiswa;
++----------+--------+---------+------------+
+| id       | id_fak | nama    | alamat     |
++----------+--------+---------+------------+
+| 13650055 |      1 | tegar   | malang     |
+| 13650056 |      1 | swasono | pagelaran  |
+| 13650057 |      1 | tatag   | Kademangan |
+| 13650058 |      1 | dodo    | pagelaran  |
+| 13660058 |      4 | fairus  | pasuruan   |
+| 13660059 |      4 | dani    | kediri     |
+| 13670070 |      5 | ari     | blitar     |
++----------+--------+---------+------------+
+7 rows in set (0.00 sec)
+
+
+#01 - inner join - fakultas yang berisi mahasiswa
+MariaDB [latihan]> select fakultas.id_fak, fakultas.nama_fak from fakultas inner join mahasiswa on fakultas.id_fak=mahasiswa.id_fak;
++--------+------------+
+| id_fak | nama_fak   |
++--------+------------+
+|      1 | saintek    |
+|      1 | saintek    |
+|      1 | saintek    |
+|      1 | saintek    |
+|      4 | kedokteran |
+|      4 | kedokteran |
+|      5 | syariah    |
++--------+------------+
+7 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+

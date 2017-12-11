@@ -1,0 +1,78 @@
+TABEL
+harus punya nama
+1.	Membuat tabel
+	create table nama_tabel(nama_kolom tipe_data keterangan, nama_kolom tipe_data keterangan);
+	
+2.	Menghapus tabel
+	drop table nama_tabel;
+        drop table nama_tabel, nama_tabel;
+	
+3.	Merubah Nama tabel
+	alter table nama_lama rename to nama_baru
+		
+4.	Melihat Semua tabel
+	\z
+	
+5.	Melihat tabel dan tipe tipe dari kolom
+	\d nama_tabel
+
+COLUMN (WADAH)
+harus punya primary key (Not Null atau Null) dan jika kosong otomatis Null
+nama tipe data(length) Not Null
+TIPE DATA:
+	- int
+	- text
+	- boolean
+	- date
+	- varchar(10)
+	
+1.	Menghapus Column
+	alter table nama_tabel drop column"nama_kolom";
+	
+2.	Menambahkan Column
+	  alter table nama_tabel add column"nama_kolom"tipe_data;
+	menambahkan kolom setelah kolom alamat_mah
+	  alter table nama_tabel add column"nama_kolom"tipe_data after alamat_mah;
+	
+3.	Merubah nama kolom
+	alter table nama_tabel rename column"nama_lama" to nama_baru
+	
+4.	Mengubah type dari column
+	alter table nama_tabel alter column nama_column type type_baru
+	
+5.	Menambahkan primary key
+	alter table nama_tabel add primary key(nama_column)
+	
+6.	menghapus primary key
+	alter table nama_tabel drop constraint tegar_pkey
+
+7.	Menambah foreign key
+	ALTER TABLE nama_tabelnya ADD FOREIGN KEY (nama_attribut_yg_ diijadikan_p_key) REFERENCES nama_tabel_yg_direference
+	(nama_attribut_pd_tabel_yg _diriferrence);
+	
+GRANT(memberi hak akses kepada satu atau semua user lain)
+	hak_akses	:	- SELECT 
+					- INSERT
+					- UPDATE
+					- DELETE
+					- ALL			untuk semua 4 diatas
+	1.	Memberikan Semua Hak akses kepada user lain
+		grant all on table nama_tabel to nama_user
+		
+	2.	memberi hak delete kepada user lain
+		grant delete on table nama_tabel to nama_user
+			
+REVOKE (mencabut hak akses kepada user lain)
+	1.	Menghapus semua hak akses
+		revoke all on table nama_tabel from nama_user
+
+	2.	Menghapus Hak Update  
+		revoke update on table nama_tabel from nama_user
+	
+TEMPORARY TABEL = tabel yang bersifat sementara
+akan hilang saat kita keluar comand psql
+	create temporary table nama_tabel(nama_kolom tipe_data keterangan, nama_kolom tipe_data keterangan);
+
+	
+INHERIT
+create table nama_tabelturunan(kolom_baru tipe) inherits(nama_tabelinduk)

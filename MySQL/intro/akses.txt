@@ -1,0 +1,37 @@
+MENGAKSES MYSQL DENGAN CLI:
+#01	LINUX - TERMINAL
+	Letak direktori linux:
+		cd /opt/lampp/bin
+
+	01	Masuk sebagai user biasa
+		./mysql
+	
+	02	Masuk sebagai root
+		./mysql -u root
+
+
+#02	WINDOWS - CMD
+	Letak direktori windows:
+		cd c:\xampp\mysql\bin
+
+	01	Masuk sebagai User yang belum terdaftar
+		mysql -u nama_user
+
+	02	Masuk sebagai root
+		mysql -u root
+		mysql -u root -p password_mu
+
+
+----------------------------------------------------------------------------------------------------------
+KONFIGURASI MYSQL LINUX
+01	run XAMPP(Apache, MySQL, PHP)
+	cd /opt/lampp && ./xampp start
+
+02	Stop XAMPP
+	/opt/lampp/lampp stop
+
+03	Atur konfigurasi Xampp
+	cd /opt/lampp && sudo ./manager-linux.run
+
+
+	

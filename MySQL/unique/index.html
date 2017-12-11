@@ -1,0 +1,22 @@
+<plaintext>
+#01
+MariaDB [latihan]> create table teman3(id int(10) unique, nama text);
+Query OK, 0 rows affected (0.01 sec)
+
+
+#02 - add unique
+MariaDB [latihan]> alter table teman3 add unique (id);		: MySQL
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+alter table teman3 add constraint (id);						: Oracle, SQL Server, MS Access
+
+
+
+#03 - drop unique
+MariaDB [latihan]> alter table teman3 drop index id;		: MySQL
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+alter table teman3 drop index id;							: Oracle, SQL Server, MS Access
+

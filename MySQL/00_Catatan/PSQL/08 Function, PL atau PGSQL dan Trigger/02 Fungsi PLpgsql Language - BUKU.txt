@@ -1,0 +1,79 @@
+1.Fungsi mencari nama dan alamat seseorang berdasarkan no
+
+CREATE FUNCTION cari_nama(int) RETURNS text AS'
+DECLARE
+	hasil TEXT;
+BEGIN
+	select into hasil nama from iseng where no=$1;
+	RETURN hasil;
+END;
+'LANGUAGE 'plpgsql';
+select cari_nama(kata_kunci);
+
+
+2. PERCABANGAN
+CREATE FUNCTION percabangan(int) RETURNS text AS'
+DECLARE
+	nilaimu text;
+BEGIN
+	if $1>100 OR $1<0 then
+	select into nilaimu ''salah'';
+	
+	elsif $1<100 OR $1>=90 then
+	select into nilaimu ''salahterus'';
+	
+	else 
+	select into nilaimu ''benar'';
+	
+	end if;
+	
+	RETURN nilaimu;
+END;
+'LANGUAGE 'plpgsql';
+
+CREATE FUNCTION percabangan(a int) RETURNS text AS'
+DECLARE
+	nilaimu text;
+BEGIN
+	if a>100 OR a<0 then
+	select into nilaimu ''benar'';
+	
+	elsif a<100 AND a>=90 then
+	select into nilaimu ''hampir'';
+	
+	else 
+	select into nilaimu ''salah'';
+	
+	end if;
+	
+	RETURN nilaimu;
+END;
+'LANGUAGE 'plpgsql';
+
+
+
+
+3. PERULANGAN
+
+CREATE FUNCTION perulangan(a integer, b integer) RETURNS integer AS'
+DECLARE
+	nilai_awal integer default a;
+	hasil integer default 0;
+BEGIN
+	loop
+	
+	if nilai_awal>b then 
+	exit;
+	end if;
+	
+	hasil :=hasil+nilai_awal;
+	nilai_awal :=nilai_awal+1;
+	
+	end loop;
+	
+	RETURN hasil;
+END;
+'LANGUAGE 'plpgsql';
+	
+
+

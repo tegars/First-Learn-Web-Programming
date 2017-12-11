@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to JSON</title>
+	<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+</head>
+<body>
+	<h2 align="center">Menggunakan parse - "obj= JSON.parse(text);"</h2>
+	<p id="p1"></p>
+
+	<hr/>
+	<h2 align="center">Menggunakan eval - "var obj2 = eval ("(" + text2 + ")");"</h2>
+	<p id="p2"></p>
+
+	<script type="text/javascript">
+		
+		var text = '{"employees":[' +
+			'{"firstName":"John","lastName":"Doe" },' +
+			'{"firstName":"Anna","lastName":"Smith" },' +
+			'{"firstName":"Peter","lastName":"Jones" }]}';
+
+		obj= JSON.parse(text);
+
+		var text2 = '{"employees":[' +
+			'{"firstName":"John","lastName":"Doe" },' +
+			'{"firstName":"Anna","lastName":"Smith" },' +
+			'{"firstName":"Peter","lastName":"Jones" }]}';
+
+		var obj2 = eval ("(" + text2 + ")");
+
+//document.getElementById("demo").innerHTML =
+
+
+		$(document).ready(function(){
+
+			$("#p1").text(obj.employees[1].firstName+" "+obj.employees[1].lastName);
+			$("#p2").text(obj.employees[1].firstName + " " + obj.employees[1].lastName);
+
+
+		});
+
+		
+	</script>
+	
+</body>
+</html>

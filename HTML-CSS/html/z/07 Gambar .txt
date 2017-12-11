@@ -1,0 +1,12 @@
+1.	Menambahkan gambar pada title				//letak sintaks sebelum <title>
+	<link rel="SHORTCUT ICON" href="1.jpg">
+
+2.	Menyisipkan gambar
+	<img src="1.jpg">   atau   <img src="gambar/1.jpg">
+	
+3.	Atur Style Gambar
+	<img src="1.jpg" width="400" height="1000" style="semua attribut CSS bisa siterapkan disini">
+	
+	
+	
+	

@@ -1,0 +1,9 @@
+UNION, EXCEPT dan INTERSECT
+   a. gabungan (yang dimiliki biologi + yang dimiliki ti)
+      select * from matkul_bio union select * from matkul_ti;
+
+   b. irisan (yang sama di hilangkan) khusus dimiliki jurusan biologi saja
+      select * from matkul_bio except select * from matkul_ti;
+
+   c. yang di miliki oleh keduanya
+      select * from matkul_bio intersect select * from matkul_ti;

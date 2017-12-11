@@ -1,0 +1,7 @@
+INI UNTUK CASTING DARI INT KE FLOAT
+ select
+ 9/2
+ ::float
+ ;
+
+maka hasil output bertipe data float

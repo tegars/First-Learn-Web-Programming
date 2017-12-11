@@ -1,0 +1,137 @@
+Macam Operator:
+1. AS
+   digunakan untuk menampilkan kolom dengan nama yang lain. tapi dalam database nama tidak berubah
+   a. hanya 1 column 
+      select nama_kolom as nama_pengganti from nama_tabel;
+   b. jika 2 column
+      select nama_kolom as nama_pengganti, nama_kolom as nama_pengganti from nama_tabel;
+
+	
+2. AND dan OR
+   Jika ingin ada 2 syarat where
+   a. memenuhi 2 syarat
+      select * from namatabel where namakolom = 'pencarian 1' and namakolom = 'pencarian 2';
+   b. memenuhi salah satu syarat sudah cukup
+      select * from namatabel where namakolom = 'pencarian 1' or namakolom = 'pencarian 2';
+
+	
+3. BETWEEN
+   1. BETWEEN     : pasti  x<nilai<y
+   2. NOT BETWEEN : pasti  nilai<x dan nilai>y
+   3. Operatornya:
+      - <
+      - >
+      - <=
+      - >=
+      - =
+      - <> atau !=
+		
+   Contoh:
+   1. menampilkan mahasiswa dengan nim antara 3 dan 5
+      select * from mahasiswa where nim_mah between '3' and '5';
+      atau
+      select * from mahasiswa where nim_mah >= '3' and nim_mah <= '5';
+
+
+   2. menampilkan mahasiswa selain antara 3 dan 5
+      select * from mahasiswa where nim_mah not between '3' and '5';
+      atau
+      select * from mahasiswa where nim_mah<'3' and nim_mah>'5';
+
+
+
+4. IN dan NOT IN
+   pencocokan data jika kata_kunci banyak
+   a. Menampilkan mahasiswa yang memiliki nim 2,4,dan 7
+      select * from mahasiswa where nim_mah in (2,4,7);
+   b. Menampilkan mahasiswa yang memiliki nim selain 2,4,dan 7
+      select * from mahasiswa where nim_mah not in (2,4,7);
+
+5. LIKE
+   Untuk pencarian data secara rinci
+   Misalkan kita hanya ingin mencari data yang ber inisial huruf A
+   Operator yang berfungsi:
+	- LIKE 'A%'		: di awali huruf A
+	- LIKE '%A'		: di akhiri huruf A
+	- LIKE '_A%'		: huruf A pada posisi ke dua
+	- LIKE 'A%I%'		: diawali huruf A yang mengandung huruf I
+	- NOT LIKE 'A%'		: tidak di awali dengan huruf A
+	
+   Misalkan kita hanya ingin mencari data yang diawali huruf R, maka:
+   select * from nama_tabel where nama_kolom LIKE'R%';
+
+	
+
+
+6. REGEXP - REGular EXPression
+   simbolnya = ~
+   Mencocokan data Gak peduli data berada di awal atau akhir
+   Daftar simbol regexp
+   - []		: 
+   - [^]	: 
+   - ?		: 
+   - +		:  
+   - *		: 
+   - {x}	: 
+   - {x,y}	: 
+   - !		: 
+   - ^		: 
+   - ()		: 
+   - $		: 
+   
+   a. mencari nama yang mengandung bi atau bu (ingat mengandung bi bukan b dan i) //berlaku untuk a sampai d
+      select * from mahasiswa where nama_mah regexp 'bi|bu';
+   b. mencari nama yang mengandung bi atau bu atau ba
+      select * from mahasiswa where nama_mah regexp 'b[iua]';
+   c. Mencari nama yang mengandung na
+      select * from mahasiswa where nama_mah regexp 'na?';
+   d. Mencari nama yang mengandung na..a  (maksudnya 2 titik adalah 2 huruf terserah)
+      select * from mahasiswa where nama_mah regexp 'ni..a';
+
+
+	
+7. DISTINCT
+   distinct hanya digunakan untuk kolom saja
+   agar tidak ada duplikasi data
+   select distinct nama_kolom from mahasiswa;
+
+   a. tanpa distinct
+      kolom_gender
+      -------------
+      L
+      L
+      L
+      P
+      P
+   B. Dengan distinct
+      kolom_gender
+      -------------
+      L
+      P
+
+   
+
+8. LIMIT dan OFFSET
+   untuk membatasi output
+   a. hanya ditampilkan 2
+      select * from mahasiswa limit 2;
+   b. dilewati 2 (misalkan ada 7, maka yang tercetak 5)
+      select * from mahasiswa limit 2 offset 2;
+   
+
+9. UNION, EXCEPT dan INTERSECT
+   a. gabungan (yang dimiliki biologi + yang dimiliki ti)
+      select * from matkul_bio union select * from matkul_ti;
+
+   b. irisan (yang sama di hilangkan) khusus dimiliki jurusan biologi saja
+      SELECT DISTINCT organ_luar.nama
+      FROM organ_luar LEFT JOIN organ_dalam USING (nama)
+      WHERE organ_dalam.nama IS NULL
+
+   c. yang di miliki oleh keduanya
+      SELECT organ_luar.nama
+      FROM organ_luar INNER JOIN organ_dalam
+      USING (nama)
+   
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coordinate</title>
+</head>
+<body>
+<hr/>
+<h2 align="center">Draw a Line</h2>
+<hr/>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"></canvas>
+
+
+<hr/>
+<h2 align="center">Draw a Line</h2>
+<hr/>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #c3c3c3;"></canvas>
+
+
+<script type="text/javascript">
+	var canvas = document.getElementById('myCanvas');
+	var ctx= canvas.getContext('2d');
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+
+	var canvas2= document.getElementById('myCanvas2');
+	var ctx2= canvas2.getContext('2d');
+	ctx2.beginPath();
+	ctx2.arc(95,50,40,0,2*Math.PI);
+	ctx2.stroke();
+
+</script>
+</body>
+</html>

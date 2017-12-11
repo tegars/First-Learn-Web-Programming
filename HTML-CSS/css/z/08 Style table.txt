@@ -1,0 +1,50 @@
+Style <table>:	
+	semua style <p> bisa di terapkan
+	semua style <div> bisa di terapkan
+
+
+	
+	vertical-align: top					// agar ada di atas kolom besar
+
+	border-collapse: collapse;			//agar garis tabel dan garis cell tidak rangkap
+
+	border:1px solid red;				//memberi border pada tulisan	//
+			solid(lurus)
+			dashed(putus-putus)
+			dotted(banyak putus-putus)
+			double,groove,ridge,inset,outset
+
+	border-left: 1px solid red;			//atur ukuran garis
+			-righ
+			-top
+			-buttom
+
+	width:150px;						//lebar
+			:100%;
+
+	height:30px;						//tinggi
+	padding:18px;						//jarak tulisan dengan border	//
+			padding:18px 0px 5px 15px	//18=atas,	0=kiri, 5=bawah, 15=kanan
+
+	padding-left:18px;					//jarak tulisan dengan border dari kiri
+			-righ
+			-top
+			-buttom
+
+	margin:90px;						//jarak tulisan dengan layar
+			margin:18px 0px 5px 15px
+			: auto
+
+	margin-left:18px;					//jarak border dengan layar dari kiri
+			-right
+			-top
+			-bottom
+			:18px
+			:auto
+	
+	border-radius:10px;					//membuat sudut border agak tumpul
+	box-shadow:10px 10px 10px blue;		//memberi bayangan pada box
+	
+Style <td>
+	semua style <p> bisa di terapkan
+	semua style <table> bisa di terapkan

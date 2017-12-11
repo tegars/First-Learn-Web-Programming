@@ -1,0 +1,29 @@
+<plaintext>
+#00
+Primary key itu otomatis harus  di deklarasikan NOT NULL
+
+
+#01 
+create table teman(id int(10) not null, nama text, primary key(id));				: MySQL
+
+create table teman(id int(10) not null primary key, nama text);						: Oracle, SQL Server, MS Access
+
+
+#02 - add primary
+alter table teman add primary key(id);												: MySQL
+alter table teman add constraint primary key (id)									: Oracle, SQL server, MS Access
+
+
+#03 Drop primary key
+alter table teman drop primary key 													: MySQL
+alter table teman drop constraint id 												: Oracle, SQL server, MS Access
+
+
+
+
+
+
+
+
+
+

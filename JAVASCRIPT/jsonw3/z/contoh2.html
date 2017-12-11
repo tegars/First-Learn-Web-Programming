@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var JSON_adi= {
+			nama: 'adiputra',
+			umur: 21,
+			status_nikah:false,
+			hobi: ['coding', 'main game', 'ngetik']
+		};
+		var nikah;
+		if(JSON_adi.status_nikah){
+			nikah= "sudah nikah";
+		}
+		else{
+			nikah="belum Nikah";
+		}
+		document.write(JSON_adi.nama+" Berumur "+JSON_adi.umur+" suka "+JSON_adi.hobi[0]+" dan "+nikah);
+	</script>
+</body>
+</html>

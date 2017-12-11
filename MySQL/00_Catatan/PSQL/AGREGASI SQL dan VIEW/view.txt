@@ -1,0 +1,10 @@
+VIEW
+   kelebihan:
+   - dapat memilih kolom tertentu dari beberapa tabel
+     create view nama_tabel_View as select nama_kolom, sum (nama_kolom) from nama_tabel group by nama_kolom;
+
+   - bikin view dari kolom beda tabel
+     create view tampil1 as select nim_mah, nama_mah, nama_fak from mahasiswa, fakultas where mahasiswa.id_fak=fakultas.id_fak
+
+
+

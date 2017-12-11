@@ -1,0 +1,39 @@
+CONTOH
+1. Buat tabel fakultas dulu
+   create table fakultas(id_fak int, nama_fak text, primary key(id_fak));
+	
+2. Buat tabel mahasiswa
+   create table mahasiswa(nim_mah int, nama_mah text, alamat_mah text, id_fak int
+   not null references fakultas, primary key(nim_mah, id_fak));
+	
+   lalu yang pertama di isi field nya adalah tabel fakultas
+
+3. misalkan lupa memberi foreign key(belum fix)
+   alter table mahasiswa add constraint id_fak foreign key (id_fak) 
+   references fakultas (id_fak) on update no action on delete no action;
+	
+
+KETERANGAN
+1. CONTOH DARI DUA TABEL
+   A. tabel mahasiswa
+      nim_mah		: primary key
+      nama_mah
+      id_fak		: foreign key dari tabel fakultas
+
+   B. tabel fakultas
+      id_fak		: primary key
+      nama_fak
+
+2. maka yang pertama kita buat adalah tabel fakultas
+   karena 
+   tabel  mahasiswa mengambil data dari tabel fakultas
+
+3. yang pertama kita isi pun juga tabel fakultas
+   karena 
+   kolom foreign key tabel mahasiswa bergantung pada primary key id_fak tabel fakultas
+
+	
+CARA KERJA
+1. pada tabel mahasiswa, kolom id_fak kita tidak bisa mengisikan sembarang
+   sehingga harus sesuai dengan id_fak yang telah di isikan pada tabel fakultas
+		

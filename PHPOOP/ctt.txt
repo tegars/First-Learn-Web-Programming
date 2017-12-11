@@ -1,0 +1,149 @@
+CARA MEMBUAT DAN MENGAKSES OBJEK DALAM PHP
+$tegar= new laptop();
+ini disebut instansiasi / inisialisasi
+
+
+
+----------------------------------------------------------------------------------------
+ENKAPASULASI
+01 enkapsulasi(information hiding) adalah
+	Encapsulasi merupakan sebuah metode
+	untuk mengatur struktur class dengan cara menyembunyikan alur kerja class tersebut(private/tidak semua bisa mengakses)
+
+	Struktur kelas yang dimaksud adalah property dan method
+
+	Tujuan:
+	untuk mengatur peroperty dan method mana saja yang boleh di akses dari luar
+
+02 Akses modifier
+	public		: semua boleh mengakses termasuk class turunan
+	protected	: tidak bisa diakses dari luar class, namun bisa diakses oleh class itu sendiri dan turunan class tersebut
+	private		: hanya bisa di akses kelas itu sendiri
+
+
+
+----------------------------------------------------------------------------------------
+PENGGUNAAN THIS
+this = variabel khusus sebagai penunjuk kepada objek
+this yang di akses dalam kelas = pseudo-variabel
+
+
+
+----------------------------------------------------------------------------------------
+MEMBUAT METHOD
+fungsi
+hak_akses function nama_method($argument1, $argumen2, $argument3){
+	//isi dari method
+}
+
+
+
+----------------------------------------------------------------------------------------
+CONSTRUCTOR DAN DESTRUCTOR
+construktor		: method khusus yang akan dijalankan secara otomatis pada saat sebuah objek dibuat(instansiasi)
+__construct()
+
+destructor		: method khusus yang akan dijalankan secara otomatis pada saat sebuah objek di hapus
+__destruct()
+
+
+
+----------------------------------------------------------------------------------------
+INHERITANCE
+inheritance (pewarisan)	: konsep pemrograman dimana sebuah class dapat menurunkan "property dan method" yang dimiliki nya kepada kelas lain.
+class induk = parent class = super class = base class
+class anak = child class = sub class = drived class = heir class
+
+
+
+----------------------------------------------------------------------------------------
+EFEK INHERITANCE PADA CONSTRUCTOR DAN DESTRUCTOR INDUK
+Overiding construktor & destructor adalah
+	anak dan induk sama sama punya construktor
+	anak dan induk sama sama punya destructor
+
+
+
+----------------------------------------------------------------------------------------
+STATIC PROPERTY DAN STATIC METHOD
+Static adalah
+ 	bisa di akses tanpa membuat objek
+
+Static
+ 	static keluar dari konsep objek
+ 	karena static melekat pada class
+
+
+Struktur Penulisan
+ 	//static property
+ 	public static $harga_beli;
+
+ 	//static method
+ 	public static function beli_laptop(){
+ 		//to do
+ 	}
+
+Cara Akses
+ 	echo laptop::$harga_beli;
+ 	echo laptop::beli_laptop();
+
+
+
+----------------------------------------------------------------------------------------
+CONSTATA CLASS
+Konstanta Class atau class constant
+	konstanta yang berada di dalam class. Selain memiliki property dan method, PHP juga membolehkan kita menggunakan konstanta (constant) di dalam class.
+
+class constant
+	tidak bisa diubah nilainya ketika sudah didefenisikan. Untuk membuat class constant di dalam PHP, kita menggunakan perintah: const.
+
+
+
+----------------------------------------------------------------------------------------
+FINAL METHOD DAN FINAL CLASS
+final class
+	adalah class yang tidak bisa di turunkan
+
+final method
+	adalah method yang tidak mengizinkan overiding
+
+tidak ada final property
+
+
+
+----------------------------------------------------------------------------------------
+ABSTRACT CLASS DAN ABSTRACT METHOD
+adalah kerangka kerja
+
+
+
+----------------------------------------------------------------------------------------
+INTERFACE
+Secara sederhana, Object Interface adalah sebuah 'kontrak' atau perjanjian implementasi method.
+syarat:
+	- method interface harus di set public
+
+
+
+----------------------------------------------------------------------------------------
+POLIMORFISME
+abstract class dan objek interface merupakan contoh implementasi dari konsep polimorfisme
+segi bahasa
+	poly	: banyak
+	morph	: bentuk
+Penjelasan
+	polimorfisme adalah konsep dimana terdapat banyak class yang memiliki signature method yang sama.
+	Implementasinya di serahkan pada class masing2
+
+
+----------------------------------------------------------------------------------------
+ABSTRACT vs INTERFACE (analogi komputer)
+abstract 		= komputer
+Interface 		= mouse
+
+abstract = "kerangka kerja". antara laptop, notebook dan komputer semuanya harus memiliki processor dan RAM inilah kerangka kerja
+interface = "perjanjian kontrak". sehingga ketika laptop menggunakan mouse maka harus juga menggunakan/memiliki klik kanan dan klik kiri
+contoh:
+	class notebook extends komputer implements mouse{
+		
+	}

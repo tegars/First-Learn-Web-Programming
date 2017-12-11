@@ -1,0 +1,40 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from m_ti;
++----------+---------+------------+-------+
+| nim      | nama    | alamat     | nilai |
++----------+---------+------------+-------+
+| 13650055 | tegar   | malang     | 100   |
+| 13650056 | swasono | pagelaran  | 90    |
+| 13650057 | tatag   | kademangan | 80    |
+| 13650058 | fairus  | lamongan   | 80    |
+| 13650059 | dani    | kediri     | 80    |
++----------+---------+------------+-------+
+5 rows in set (0.00 sec)
+
+
+
+#01
+MariaDB [latihan]> select round(nilai, 3) from m_ti;
++-----------------+
+| round(nilai, 3) |
++-----------------+
+|         100.000 |
+|          90.000 |
+|          80.000 |
+|          80.000 |
+|          80.000 |
++-----------------+
+5 rows in set (0.00 sec)
+
+MariaDB [latihan]> select round(nilai, 2) as Harga from m_ti;
++--------+
+| Harga  |
++--------+
+| 100.00 |
+|  90.00 |
+|  80.00 |
+|  80.00 |
+|  80.00 |
++--------+
+5 rows in set (0.00 sec)

@@ -1,0 +1,90 @@
+<plaintext>
+#01
+
+MariaDB [latihan]> describe m_ti;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| nim    | int(10) | NO   | PRI | 0       |       |
+| nama   | text    | YES  |     | NULL    |       |
+| alamat | text    | YES  |     | NULL    |       |
+| nilai  | text    | YES  |     | NULL    |       |
++--------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+MariaDB [latihan]> describe m_ta;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| nim    | int(10) | NO   | PRI | 0       |       |
+| nama   | text    | YES  |     | NULL    |       |
+| alamat | text    | YES  |     | NULL    |       |
+| nilai  | text    | YES  |     | NULL    |       |
++--------+---------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+
+create table m_ti(nim int(10), nama text, alamat text, nilai text, primary key(nim));
+create table m_ta(nim int(10), nama text, alamat text, nilai text, primary key(nim));
+
+insert into m_ti(nim, nama, alamat, nilai) values(13650055, 'tegar',  'malang', '100');
+insert into m_ti(nim, nama, alamat, nilai) values(13650056, 'swasono',  'pagelaran', '90');
+insert into m_ti(nim, nama, alamat, nilai) values(13650057, 'tatag',  'kademangan', '80');
+insert into m_ti(nim, nama, alamat, nilai) values(13650058, 'fairus',  'lamongan', '80');
+insert into m_ti(nim, nama, alamat, nilai) values(13650059, 'dani',  'kediri', '80');
+
+insert into m_ta(nim, nama, alamat, nilai) values(13660055, 'taqiudin',  'pasuruan', '50');
+insert into m_ta(nim, nama, alamat, nilai) values(13660056, 'ayom',  'sidoarjo', '70');
+insert into m_ta(nim, nama, alamat, nilai) values(13660057, 'ari',  'pasuruan', '60');
+insert into m_ta(nim, nama, alamat, nilai) values(13660058, 'arif',  'blitar', '80');
+insert into m_ta(nim, nama, alamat, nilai) values(13660059, 'muharram',  'sidoarjo', '80');
+
+
+
+#02
+create table fakultas(id_fak int(10), nama_fak text, primary key(id_fak));
+create table mahasiswa(id int(10), id_fak int(10) not null references fakultas, nama text, alamat text, primary key(id, id_fak));
+
+insert into fakultas(id_fak, nama_fak) values(1, 'saintek');
+insert into fakultas(id_fak, nama_fak) values(2, 'ekonomi');
+insert into fakultas(id_fak, nama_fak) values(3, 'tarbiyah');
+insert into fakultas(id_fak, nama_fak) values(4, 'kedokteran');
+insert into fakultas(id_fak, nama_fak) values(5, 'syariah');
+insert into fakultas(id_fak, nama_fak) values(6, 'psikologi');
+
+insert into mahasiswa(id, id_fak, nama, alamat) values(13650055, 1, 'tegar', 'malang');
+insert into mahasiswa(id, id_fak, nama, alamat) values(13650056, 1, 'swasono', 'pagelaran');
+insert into mahasiswa(id, id_fak, nama, alamat) values(13650057, 1, 'tatag', 'Kademangan');
+insert into mahasiswa(id, id_fak, nama, alamat) values(13650058, 1, 'dodo', 'pagelaran');
+
+insert into mahasiswa(id, id_fak, nama, alamat) values(13660058, 4, 'fairus', 'pasuruan');
+insert into mahasiswa(id, id_fak, nama, alamat) values(13660059, 4, 'dani', 'kediri');
+
+insert into mahasiswa(id, id_fak, nama, alamat) values(13670070, 5, 'ari', 'blitar');
+
+
+
+#03
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

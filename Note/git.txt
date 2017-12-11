@@ -1,0 +1,80 @@
+#01 PERSIAPAN
+----------------------------------------------------------------------------------------------------------------------
+cara pakek git dalam project
+	git init
+
+-----------------------------------------------
+Melihat status git
+	git status
+	note: jika ada untracked files, maka ada perubahan baru yang belum di laporin
+
+
+#02 ADD DAN COMMIT
+----------------------------------------------------------------------------------------------------------------------
+Kita daftarin
+	git add index.html atau git add .
+
+Kita laporin
+	git commit -m "commit pertama"
+
+-----------------------------------------------
+Melihat perbedaan setelah di daftarkan 
+	git diff
+	
+-----------------------------------------------
+Melihat log git
+	git log
+	git log --oneline
+
+
+#03 UNDO
+----------------------------------------------------------------------------------------------------------------------
+Cara undo sebelum di add
+	git checkout index.html atau git checkout .
+
+Cara kembali ke point tertentu dan point di atasnya hilang
+	git checkout c2c8329 -- index.html
+
+Cara kembali ke point tertentu tanpa menghilangkan point di atasnya
+	git 
+
+#04 RESET
+----------------------------------------------------------------------------------------------------------------------
+reset medium = Hapus checkpoint, working directy tidak berubah
+	git reset c2c8329
+
+reset hard = Hapus checkpoint, working directy berubah kembali ke checkpoint
+	git reset --hard 99effde
+	
+
+#04 BRANCH dan MERGE
+----------------------------------------------------------------------------------------------------------------------
+cek branch
+	git branch
+
+Membuat branch baru
+	git branch baru
+
+Pindah branch
+	git checkout baru
+
+Membuat branch baru dan pindah
+	git checkout -b terbaru
+
+Menghapus branch 
+	git branch -D baru
+
+Merubah nama branch
+	git branch -m lama baru
+
+Cara merger 2 branch
+	git merge baru
+
+
+#04 CONFLIK MERGE BRANCH
+----------------------------------------------------------------------------------------------------------------------
+	jika 2 orang edit 1 file maka terjadi konfik, dan ternyata jika di merger = di 1 file contoh index.html akan menampilkan 2 codingan orang
+	sehingga
+	kita harus edit manual
+	mana yang dihapus dan mana yang di biarkan
+

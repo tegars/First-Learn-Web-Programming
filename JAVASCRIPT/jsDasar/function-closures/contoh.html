@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Closures</title>
+</head>
+<body>
+	<script>
+		var a=5;
+		function fungsi1(){
+			return a*a;
+		}
+		var coba1= fungsi1();
+
+		var counter=0;
+		function add(){
+			return counter+=1;
+
+		}
+		function tambah(){
+			document.getElementById("demo").innerHTML=add();
+		}
+	</script>
+	<button type="button" onclick="tambah()">Count!</button>
+	<p id="demo">0</p>
+</body>
+</html>

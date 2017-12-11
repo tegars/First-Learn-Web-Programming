@@ -1,0 +1,9 @@
+{
+	"id":1,
+	"nama": "tegar",
+	"lahir": true,
+	"kota": [
+		"makasar",
+		"ujungpandang"
+	]
+}

@@ -1,0 +1,5 @@
+<p align=”center">...</p>
+center			//rata tengah
+right			//rata kanan
+left			//rata kiri
+justify			//rata kiri kanan

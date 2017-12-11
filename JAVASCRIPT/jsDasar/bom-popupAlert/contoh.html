@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bom Popup Alert</title>
+</head>
+<body>
+	<h3>Alert Box</h3>
+	<button onclick="fungsi1()">Button 1</button>
+
+
+	<hr/>
+	<h3>Confirm Box</h3>
+	<button onclick="fungsi2()">Button 2</button>
+
+
+	<hr/>
+	<h3>Prompt Box</h3>
+	<button onclick="fungsi3()">Button 3</button>
+
+	<hr/>
+	<h3>Line Breaks</h3>
+	<button onclick="fungsi4()">Button 4</button>
+
+
+	<script type="text/javascript">
+		function fungsi1(){
+			window.alert("tegar");
+			//alert("tegar");
+		}
+		function fungsi2(){
+			var pilih= confirm("Apakah Anda Yakin");
+			if(pilih==true){
+				alert("Anda menekan Oke");
+			}else{
+				alert("anda menekan cancel");
+			}
+		}
+		function fungsi3(){
+			var person = prompt("Please enter your name", "Harry Potter");
+			alert(person);
+		}
+		function fungsi4(){
+			alert("Hello\nHow are you?");
+		}
+	</script>
+</body>
+</html>

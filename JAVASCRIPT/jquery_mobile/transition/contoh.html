@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../js/jquery.mobile.min.css">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.mobile.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="header">
+			<h1>Header</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			Transition untuk page<br/>
+			<ol>
+				<li><a href="#pagetwo" data-transition="fade">Fade</a></li>
+				<li><a href="#pagetwo" data-transition="flip">Flip</a></li>
+				<li><a href="#pagetwo" data-transition="flow">Flow</a></li>
+				<li><a href="#pagetwo" data-transition="pop">Pop</a></li>
+				<li><a href="#pagetwo" data-transition="slide">Slide</a></li>
+
+				<li><a href="#pagetwo" data-transition="slidefade">SlideFade</a></li>
+				<li><a href="#pagetwo" data-transition="slideup">SlideUp</a></li>
+				<li><a href="#pagetwo" data-transition="slidedown">SlideDown</a></li>
+				<li><a href="#pagetwo" data-transition="turn">Turn</a></li>
+				<li><a href="#pagetwo" data-transition="none">None</a></li>				
+			</ol>
+			<hr/>
+			Transition untuk dialog<br/>
+			<ol>
+				<li><a href="#pagethree" data-transition="fade">Fade</a></li>
+				<li><a href="#pagethree" data-transition="flip">Flip</a></li>
+				<li><a href="#pagethree" data-transition="flow">Flow</a></li>
+				<li><a href="#pagethree" data-transition="pop">Pop</a></li>
+				<li><a href="#pagethree" data-transition="slide">Slide</a></li>
+
+				<li><a href="#pagethree" data-transition="slidefade">SlideFade</a></li>
+				<li><a href="#pagethree" data-transition="slideup">SlideUp</a></li>
+				<li><a href="#pagethree" data-transition="slidedown">SlideDown</a></li>
+				<li><a href="#pagethree" data-transition="turn">Turn</a></li>
+				<li><a href="#pagethree" data-transition="none">None</a></li>				
+			</ol>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="pagetwo">
+		<div data-role="header">
+			<h1>Header</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			Ini adalah halaman kedua<hr/>
+			<a href="#pageone">Kembali ke halaman 1</a>
+		</div>
+		<div data-role="footer">
+			<h1>Footer</h1>
+		</div>
+	</div>
+
+	<div data-role="page" data-dialog="true" id="pagethree">
+		<div data-role="header">
+			<h1>I'm A Dialog Box!</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<p>Click on the link to go to Page One. <b>Note</b>: fade is default.</p>
+			<a href="#pageone">Go to Page One</a>
+			<p><b>Tip:</b> You can also close the dialog box by clicking the X button in header. This will automatically transition back to the page you came from, with the same transition effect (fade) used to open this dialog.</p>
+		</div>
+		<div data-role="footer">
+			<h1>Footer Text in Dialog</h1>
+		</div>
+	</div>
+</body>
+</html>

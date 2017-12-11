@@ -1,0 +1,37 @@
+1. OPERATOR JAVA BERLAKU
+   =	: sama dengan
+   !=	: tidak sama dengan
+	
+2. SELECT
+   a.	menampilkan data nim dan nama
+	select nim, nama from mahasiswa;
+		
+   b.	jika ingin menampilkan semuanya
+	select * from mahasiswa;			
+		
+   c.	menampilkan berdasarkan nim yang diinginkan saja
+	select nama_kolom from nama_tabel where nama_kolom=katakunci;
+		
+   d.	Menampilkan dari 2 tabel
+	select semua_column from tabel1, tabel2 where tabel1.column_foreign=tabel2.column_foreign;
+
+		
+3. DELETE
+   delete from nama_tabel where nama_kolom=katakunci;
+	
+4. UPDATE
+   update nama_tabel set nama_kolom=isidata where namakolom=katakunci;
+	
+5. SORTING
+   a.	ascending
+	select * from nama_tabel order by nama_kolom;
+
+   b.	descending
+	select * from nama_tabel order by nama_kolom desc;
+
+   c.	berdasarkan beberapa kolom
+	select * from nama_tabel order by nama_kolom asc, nama_kolom desc;
+
+
+
+

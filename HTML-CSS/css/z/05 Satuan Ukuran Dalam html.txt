@@ -1,0 +1,14 @@
+MACAM SATUAN:
+1.	tanpa apapun
+2.	px (Pixel)				//pixel pada layar
+3.	em (ems)
+4.	pt (Point)				//digunakan di ms word pada huruf. contoh ukuran huruf 12 itu berarti 12pt = seper delapan inci
+5.	pc (pica)
+6.	in (inchi)
+7.	mm (milimeter)
+8.	cm (centimeter)
+9.	%  (persen)
+
+KESETARAAN SATUAN:
+	1 inchi=	72pt
+	1 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Add</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p id="p1">Paragraf 1</p>
+	<button id="btn1">append()</button>
+	<button id="btn2">prepend()</button>
+	<button id="btn3">after()</button>
+	<button id="btn4">before()</button>
+
+	<hr/>
+	<h2>Add Elements - p</h2>
+	<p>This is a paragraph.</p>
+	<button id="btn5">Append text</button>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				$("#p1").append("<b>text tambahan</b>");
+			});
+			$("#btn2").click(function(){
+				$("#p1").prepend("<b>tegar baru</b>");
+			});
+
+			//aksi 2
+			$("#btn3").click(function(){
+				$("#p1").after("<b>Swasono</b>");
+			});
+			$("#btn4").click(function(){
+				$("#p1").before("<i>Swasono</i>");
+			});
+
+			//aksi 3
+			$("#btn5").click(function(){
+				var tag= document.createElement("p");
+				$("#btn5").after(tag, "tegar");
+			});
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

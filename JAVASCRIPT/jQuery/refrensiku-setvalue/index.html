@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set pada form</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+<form>
+	<table>
+		<tr>
+			<td>Nim</td>
+			<td><input id="nim"></input></td>
+		</tr>
+		<tr>
+			<td>Nama</td>
+			<td><input id="nama"></input></td>
+		</tr>
+	</table>	
+</form>
+<hr/>
+
+<table border="1" style="border-collapse: collapse;">
+	<thead>
+		<tr>
+			<th>Nim</th>
+			<th>Nama</th>
+			<th>Edit</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>13650055</td>
+			<td>tegar</td>
+			<td><button class="edit btn">Edit</button></td>
+		</tr>
+		<tr>
+			<td>13650056</td>
+			<td>swasono</td>
+			<td><button class="edit btn">Edit</button></td>
+		</tr>
+		<tr>
+			<td>13650057</td>
+			<td>tatag</td>
+			<td><button class="edit btn">Edit</button></td>
+		</tr>
+	</tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.edit').click(function(){
+			var nim= $(this).parent().siblings().eq(0).html();
+			var nama= $(this).parent().siblings().eq(1).html();
+			
+			$('#nim').val(nim);
+			$('#nama').val(nama);
+
+		});
+	});
+</script>
+</body>
+</html>

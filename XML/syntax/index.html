@@ -1,0 +1,59 @@
+<plaintext>
+Aturan Dalam XML:
+01. XML Documents Must Have a Root Element / XML harus memiliki root element
+	contoh:
+	<?xml version="1.0" encoding="UTF-8"?>			: Ini adalah XML prolog, UTF-8 is also the default encoding for HTML5, CSS, JavaScript, PHP, and SQL.
+	<note>							: Ini adalah root element
+	  <to>Tove</to>
+	  <from>Jani</from>
+	  <heading>Reminder</heading>
+	  <body>Don't forget me this weekend!</body>
+	</note>
+	
+
+02. XML Tags are Case Sensitive
+	<Message>Ini contoh salah</message>
+	<message>Ini contoh benar</message>
+
+
+03. XML Elements Must be Properly Nested/ 
+	contoh salah:	<b><i>This text is bold and italic</b></i>
+	contoh benar: 	<b><i>This text is bold and italic</i></b>
+
+04. XML Attribute Values Must be Quoted
+	contoh salah:	
+	<note date=12/11/2007>
+	  <to>Tove</to>
+	  <from>Jani</from>
+	</note>
+	contoh benar: 
+	<note date="12/11/2007">
+	  <to>Tove</to>
+	  <from>Jani</from>
+	</note>
+
+
+05. Entity References
+	jangan memasukkan simbol ini di XML, jadi harus diganti
+	&lt;	<	less than
+	&gt;	>	greater than
+	&amp;	&	ampersand 
+	&apos;	'	apostrophe
+	&quot;	"	quotation mark
+
+
+06. Comments in XML
+	<!-- This is a comment -->
+
+
+07. XML Stores New Line as LF
+	Windows applications store a new line as: carriage return and line feed (CR+LF).
+	Unix and Mac OSX uses LF.
+	Old Mac systems uses CR.
+	XML stores a new line as LF.
+
+
+
+
+
+

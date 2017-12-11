@@ -1,0 +1,11 @@
+00	Dasar
+	npm install 	: perintah default untuk mendownload modul2 node js
+
+01	Update Node JS
+	npm install npm -g
+
+02	Menjalankan aplikasi JS
+	node nama_aplikasi.js
+
+
+03	Menginstall Modul Node JS

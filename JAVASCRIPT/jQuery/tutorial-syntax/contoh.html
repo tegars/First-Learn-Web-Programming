@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Syntax</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p onclick="$(document).ready(fungsi1())">paragraf 1 - Klik Saya</p>
+	<p>paragraf 2</p>
+	<p>paragraf 3</p>
+
+	<script type="text/javascript">
+		//Cara 1
+		function fungsi1(){
+			$("p").hide();	
+		}
+		
+		//Cara 2
+		$(document).ready(function(){
+
+		});
+
+		//cara 3
+		$(function(){
+			
+		});
+	</script>
+
+	<hr/>
+	<img src="01.png">
+	<hr/>
+	<img src="02.png">
+	<hr/>
+</body>
+</html>

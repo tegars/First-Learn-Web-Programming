@@ -1,0 +1,13 @@
+1.	Link Standart
+	<a href=”1.html” target=”_blank” title=”memberi keterangan”> …………….</a>
+																				//target=”_blank” agar link membuka di newtab
+																				//title=”” ini untuk memberi keterangan di saat kursor di atasnya
+
+2.	Link ke Email atau Google
+	< a href=”http://google.co.id”> …………….</a>
+
+3.	Link Gambar
+	<a href=”1.html”><img src=”1.jpg”></a>
+
+4.	kembali ke folder sebelumnya
+	<a href=”../pertemuan2”></a>

@@ -1,0 +1,72 @@
+<plaintext>
+
+#00
+MariaDB [latihan]> select * from teman;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+13 rows in set (0.04 sec)
+
+
+#01 - BETWEEN
+MariaDB [latihan]> select * from teman where id between 2 and 10;
++----+---------+------------+
+| id | nama    | alamat     |
++----+---------+------------+
+|  2 | rojakan | kademangan |
+|  3 | piyan   | kademangan |
+|  4 | jaka    | kademangan |
+|  7 | tegar   | jakarta    |
+|  8 | asdfas  | asdfasdf   |
+| 10 | fairus  | lamongan   |
++----+---------+------------+
+6 rows in set (0.00 sec)
+kalau untuk text hasil tidak begitu akurat
+MariaDB [latihan]> select * from teman where nama between 'a' and 's'  order by nama;
++----+---------+--------------+
+| id | nama    | alamat       |
++----+---------+--------------+
+|  1 | anton33 | kademangan33 |
+|  8 | asdfas  | asdfasdf     |
+| 16 | asdseg  | sdfg         |
+| 13 | ayom    | sidoarjo     |
+| 11 | dani    | kediri       |
+| 10 | fairus  | lamongan     |
+|  4 | jaka    | kademangan   |
+|  3 | piyan   | kademangan   |
+|  2 | rojakan | kademangan   |
++----+---------+--------------+
+9 rows in set (0.00 sec)
+
+
+
+#02 - NOT BETWEEN
+MariaDB [latihan]> select * from teman where id not between 2 and 10;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+7 rows in set (0.00 sec)
+
+

@@ -1,0 +1,75 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from teman;
++----+----------+------------+
+| id | nama     | alamat     |
++----+----------+------------+
+|  1 | anton    | kademangan |
+|  2 | rojakan  | kademangan |
+|  3 | piyan    | kademangan |
+|  4 | jaka     | kademangan |
+|  7 | tegar    | jakarta    |
+|  8 | asdfas   | asdfasdf   |
+| 10 | fairus   | lamongan   |
+| 11 | dani     | kediri     |
+| 12 | tatak    | pasuruan   |
+| 13 | ayom     | sidoarjo   |
+| 14 | ari      | blitar     |
+| 15 | arif     | pasuruan   |
+| 16 | asdseg   | sdfg       |
+| 17 | sdfgsdfg | sdfgds     |
+| 20 | tatak    | pasuruan   |
+| 21 | tt       | malang     |
++----+----------+------------+
+16 rows in set (0.00 sec)
+
+
+
+#01
+MariaDB [latihan]> update teman set nama='anton33', alamat='kademangan33' where id=1;
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Mari kita cek
+	MariaDB [latihan]> select * from teman;
+	+----+----------+--------------+
+	| id | nama     | alamat       |
+	+----+----------+--------------+
+	|  1 | anton33  | kademangan33 |
+	|  2 | rojakan  | kademangan   |
+	|  3 | piyan    | kademangan   |
+	|  4 | jaka     | kademangan   |
+	|  7 | tegar    | jakarta      |
+	|  8 | asdfas   | asdfasdf     |
+	| 10 | fairus   | lamongan     |
+	| 11 | dani     | kediri       |
+	| 12 | tatak    | pasuruan     |
+	| 13 | ayom     | sidoarjo     |
+	| 14 | ari      | blitar       |
+	| 15 | arif     | pasuruan     |
+	| 16 | asdseg   | sdfg         |
+	| 17 | sdfgsdfg | sdfgds       |
+	| 20 | tatak    | pasuruan     |
+	| 21 | tt       | malang       |
+	| 22 | tg       | pagelaran    |
+	+----+----------+--------------+
+	17 rows in set (0.00 sec)
+
+
+
+#02 - HATI HATI LUPA MENULISKAN KONDISI, JIKA TIDAK LIHATLAH
+MariaDB [latihan]> update teman set nama='anton33', alamat='kademangan33';
+
+Mari kita cek
+	MariaDB [latihan]> select * from teman;
+	+----+----------+--------------+
+	| id | nama     | alamat       |
+	+----+----------+--------------+
+	|  1 | anton33  | kademangan33 |
+	|  2 | anton33  | kademangan33 |
+	|  3 | anton33  | kademangan33 |
+	|  4 | anton33  | kademangan33 |
+	|  7 | anton33  | kademangan33 |
+	+----+----------+--------------+
+	Semua record akan menjadi seperti ini,.. wow
+

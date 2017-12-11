@@ -1,0 +1,19 @@
+DATABASE
+1. Membuat database baru
+   CREATE DATABASE nama_database;
+
+	
+2. Menghapus Database
+   DROP DATABASE nama_database;
+
+
+3. Mengganti nama Database
+   TIDAK SUPPORT
+	
+4. Koneksi database
+   use nama_database;
+
+
+5. Melihat Semua Database
+   show databases;
+

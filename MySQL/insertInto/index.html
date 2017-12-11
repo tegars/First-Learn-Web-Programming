@@ -1,0 +1,96 @@
+<plaintext>
+#00
+MariaDB [latihan]> describe teman;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| nama   | varchar(20) | NO   |     | NULL    |                |
+| alamat | varchar(20) | NO   |     | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+MariaDB [latihan]> select * from teman;
++----+----------+------------+
+| id | nama     | alamat     |
++----+----------+------------+
+|  1 | anton    | kademangan |
+|  2 | rojakan  | kademangan |
+|  3 | piyan    | kademangan |
+|  4 | jaka     | kademangan |
+|  7 | tegar    | jakarta    |
+|  8 | asdfas   | asdfasdf   |
+| 10 | fairus   | lamongan   |
+| 11 | dani     | kediri     |
+| 12 | tatak    | pasuruan   |
+| 13 | ayom     | sidoarjo   |
+| 14 | ari      | blitar     |
+| 15 | arif     | pasuruan   |
+| 16 | asdseg   | sdfg       |
+| 17 | sdfgsdfg | sdfgds     |
+| 20 | tatak    | pasuruan   |
++----+----------+------------+
+15 rows in set (0.01 sec)
+
+
+
+#01
+MariaDB [latihan]> insert into teman(id, nama, alamat) values('21', 'tt', 'malang');
+Query OK, 1 row affected (0.00 sec)
+
+mari kita cek
+	MariaDB [latihan]> select * from teman;
+	+----+----------+------------+
+	| id | nama     | alamat     |
+	+----+----------+------------+
+	|  1 | anton    | kademangan |
+	|  2 | rojakan  | kademangan |
+	|  3 | piyan    | kademangan |
+	|  4 | jaka     | kademangan |
+	|  7 | tegar    | jakarta    |
+	|  8 | asdfas   | asdfasdf   |
+	| 10 | fairus   | lamongan   |
+	| 11 | dani     | kediri     |
+	| 12 | tatak    | pasuruan   |
+	| 13 | ayom     | sidoarjo   |
+	| 14 | ari      | blitar     |
+	| 15 | arif     | pasuruan   |
+	| 16 | asdseg   | sdfg       |
+	| 17 | sdfgsdfg | sdfgds     |
+	| 20 | tatak    | pasuruan   |
+	| 21 | tt       | malang     |
+	+----+----------+------------+
+	16 rows in set (0.00 sec)
+
+
+
+#02
+MariaDB [latihan]> insert into teman(nama, alamat) values('tg', 'pagelaran');
+Query OK, 1 row affected (0.00 sec)
+
+mari kita cek
+	MariaDB [latihan]> select * from teman;
+	+----+----------+------------+
+	| id | nama     | alamat     |
+	+----+----------+------------+
+	|  1 | anton    | kademangan |
+	|  2 | rojakan  | kademangan |
+	|  3 | piyan    | kademangan |
+	|  4 | jaka     | kademangan |
+	|  7 | tegar    | jakarta    |
+	|  8 | asdfas   | asdfasdf   |
+	| 10 | fairus   | lamongan   |
+	| 11 | dani     | kediri     |
+	| 12 | tatak    | pasuruan   |
+	| 13 | ayom     | sidoarjo   |
+	| 14 | ari      | blitar     |
+	| 15 | arif     | pasuruan   |
+	| 16 | asdseg   | sdfg       |
+	| 17 | sdfgsdfg | sdfgds     |
+	| 20 | tatak    | pasuruan   |
+	| 21 | tt       | malang     |
+	| 22 | tg       | pagelaran  |
+	+----+----------+------------+
+	17 rows in set (0.00 sec)
+
+

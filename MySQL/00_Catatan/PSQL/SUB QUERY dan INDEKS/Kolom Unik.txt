@@ -1,0 +1,10 @@
+kolom unik = digunakan agar tidak ada data yang sama dalam kolom
+
+1. PEMBUATAN TABEL
+create table nama_tabel(nama_kolom tipe_data unique);
+
+2. PENAMBAHAN
+alter table nama_tabel add unique(nama_kolom);
+
+3. DROP UNIQUE
+alter table nama_tabel drop contraint nama_konstrain;

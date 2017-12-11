@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>refrensiku-split</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<label>Minatmu:</label><hr/>
+		<input type="checkbox" value="Pemrograman" name="minat1" id="pemrograman">Pemrograman
+		<input type="checkbox" value="Desain" name="minat2" id="desain">Desain
+		<input type="checkbox" value="Jaringan" name="minat3" id="jaringan">Jaringan
+	</div>
+<script type="text/javascript">
+	var pilihan= '1 2 3';
+	var res= pilihan.split(' ');
+	// document.write(res.length);
+
+	for(var a=0; a<res.length; a++){
+		document.write(res[a]);
+		if(res[a]==1){
+			$('#pemrograman').attr({
+				'checked':''
+			});
+		}
+		if(res[a]==2){
+			$('#desain').attr({
+				'checked':''
+			});
+		}
+		if(res[a]==3){
+			$('#jaringan').attr({
+				'checked':''
+			});
+		}
+	}
+</script>
+</body>
+</html>

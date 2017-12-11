@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>effect-callback</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<h2>A callback function is executed after the current effect is 100% finished.</h2>
+	<div style="width:300px; height: 150px; background-color:darkgrey;"></div>
+	<button>callback - Perhatikan ketika effeck selesai muncul aksi</button>
+	<hr/>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("button").click(function(){
+				$("div").hide("slow",function(){
+					alert("ini adalah aksi \nsetelah animate selesai");
+				});
+			});
+
+
+		});
+	</script>
+</body>
+</html>

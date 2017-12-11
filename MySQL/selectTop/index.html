@@ -1,0 +1,29 @@
+<plaintext>
+Not all database systems support the SELECT TOP clause
+
+
+#01 MySQL
+MariaDB [latihan]> select * from teman limit 5;
++----+---------+--------------+
+| id | nama    | alamat       |
++----+---------+--------------+
+|  1 | anton33 | kademangan33 |
+|  2 | rojakan | kademangan   |
+|  3 | piyan   | kademangan   |
+|  4 | jaka    | kademangan   |
+|  7 | tegar   | jakarta      |
++----+---------+--------------+
+5 rows in set (0.00 sec)
+
+
+
+#02 Oracle
+select * from teman where rownum<=5;
+
+
+
+#03 SQL Server dan MS Access
+Pakek top 2
+	SELECT TOP 2 * FROM Customers;
+Pakek persen
+	SELECT TOP 50 PERCENT * FROM Customers;

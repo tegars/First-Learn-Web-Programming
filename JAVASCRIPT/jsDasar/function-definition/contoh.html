@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Definition</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script>
+		//fungsi dasar
+		function satu(a, b){
+			return a*b;
+		}
+		var coba1= satu(5,4);
+		var coba2= satu(2,5);
+
+		//VARIABEL BERISI FUNGSI
+
+		//01-dasar
+		var x= function(a, b){
+			return a*b;
+		}
+		var coba3= x(3,5);
+
+		//02-jadi satu
+		var y = new Function("a", "b", "return a * b");
+		var coba4= y(4, 3);
+
+		//fungsi yang otomatis di panggil ketika halaman load
+		(function () {
+		    document.getElementById("demo").innerHTML = "Hello! I called myself";
+		})();
+	</script>
+</body>
+</html>

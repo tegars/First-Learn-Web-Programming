@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Syntaks</title>
+	<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+</head>
+<body>
+	<h3>JSON Data</h3>
+	<p id="data1"></p>
+	<script>
+		var nama = {"firstName":"Tegar"};
+		$("#data1").text(nama.firstName);
+	</script>
+	<hr/>
+
+
+	<h3>JSON Objek</h3>
+	<p id="data2"></p>
+	<script>
+		var keterangan= {"nama":"Tegar","alamat":"malang"};
+		$("#data2").html(keterangan.nama+"<br/>"+keterangan.alamat);
+	</script>
+	<hr/>
+
+
+	<h3>JSON Array</h3>
+	<p id="data3"></p>
+	<script>
+		var siswa=[
+			{"nama":"tegar","alamat":"malang"},
+			{"nama":"afaf","alamat":"lamongan"},
+			{"nama":"bill","alamat":"pasuruan"}
+		];
+		$("#data3").text(siswa[0].nama);
+		//atau cara ini
+		//$("#data3").text(siswa[0]["nama"]);
+		//cara mengganti data di arrays
+		// siswa[0].nama="swasono";
+	</script>
+	<hr/>
+
+
+	<h3>JSON OPREK</h3>
+	<p id="data4"></p>
+	<script>
+		var data=[
+			{"nama":"tegar","alamat":"malang"},
+			{"nama":"swasono","alamat":"surabaya"}
+		];
+		data[0].nama="tegarsaja";
+		for(var i=0; i<data.length; i++){
+			document.write(data[i].nama+' ');
+		}
+		
+
+	</script>
+</body>
+</html>

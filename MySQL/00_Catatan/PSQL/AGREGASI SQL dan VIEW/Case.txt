@@ -1,0 +1,16 @@
+CASE = INI MENGHASILKAN KOLOM BARU
+
+Struktur Penulisan:
+   CASE WHEN kondisi THEN keinginan
+   WHEN kondisi THEN keinginan
+   ELSE keinginan
+   END
+
+1. L maka otomatis Lakilaki dan P maka perempuan:
+   select kelamin, 
+   case when kelamin = 'L' 
+   then 'Lakilaki' 
+   else 'Perempuan' 
+   end 
+   from nama_tabel;
+

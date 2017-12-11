@@ -1,0 +1,17 @@
+1.	Bikin style di notepadd berekstensi .CSS
+	.style1 {color: red;font-style: italic;}
+	#style2 {color: gold;font-weight: bold;}
+	
+2.	Dipanggil di html
+	<html>
+	<head><title>selalu mencoba</title>
+		<link rel="stylesheet" href="linked.css" type="text/css">
+	</head>
+	<body>
+		<p class="style1">
+		ini pakek linked bukan embedded
+		
+		<p id="style2">
+		ini paragraf ke berapa saja	
+	</body>
+	</html>

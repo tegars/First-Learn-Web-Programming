@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intro</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script type="text/javascript" src="src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">"></script>
+</head>
+<body>
+	<h2 align="center">01 Buat modul dan menambahkan controller</h2>
+	<div ng-app="myApp1" ng-controller="myCtrl1">{{awal+" "+akhir}}</div>
+	
+	<hr/>
+	<h2 align="center">02 Buat Modul dan menambahkan directive</h2>
+		<div ng-app="myApp2" test-tegar></div>
+	<hr/>
+	<h2 align="center">03 Modul dan controller in file</h2>
+	
+	<hr/>
+	<h2 align="center">04 Functions can Pollute the Global Namespace</h2>
+	
+	<script type="text/javascript">
+
+		//kita buat modul dulu
+		var app1= angular.module("myApp1", []);
+		//contoh buat controller
+		app1.controller("myCtrl1", function($scope){
+			$scope.awal="tegar";
+			$scope.akhir="swasono";
+		});
+
+		//contoh buat directive
+		var app2= angular.module("myApp2", []);
+		app2.directive("test-tegar", function(){
+			return{
+				template: "I was made in a directive constructor!"
+			};
+		});
+
+
+	</script>
+	<hr/>
+
+<div ng-app="myApp" w3-test-directive></div>
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "I was made in a directive constructor!"
+    };
+});
+</script>
+</body>
+</html>

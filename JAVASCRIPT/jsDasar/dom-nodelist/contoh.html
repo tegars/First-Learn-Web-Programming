@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Nodelist</title>
+</head>
+<body>
+	<p>Paragraf 1</p>
+	<p>Paragraf 2</p>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var simpan= document.getElementsByTagName("p");
+		var coba1= simpan[1].innerHTML;
+		var coba2= simpan.length;
+		function fungsi(){
+			var myNodelist = document.getElementsByTagName("p");
+		    var i;
+		    for (i = 0; i < myNodelist.length; i++) {
+		        myNodelist[i].style.backgroundColor = "red";
+		    }
+		}
+		//lihatkan di hilangkan coment untuk mencoba
+		// var coba3= this.fungsi();
+	</script>
+</body>
+</html>

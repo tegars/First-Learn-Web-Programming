@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTTP</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+	<script type="text/javascript">
+		var app1= angular.module('app1', []);
+
+		app1.controller('ctrl1', function($scope, $http){
+
+			//nomor 1
+			$http.get('welcome.txt').then(function(response){
+				$scope.data1= response.data;
+			});
+
+			//nomor 2
+			$http({
+				method: "GET",
+				url: "welcome.txt"
+			}).then(function mySuccess(response){
+				$scope.myWelcome= response.data;
+			}, function myError(response){
+				$scope.myWelcome= response.statusText;
+			});
+
+			//nomor 3
+			$http.get('http://www.w3schools.com/angular/customers.php').then(function(response){
+				$scope.myData= response.data.records;
+			});
+
+		});
+	</script>
+	<h1 align="center">01 Dasar</h1>
+	<div>
+		<p>{{data1}}</p>
+	</div>
+
+
+	<hr/>
+	<h1 align="center">02 Method</h1>
+	<div>
+		<p>{{myWelcome}} : ini seperti try catch - tekan F12</p>
+	</div>
+
+
+	<hr/>
+	<h1 align="center">03 JSON</h1>
+	<div>
+	ini dihasilkan dari file php
+		<ul>
+			<li ng-repeat="x in myData">
+				{{x.Name+', '+x.Country}}
+			</li>
+		</ul>
+	</div>
+
+
+
+	<hr/>
+	<img src="00.png">
+	<hr/>
+	<img src="01.png">
+	<hr/>
+	<img src="02.png">
+	<hr/>
+	<img src="03.png">
+</body>
+</html>

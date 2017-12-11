@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Selector</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<h2>Element Selector</h2>
+	<p>Ini adalah paragraf saya</p>
+	<button id="button1">Klik Saya</button>
+
+	<hr/>
+	<h2>#ID Selector</h2>
+	<p>Paragraf satu</p>
+	<p id="test">Paragraf dua</p>
+	<button id="button2">KLik Saya</button>
+
+	<hr/>
+	<h2>The .Class Selector</h2>
+	<p class="test2">Paragraf 1</p>
+	<p class="test2">Paragraf 2</p>
+	<p>tanpa class</p>
+	<button id="button3">Klik Saya</button>
+
+	<script type="text/javascript">
+		// INI ADALAH ELEMENT SELECTOR
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				$("p").hide();
+			});
+		});
+
+		//INI ADALAH #ID SELECTOR
+		$(document).ready(function(){
+			$("#button2").click(function(){
+				$("#test").hide();
+			});
+		});
+
+		//INI ADALAH .CLASS SELECTOR
+		$(document).ready(function(){
+			$("#button3").click(function(){
+				$(".test2").hide();
+			});
+		});
+	</script>
+
+	<hr/>
+	<img src="01.png">
+</body>
+</html>

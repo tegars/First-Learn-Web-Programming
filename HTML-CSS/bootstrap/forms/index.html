@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" scr="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<hr/>
+<h2 align="center">Bootstrap Vertikal Form (Default)</h2>
+<hr/>
+<div class="container">
+	<form role="form">
+		<div class="form-group">
+			<label for="email">Emailmu: </label>
+			<input type="email" id="email" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="password">passwordmu: </label>
+			<input type="password" id="password" class="form-control">
+		</div>
+		<div class="checkbox">
+			<label><input type="checkbox" name="remember">Remember me</label>
+		</div>
+		<button class="btn btn-info" type="submit">Submit</button>
+	</form>
+</div>
+
+
+
+<hr/>
+<h2 align="center">Bootstrap Inline Form - <code>.form-inline</code></h2>
+<hr/>
+<div class="container">
+	<form role="form" class="form-inline">
+		<div class="form-group">
+			<label for="email">Emailmu: </label>
+			<input type="email" id="email" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="password">passwordmu: </label>
+			<input type="password" id="password" class="form-control">
+		</div>
+		<div class="checkbox">
+			<label><input type="checkbox" name="remember">Remember me</label>
+		</div>
+		<button class="btn btn-info" type="submit">Submit</button>
+	</form>
+</div>
+
+
+
+<hr/>
+<h2 align="center">Bootstrap Horizontal Form - <code>.form-horizontal</code></h2>
+<hr/>
+<div class="container">
+	<form role="form" class="form-horizontal">
+		<div class="form-group">
+			<label for="email" class="control-label col-sm-2">Emailmu: </label>
+			<div class="col-sm-10">
+				<input type="email" id="email" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="control-label col-sm-2">passwordmu: </label>
+			<div  class="col-sm-10">
+				<input type="password" id="password" class="form-control">
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember">Remember me</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button class="btn btn-info" type="submit">Submit</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+
+</body>
+</html>

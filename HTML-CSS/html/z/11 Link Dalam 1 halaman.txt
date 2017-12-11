@@ -1,0 +1,9 @@
+Contoh HTML:
+<body>
+	<a href="#pendahuluan">...</a>				//ini yang memanggil	//saat di klik
+	<a href="#isi">...</a>
+	<a href="#penutup">...</a>
+	
+	<h3 id="pendahuluan">...</h3>				//ini yang dipanggil
+
+

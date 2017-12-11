@@ -1,0 +1,18 @@
+DISTINCT
+   distinct hanya digunakan untuk kolom saja
+   agar tidak ada duplikasi data
+   select distinct nama_kolom from mahasiswa;
+
+   a. tanpa distinct
+      kolom_gender
+      -------------
+      L
+      L
+      L
+      P
+      P
+   B. Dengan distinct
+      kolom_gender
+      -------------
+      L
+      P

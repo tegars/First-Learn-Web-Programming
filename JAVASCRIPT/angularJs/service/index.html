@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Services</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+	<script type="text/javascript">
+		var app1= angular.module('app1', []);
+		app1.controller('ctrl1', function($scope, $location, $http, $timeout, $interval){
+
+			//nomor 1 - hanya butuh service $location
+			$scope.url= $location.absUrl();
+
+			//nomor 2 - hanya butuh service $http
+			$http.get('welcome.txt').then(function (response){
+		    	$scope.welcome = response.data;
+			});
+
+			//nomor 3 - hanya butuh $timeout
+			$scope.header='HelloWorld!';
+			$timeout(function(){
+				$scope.header= 'How are you?';
+			}, 2000);
+
+			//nomor 4 - hanya butuh $timeout
+			$scope.waktu= new Date().toLocaleTimeString();
+			$interval(function(){
+				$scope.waktu= new Date().toLocaleTimeString();
+			}, 1000);
+
+
+		});
+	</script>
+
+	<h3 align="center">01 $location - BOM</h3>
+	<p>{{url}}</p>
+
+
+	<hr/>
+	<h3 align="center">02 $http - Seperti Konsep Modul PHP</h3>
+	<p>{{welcome}}</p>
+
+
+	<hr/>
+	<h3 align="center">03 $timeout - timer</h3>
+	<p>{{header}}</p>
+
+
+	<hr/>
+	<h3 align="center">04 $interval - Waktu Sekarang</h3>
+	<p><b>{{waktu}}</b></p>
+
+
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

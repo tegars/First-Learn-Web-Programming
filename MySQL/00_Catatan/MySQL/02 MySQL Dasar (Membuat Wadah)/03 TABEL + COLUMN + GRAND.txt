@@ -1,0 +1,64 @@
+TABEL 
+1. Membuat tabel baru
+   CREATE TABLE nama_tabel(nama_kolom tipe_data keterangan, nama_kolom tipe_data keterangan);
+	
+2. Menghapus tabel
+   DROP TABLE nama_tabel;
+
+3. Mengganti nama tabel
+   RENAME TABLE nama_lama TO nama_baru;
+   alter table nama_lama rename to nama_baru;
+	
+4. Melihat Semua tabel dalam database
+   show tables;
+
+5. Melihat rincian kolom dari Tabel (termasuk tipe datanya)
+   describe nama_tabel;
+   desc nama_tabel;
+
+
+TEMPORARY TABEL
+   create temporary table nama_tabel(nama_kolom tipe_data keterangan, nama_kolom tipe_data keterangan);	
+	
+
+INHERIT
+   TIDAK MENDUKUNG
+
+
+KOLOM
+1. Menghapus Column
+   alter table nama_tabel drop column nama_kolom;
+	
+2. Menambahkan Column
+   alter table nama_tabel add column nama_kolom tipe_data;
+	
+3. Merubah nama kolom
+   alter table nama_tabel change nama_lama nama_baru tipe_data;
+	
+4. Mengubah type dari column
+   alter table nama_tabel change nama_lama nama_lama tipe_data_baru;
+   alter table nama_tabel modify nama_kolom tipe_data_baru;	
+
+5. Menambahkan primary key 
+   alter table nama_tabel add primary key(nama_column)
+	
+6. menghapus primary key
+   alter table nama_tabel drop primary key
+
+7. Menambahkan kolom setelah kolom tertentu
+   ALTER TABLE peserta ADD telepon varchar(30) AFTER nama;
+
+
+GRANT dan REVOKE (HAK EDIT ISI TABEL)
+a. Memberi hak kepada user tertentu
+   GRANT hak_akses ON nama_database.nama_tabel TO 'nama_user'@'lokasi_user';
+   GRANT hak_akses ON nama_database.nama_tabel TO 'nama_user';
+   hak_akses:	
+   - SELECT 
+   - INSERT
+   - UPDATE
+   - DELETE
+   - ALL		: untuk semua 4 diatas
+
+b. Mencabut hak kepada user tertentu
+   revoke hak_akses ON nama_database.nama_tabel from 'nama_user';

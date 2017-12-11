@@ -1,0 +1,17 @@
+1. tanggal sekarang
+   current_date;
+
+2. waktu(jam) sekarang
+   current_time;
+
+3. waktu lengkap
+   current_timestamp
+
+PENERAPAN:
+select current_date;
+
+d.	Membandingkan Waktu
+	select extract (day from now() - cast ('1999-10-11' as "timestamp"));
+	select (cast ('2014-09-18' as "timestamp") - cast ('1999-10-11' as "timestamp"));
+
+

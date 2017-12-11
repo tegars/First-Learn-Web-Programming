@@ -1,0 +1,54 @@
+------------------------------------------------------------------------------------------------------------------
+Cryptography/ Kriptografi ada 2:
+	01	Enkripsi
+		proses - perubahan teks terang(plaintext) -> teks tersandi(ciphertext)
+		dengan bantuan kunci
+
+	02	Dekripsi
+		kebalikan enkripsi
+		dengan bantuan kunci
+
+------------------------------------------------------------------------------------------------------------------
+Keamanan Cryptography:
+	hanya terletak pada kunci
+
+------------------------------------------------------------------------------------------------------------------
+Macam Cryptography Klasik
+	01 	Transposisi
+		cth:
+			- 'hello world' menjadi 'ehlol owrdl'
+	02	Subtitusi
+		cth:
+			-  'fly at once' menjadi 'gmz bu podf'
+
+------------------------------------------------------------------------------------------------------------------
+Macam Cryptography Modern
+	01	Algoritma kunci Simetrik
+		kunci sama untuk enkripsi dan dekripsi
+		cth:
+			- DES (Data Encryption Standart)
+				- ukuran blog 64-bit
+				- ukuran kunci 56-bit
+			- AES (Advanced Encryption Standart)
+				- terdiri dari 3 blog cipher
+					AES-128 (ukuran kunci: 128-bit) (ukuran blog: 128-bit)
+					AES-192 (ukuran kunci: 192-bit) (ukuran blog: 128-bit)
+					AES-256 (ukuran kunci: 256-bit) (ukuran blog: 128-bit)
+
+
+
+	02	Algoritma kunci Asimetrik
+		membutuhkan sepasang kunci
+			- kunci publik(public key)		: untuk Enkripsi 	= diumumkan secara public
+			- kunci pribadi(private key)	: untuk dekripsi
+		cth:
+			- RSA ()
+
+
+	03	Algoritma Hibrida
+
+
+
+
+	
+

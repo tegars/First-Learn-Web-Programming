@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dapatkan gambar + bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cropit.js"></script>
+	<style type="text/css">
+		.cropit-image-preview{
+			background-color: #f8f8f8;
+			background-size: cover;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			margin-top: 7px;
+			width: 250px;
+			height: 250px;
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+<hr/><hr/>
+<div class="container">
+	<div class="image-editor">
+		<input type="file" class="cropit-image-input">
+		<div class="cropit-image-preview"></div>
+
+		<input type="range" class="cropit-image-zoom-input" style="width: 250px;">
+		<button id="cetak" class="btn btn-info btn-sm">Simpan</button>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.image-editor').cropit({
+			imageState:{src:''}
+		});
+
+		$('#cetak').click(function(){
+			var imageData= $('.image-editor').cropit('export');
+			window.open(imageData);
+		});
+
+	});
+</script>
+</body>
+</html>

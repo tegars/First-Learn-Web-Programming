@@ -1,0 +1,78 @@
+AGREGASI adalah
+pengumpulan sejumlah data yg terpisah-pisah menjadi satu;
+
+INGAT
+NAMA_KOLOM sebenarnya ditulis NAMA_TABEL.NAMA_KOLOM
+
+
+
+1. AGREGATE OPERATOR
+   a. Menghitung jumlah data baris atau yang ada di tabel 
+      select count(*) from mahasiswa;
+
+   b. Menghitung penjumlahan data dari semua baris dalam kolom tertentu
+      select sum(nama_kolom) from mahasiswa;
+
+   c. Mencari nilai terbesar atau nim terbesar
+      select max(nim_mah) from mahasiswa;
+
+   d. Mencari nilai terkecil atau nim terkecil
+      select min(nim_mah) from mahasiswa;
+
+   e. Mencari nilai rata-rata nilai
+      select avg(nama_kolom) from nama_tabel;
+
+
+
+
+2. GROUP BY
+   untuk pengelompokan
+
+   a. menampilkan nama pengarang jika ia mengarang banyak buku tapi yang ditampilkan hanya satu
+      select kolom_pengarang from nama_tabel group by kolom_pengarang;
+    
+   b. Menampilkan informasi pengarang + jumlah buku yang di karang
+      select kolom_pengarang, count(*) from nama_tabel group by kolom_pengarang;
+   
+   c. count(*) bisa diganti sum dll
+      as pertemuan sebelumnya pun juga bisa digunakan
+
+
+
+3. HAVING
+   menentukan kondisi dari group by
+   sama seperti where, tapi ini di khususkan pada agregasi
+   
+   select pelanggan, sum (hargaorder) from nama_tabel group by pelanggan having sum (hargaorder) <2000;
+
+
+
+ 
+4. CASE
+   if else jika dalam java
+
+   Struktur Penulisan:
+   CASE WHEN kondisi THEN keinginan
+   WHEN kondisi THEN keinginan
+   ELSE keinginan
+   END
+
+   a. Ingin jika isi field L maka otomatis Lakilaki dan P maka perempuan
+   select kelamin, case when kelamin = 'L' then 'Lakilaki' else 'Perempuan' end from nama_tabel;
+
+
+
+
+5. VIEW
+   hampir sama seperti membuat tabel
+   sifatnya seperti tabel turunan tapi bersifat permanen
+   data otomatis terisi jika kita imput di tabel asal
+   kelebihan:
+   - dapat memilih kolom tertentu dari beberapa tabel
+     create view nama_tabel_View as select nama_kolom, sum (nama_kolom) from nama_tabel group by nama_kolom;
+
+   - bikin view dari kolom beda tabel
+     create view tampil1 as select nim_mah, nama_mah, nama_fak from mahasiswa, fakultas where mahasiswa.id_fak=fakultas.id_fak
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Nodes</title>
+</head>
+<body>
+	<div id="div1">
+		<p id="p1">paragraf 1</p>
+		<p id="p2">paragraf 2</p>
+	</div>
+	<script type="text/javascript">
+		var tag= document.createElement("p");
+		var tulisan= document.createTextNode("ini paragraf baru");
+		tag.appendChild(tulisan);
+		//menghasilkan tulisan paragraf baru di bagian bawah
+		document.getElementById("div1").appendChild(tag);
+	</script>
+
+	<hr/>
+	<h1>Creating new HTML element</h1>
+	<div id="div2">
+		<p id="p21">paragraf 1</p>
+		<p id="p22"> paragraf 2</p>
+	</div>
+	<script type="text/javascript">
+		var tag= document.createElement("p");
+		var tulisan= document.createTextNode("ini paragraf baru");
+		tag.appendChild(tulisan);
+
+		var child= document.getElementById("p21");
+		document.getElementById("div2").insertBefore(tag, child);
+	</script>
+
+	<hr/>
+	<div id="div3">
+		<p id="p31">Paragraf 1</p>
+		<p id="p32">Paragraf 2 - paragraf 1 otomatis hilang</p>
+	</div>
+	<script type="text/javascript">
+		var parent= document.getElementById("div3");
+		var child= document.getElementById("p31");
+		parent.removeChild(child);
+	</script>
+
+	<hr/>
+	<div id="div4">
+		<p id="p41">paragraf 1</p>
+		<p id="p42">paragraf 2</p>
+	</div>
+	<script type="text/javascript">
+		var tag= document.createElement("p");
+		var tulisan= document.createTextNode("ini paragraf baru");
+		tag.appendChild(tulisan);
+
+		var child= document.getElementById("p41");
+		document.getElementById("div4").replaceChild(tag, child);
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traversing - Ancestors/ silsilah ke atas</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<style type="text/css">
+	.ancestors * { 
+		display: block;
+		border: 2px solid lightgrey;
+		color: lightgrey;
+		padding: 5px;
+		margin: 15px;
+	}
+</style>
+<body>
+	<h2 align="center">Parent()</h2>
+	<hr/>
+	<div class="ancestors">
+		<div style="width:500px;">div (great-grandparent)
+			<ul>ul (grandparent)
+				<li>li (direct parent)
+					<span>Span</span>
+				</li>
+			</ul>
+		</div>
+		<div style="width:500px;">div (grandparent)
+			<p>p (direct parent)
+				<span>Span</span>
+			</p>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+	    	$("span").parent().css({
+	    		"color": "red",
+	    		"border": "2px solid red"
+	    	});
+	    });
+	</script>
+	
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

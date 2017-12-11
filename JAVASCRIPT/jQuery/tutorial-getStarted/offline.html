@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Offline</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<h2 id="h1">INi Tanpa jQuery</h2>
+	<script type="text/javascript">
+		function fungsi1(){
+			var obj= document.getElementById("h1");
+			obj.innerHTML="Tanpa jQuery";
+		}
+		onload= fungsi1;
+	</script>
+
+	<hr/>
+	<h2 id="h2">Ini Dengan jQuery</h2>
+	<script type="text/javascript">
+		function fungsi2(){
+			$("#h2").html("Dengan jQuery");
+		}
+		$(document).ready(fungsi2);
+	</script>
+</body>
+</html>

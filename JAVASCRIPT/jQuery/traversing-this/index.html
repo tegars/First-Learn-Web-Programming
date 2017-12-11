@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traversing-this</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+</head>
+<body>
+	<h2 align="center">Diri Sendiri</h2>
+	<button id="btn1" class="btn btn-default">Klik Saya</button>
+	<hr/>
+
+
+	<h2 align="center">Induk</h2>
+	<div class="container">
+		<p>tegar</p>
+		<p>swasono</p>
+		<button id="btn2" class="btn btn-default">btn2</button>
+	</div>
+	<hr/>
+
+
+	<h2 align="center">Anak</h2>
+	<div class="container" id="anak">
+		<p>tegar</p>
+		<p>swasono</p>
+		<p>tatag</p>
+		<h2>
+			<ol>
+				<li>a</li>
+				<li>b</li>
+				<li>c</li>
+			</ol>
+		</h2>
+	</div>
+	<button id="btn3" class="btn btn-default">btn3</button>
+	<hr/>
+
+	<h2 align="center">Saudara</h2>
+	<div class="container">
+		<p id="saudara">tegar</p>
+		<p>fairus</p>
+		<p>dani</p>
+		<p>tatak</p>
+		<p>ayom</p>
+		<p>ari</p>
+		<p>arif</p>
+	</div>
+	<button id="btn4" class="btn btn-default">btn4</button>
+	<hr/>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			//milik sendiri
+			$('#btn1').click(function(){
+				var simpan1= $(this).attr('id');
+				var simpan2= $(this).attr('class');
+				console.log('id: '+simpan1);
+				console.log('class: '+simpan2);
+			});
+
+			//orang tua
+			$('#btn2').click(function(){
+				/*BAB PARENT()*/
+
+				//01 mendapatkan induk + anaknya
+				//var simpan1= $(this).parent().get(0);
+
+				//02 mendapatkan value dari induk
+				//var simpan1= $(this).parent().html();
+
+				//03 mendapatkan tag induk
+				// var simpan1= $(this).parent().get(0).tagName;
+
+				//04 mendapatkan attribut induk
+				//var simpan1= $(this).parent().attr('class');
+				//var simpan1= $(this).parent().prop('className');
+
+				//05 mendapatkan length induk
+				//var simpan1= $(this).parent().length;
+
+				//06 set style css
+				//var simpan1= $(this).parent().css('background-color', 'red');
+
+				//07 set class
+				//var simpan1= $(this).parent().addClass('container');
+
+				/*BAB PARENTS()*/
+
+				//01 mendapatkan induk tingkat 1
+				//var simpan1= $(this).parents().get(0);
+
+				//02 mendapatkan induk tingkat 2
+				//var simpan1= $(this).parents().get(1);
+
+				//03 set style css
+				var simpan1= $(this).parents().css( "background-color", "red" );
+
+				console.log(simpan1);
+			});
+
+			//anak
+			$('#btn3').click(function(){
+				/* BAB CHILDREN() */
+
+				//01 jumlah anak
+				//var simpan1= $('#anak').children().length;
+
+				//02 anak ke 1
+				//var simpan1= $('#anak').children().get(0);
+
+				//03 length cucu
+				//var simpan1= $('#anak').children('h2').children('ol').children().length;
+
+				//04 cucu
+				//var simpan1= $('#anak').children('h2').children('ol').children().get(0);
+				
+
+				/* BAB FIND() */
+				//berdasarkan tag
+				var simpan1= $('#anak').find('li').css( "background-color", "red" );
+
+
+				console.log(simpan1);
+			});
+
+			//saudara
+			$('#btn4').click(function(){
+
+				//01 mendapatkan length
+				//var simpan1= $('#saudara').siblings().length;
+
+				//02 tag + value
+				//var simpan1= $('#saudara').siblings().get(0);
+
+				//03 mendapatkan nilai
+				//var simpan1= $('#saudara').siblings().eq(0).html();
+				//var simpan1= $('#saudara').siblings().next().html();
+				var simpan1= $('#saudara').siblings().next().next().html();
+
+
+
+				console.log(simpan1);
+			});
+		});
+	</script>
+</body>
+</html>

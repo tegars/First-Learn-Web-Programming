@@ -1,0 +1,58 @@
+<plaintext>
+
+#00
+MariaDB [latihan]> select * from data_diri;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.04 sec)
+
+
+
+#01 - AND
+MariaDB [latihan]> select * from data_diri where jenis_kelamin="L" and cita_cita="Dosen";
++----+--------+---------------+--------+-----------+-------------------------------------+
+| id | nama   | jenis_kelamin | minat  | cita_cita | keterangan                          |
++----+--------+---------------+--------+-----------+-------------------------------------+
+|  1 | tegar  | L             | 1,2,3, | Dosen     | saya adalah tegar swasono sammmm!!! |
+|  3 | tatag  | L             | 1,     | Dosen     | saya akan menjadi dosen             |
+| 35 | fairus | L             | 1,2,   | Dosen     | asdfasdf                            |
++----+--------+---------------+--------+-----------+-------------------------------------+
+3 rows in set (0.00 sec)
+
+
+
+
+#02 - OR
+MariaDB [latihan]> select * from data_diri where jenis_kelamin="P" or cita_cita="Dosen";
++----+--------+---------------+--------+-----------+-------------------------------------+
+| id | nama   | jenis_kelamin | minat  | cita_cita | keterangan                          |
++----+--------+---------------+--------+-----------+-------------------------------------+
+|  1 | tegar  | L             | 1,2,3, | Dosen     | saya adalah tegar swasono sammmm!!! |
+|  3 | tatag  | L             | 1,     | Dosen     | saya akan menjadi dosen             |
+|  7 | dani   | P             | 2,     | Desainer  | saya kan menjadi desainer           |
+| 35 | fairus | L             | 1,2,   | Dosen     | asdfasdf                            |
++----+--------+---------------+--------+-----------+-------------------------------------+
+4 rows in set (0.00 sec)
+
+
+
+#03 - AND + OR
+MariaDB [latihan]> select * from data_diri where jenis_kelamin="L" and (cita_cita="Dosen" or cita_cita="Guru");
++----+---------+---------------+--------+-----------+-------------------------------------+
+| id | nama    | jenis_kelamin | minat  | cita_cita | keterangan                          |
++----+---------+---------------+--------+-----------+-------------------------------------+
+|  1 | tegar   | L             | 1,2,3, | Dosen     | saya adalah tegar swasono sammmm!!! |
+|  3 | tatag   | L             | 1,     | Dosen     | saya akan menjadi dosen             |
+|  8 | testing | L             | 1,2,3, | Guru      | sdgfdfs                             |
+| 35 | fairus  | L             | 1,2,   | Dosen     | asdfasdf                            |
++----+---------+---------------+--------+-----------+-------------------------------------+
+4 rows in set (0.00 sec)
+

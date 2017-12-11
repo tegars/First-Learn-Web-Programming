@@ -1,0 +1,36 @@
+<plaintext>
+#01
+create table mahasiswa(id int(10), id_fak int(10) not null references fakultas, nama text, alamat text, primary key(id, id_fak));
+
+MySQL way:
+	create table mahasiswa(id int(10) not null, id_fak int(10) not null, nama text, primary key(id), foreign key(id_fak) references fakultas(id_fak));
+
+Oracle, SQL server, MS Access way:
+	create table mahasiswa(id int(10) not null primary key, id_fak int(10) not null, nama text, id_fak int foreign key references fakultas(id_fak));
+
+
+#02 - add foreign key
+alter table mahasiswa add foreign key(id_fak) references fakultas(id_fak);
+
+
+
+#03 - Drop Foreign
+MySQL way:
+	alter table mahasiswa drop foreign key id_fak;
+
+Oracle, SQL Server, MS Access way:
+	alter table mahasiswa drop constraint id_fak;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom HTML</title>
+</head>
+<body>
+	<script>
+		document.write(Date());
+	</script>
+
+
+	<hr/>
+	<div id="header">header</div>
+	<script>
+		document.getElementById("header").innerHTML= "Ini header Baru";
+	</script>
+
+	<hr/>
+	<h2>Mengganti Nilai dari sebuah tag</h2>
+	<img src="00.png" id="gambar">
+	<script>
+		document.getElementById("gambar").src="01.jpg";
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>text</title>
+</head>
+<body>
+<hr/>
+<h2 align="center">Using FillText()</h2>
+<hr/>
+<canvas id="canvas1" width="200" height="100" style="border: 1px solid grey;"></canvas>
+
+
+<hr/>
+<h2 align="center">Using strokeText()</h2>
+<hr/>
+<canvas id="canvas2" width="200" height="100" style="border: 1px solid grey;"></canvas>
+
+
+<hr/>
+<h2 align="center">Add Color and Center Text</h2>
+<hr/>
+<canvas id="canvas3" width="200" height="100" style="border: 1px solid grey;"></canvas>
+
+
+
+
+<script type="text/javascript">
+	var canvas1= document.getElementById('canvas1');
+	var ctx1= canvas1.getContext('2d');
+	ctx1.font= '30px Arial';
+	ctx1.fillText('hallo tegar', 10,50);
+
+	var canvas2= document.getElementById('canvas2');
+	var ctx2= canvas2.getContext('2d');
+	ctx2.font= '30px Arial';
+	ctx2.strokeText('Hallo tegar', 10,50);
+
+	var canvas3= document.getElementById('canvas3');
+	var ctx3= canvas3.getContext('2d');
+	ctx3.font= '30px Arial';
+	ctx3.textAlign='center';
+	ctx3.fillText('Hallo tegar', canvas3.width/2, canvas3.height/2);
+
+
+
+</script>
+</body>
+</html>

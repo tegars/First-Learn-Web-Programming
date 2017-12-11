@@ -1,0 +1,9 @@
+PERTANYAAN BAB 8:
+1.hapus function tapi lupa parameternya???
+  
+2.penampilkan data nama alamat dan semuanya berdasarkan nim???
+  satu fungsi hanya bisa me RETURN satu keluaran
+  sehingga buat fungsi banyak
+  lalu dipanggil dengan trigger
+  
+3.Otomatis mengisi tabel umur ketika memasukkan tanggal lahir

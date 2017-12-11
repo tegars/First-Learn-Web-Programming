@@ -1,0 +1,15 @@
+NORMALISASI ADALAH:
+penyusun tabel agar tidak redundan(doble) yang menyebabkan anomali 
+//anomali: menyebabkan data tidak konsisten atau membuat data hilang ketika data yang lain dihapus saat melakukan proses insert, update, delete.
+
+LANGKAH NORMALISASI:
+1. Unnormalization Form
+   kolom di kumpulkan dalam satu tabel
+2. 1NF
+3. 2NF
+4. 3NF
+5. BCNF
+6. 4NF
+7. 5NF
+
+

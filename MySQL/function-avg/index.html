@@ -1,0 +1,46 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from m_ti;
++----------+---------+------------+-------+
+| nim      | nama    | alamat     | nilai |
++----------+---------+------------+-------+
+| 13650055 | tegar   | malang     | 100   |
+| 13650056 | swasono | pagelaran  | 90    |
+| 13650057 | tatag   | kademangan | 80    |
+| 13650058 | fairus  | lamongan   | 80    |
+| 13650059 | dani    | kediri     | 80    |
++----------+---------+------------+-------+
+5 rows in set (0.07 sec)
+
+
+
+#01
+MariaDB [latihan]> select avg(nilai) from m_ti;
++------------+
+| avg(nilai) |
++------------+
+|         86 |
++------------+
+1 row in set (0.00 sec)
+
+
+#02 avg with as
+MariaDB [latihan]> select avg(nilai) as nilai_mahasiswa_ti from m_ti;
++--------------------+
+| nilai_mahasiswa_ti |
++--------------------+
+|                 86 |
++--------------------+
+1 row in set (0.00 sec)
+
+
+#03 mencari yg lebih dari rata2
+MariaDB [latihan]> select * from m_ti where nilai>(select avg(nilai) from m_ti);
++----------+---------+-----------+-------+
+| nim      | nama    | alamat    | nilai |
++----------+---------+-----------+-------+
+| 13650055 | tegar   | malang    | 100   |
+| 13650056 | swasono | pagelaran | 90    |
++----------+---------+-----------+-------+
+2 rows in set (0.02 sec)
+

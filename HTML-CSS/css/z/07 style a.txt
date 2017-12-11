@@ -1,0 +1,23 @@
+Style <a>:
+	semua style <p> bisa di terapkan
+	
+	text-decoration:none		//menghilangkan garis bawah pada link
+	cursor:wait					//merubah kursor
+
+Macam Actionlistener:
+1.	link belum di kunjungi kursor
+	a:link {color: blue;}
+	a:visited {color: red;}
+	
+2.	link saat di kunjungi kursor
+	a:hover {color: green;}
+	
+3.	link saat di klik
+	a:active {color: yellow;}
+	
+	
+	
+	
+	
+	
+	

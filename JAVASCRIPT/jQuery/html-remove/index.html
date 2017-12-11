@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Remove</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p id="p1">Paragraf 1</p>
+	<p id="p2">Paragraf 2</p>
+	<button id="btn1">remove()</button>
+	<button id="btn2">empty() - hanya menghapus value</button>
+	
+	<hr/>
+	<p class="satu">ini class satu</p>
+	<p class="dua">ini class dua</p>
+	<button id="btn3">hapus beberapa p - dengan class tertentu</button>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				$("#p1").remove();
+			});
+			$("#btn2").click(function(){
+				$("#p2").empty();
+			});
+			//aksi 2
+			$("#btn3").click(function(){
+				$("p").remove(".satu, .dua");
+			});
+			
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

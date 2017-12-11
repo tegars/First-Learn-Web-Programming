@@ -1,0 +1,118 @@
+call
+
+sql			: select
+
+trigger		: insert update delete
+
+
+
+create function konversi (float, float, float)
+returns float
+as 'select($40-$32/$1.8);'
+language 'sql';
+
+buat method dulu
+create function konversi (n float)
+returns float
+as 'select((n-32)/1.8);'
+language 'sql';
+
+baru dipanggil
+select konversi(32);
+
+
+create function cari(text)
+returns text as 'select alamat_mah from mahasiswa where nama_mah=$1;'
+language 'sql';
+
+select cari ('tegar');
+
+
+create or replace function percabangan (nilai integer)
+returns text
+as 'declare nilai1 text;
+begin
+if nilai>100 OR nilai<0 then
+select into nilai1 ''angka_salah'';
+elsif nilai>=90 then
+select into nilai1 '' a'';
+elsif nilai>=70 and nilai<90 then
+select into nilai1 '' b'';
+elsif nilai>=60 and nilai<70 then
+select into nilai1 '' c'';
+elsif nilai>=50 and nilai<60 then
+select into nilai1 '' d'';
+else
+select into nilai1 '' e'';
+end if;
+return nilai1;
+end;'
+language 'plpgsql';
+
+
+create function ganjilgenap (angka integer)
+returns text
+as 'declare hasil text;
+begin
+if angka%2=0 then
+select into hasil ''genap'';
+else
+select into hasil ''ganjil'';
+
+end if;
+return hasil;
+end;'
+language 'plpgsql';
+
+
+create function tes_trigger()
+returns opaque
+as '
+begin
+new.modifikasi := current_date;
+return new;
+end;'
+language 'plpgsql';
+
+create trigger tes1_trigger
+before insert
+ON mahasiswa
+for each row
+execute procedure tes_trigger();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Prototypes</title>
+</head>
+<body>
+	<script>
+		function person(first, last, age, eye) {
+		   	this.firstName = first;
+		    this.lastName = last;
+		    this.age = age;
+		    this.eyeColor = eye;
+		}
+		person.prototype.nationality = "English";
+		var ayah = new person("John", "Doe", 50, "blue");
+	</script>
+</body>
+</html>

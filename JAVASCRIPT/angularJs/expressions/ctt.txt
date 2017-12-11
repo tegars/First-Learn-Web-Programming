@@ -1,0 +1,1 @@
+expression {{}} : ini sebagai penganti ng-bind=""

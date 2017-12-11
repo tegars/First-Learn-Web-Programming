@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation API</title>
+</head>
+<body>
+	<p>01 VALIDASI ANGKA DI ANTARA</p>
+	<input type="number" id="id1" min="100" max="300">
+	<button onclick="myFunction()">OK</button>
+	<p>If the number is less than 100 or greater than 300, an error message will be displayed</p>
+	<p id="demo"></p>
+
+	<script>
+		function myFunction(){
+			var angka= document.getElementById("id1");
+			if(angka.checkValidity()==false){
+				document.getElementById("demo").innerHTML= angka.validationMessage;
+			}else{
+				document.getElementById("demo").innerHTML= "input OK";
+			}
+		}
+	</script>
+	<br/><hr/>
+	<p>02 VALIDASI ANGKA LEBIH DARI</p>
+	<input type="number" id="angka2" max="100">
+	<button onclick="myFunction2()">OK</button>
+	<p>If the number is greater than 100 (the input's max attribute), an error will be displayed.</p>
+	<p id="demo2"></p>
+	<script>
+		function myFunction2(){
+			var txt2= "";
+			if(document.getElementById("angka2").validity.rangeOverflow){
+				txt2= "Value too large";
+			}else{
+				txt2= "Input OK";
+			}
+			document.getElementById("demo2").innerHTML= txt2;
+		}
+	</script>
+	<br/><hr/>
+	<p>03 VALIDASI ANGKA KURANG DARI</p>
+	<input type="number" id="angka3" min="100">
+	<button onclick="myFunction3()">OK</button>
+	<p>If the number is less than 100 (the input's min attribute), an error message will be displayed.</p>
+	<p id="demo3"></p>
+	<script>
+		function myFunction3(){
+			var txt3= "";
+			if(document.getElementById("angka3").validity.rangeUnderflow){
+				txt3= "Value too Small";
+			}else{
+				txt3= "Input OK";
+			}
+			document.getElementById("demo3").innerHTML= txt3;
+		}
+	</script>
+	<br/><hr/>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Methods</title>
+</head>
+<body>
+	<script>
+		function orang(namaAwal, namaAkhir, umur){
+			this.namaAwal= namaAwal;
+			this.namaAkhir= namaAkhir;
+			this.umur= umur;
+			this.gantiNama= function(nama){
+				this.namaAwal=nama;
+			}
+		}
+		var ibu= new orang("itegar", "iswasono", 21);
+		ibu.gantiNama("itegar2");
+	</script>
+</body>
+</html>

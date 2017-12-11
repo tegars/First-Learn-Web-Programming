@@ -1,0 +1,6 @@
+Contoh melakukan Penjumlahan:
+select 
+7+8
+;
+
+lalu enter

@@ -1,0 +1,26 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from m_ti;
++----------+---------+------------+-------+
+| nim      | nama    | alamat     | nilai |
++----------+---------+------------+-------+
+| 13650055 | tegar   | malang     | 100   |
+| 13650056 | swasono | pagelaran  | 90    |
+| 13650057 | tatag   | kademangan | 80    |
+| 13650058 | fairus  | lamongan   | 80    |
+| 13650059 | dani    | kediri     | 80    |
++----------+---------+------------+-------+
+5 rows in set (0.00 sec)
+
+
+
+
+#01
+MariaDB [latihan]> select max(nim) as nim_terbesar from m_ti;
++--------------+
+| nim_terbesar |
++--------------+
+|     13650059 |
++--------------+
+1 row in set (0.00 sec)
+

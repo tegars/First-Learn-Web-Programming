@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<style type="text/css">
+		table, th , td  {
+			border: 1px solid grey;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+		table tr:nth-child(odd)	{
+			background-color: #f1f1f1;
+		}
+		table tr:nth-child(even) {
+			background-color: #ffffff;
+		}
+	</style>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+	<script type="text/javascript">
+		var app1= angular.module('app1', []);
+		app1.controller('ctrl1', function($scope, $http){
+			$http.get('http://localhost/00_JS/angularJs/customers.php').then(function(response){
+				$scope.names= response.data.records;
+			});
+		});
+
+	</script>
+	<h2 align="center">01 Displaying data in a table</h2>
+	<table>
+  		<tr ng-repeat="x in names">
+		 	<td>{{x.Name}}</td>
+		 	<td>{{x.City}}</td>
+		   	<td>{{x.Country}}</td>
+		</tr>
+	</table>
+
+
+	<hr/>
+	<h2 align="center">02 orderBy Filter + uppercase</h2>
+	<table>
+		<tr ng-repeat="x in names|orderBy:'Country'">
+			<td>{{x.Name|uppercase}}</td>
+			<td>{{x.City}}</td>
+			<td>{{x.Country}}</td>
+		</tr>
+	</table>
+
+
+	<hr/>
+	<h2 align="center">03 Display the table Index($index)</h2>
+	<table>
+		<tr ng-repeat="x in names|orderBy:'Name'">
+			<td>{{$index+1}}</td>
+			<td>{{x.Name|uppercase}}</td>
+			<td>{{x.City}}</td>
+			<td>{{x.Country}}</td>
+		</tr>
+	</table>
+
+
+	<hr/>
+	<h2 align="center">04 Using $even and $odd</h2>
+
+	
+</body>
+</html>

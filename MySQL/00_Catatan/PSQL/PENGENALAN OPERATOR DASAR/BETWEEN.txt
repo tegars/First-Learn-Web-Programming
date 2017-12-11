@@ -1,0 +1,22 @@
+BETWEEN
+1. BETWEEN
+2. NOT BETWEEN
+3. Operatornya:
+      - <
+      - >
+      - <=
+      - >=
+      - =
+      - <> atau !=
+		
+   Contoh:
+   1. menampilkan mahasiswa dengan nim antara 3 dan 5
+      select * from mahasiswa where nim_mah between '3' and '5';
+      atau
+      select * from mahasiswa where nim_mah >= '3' and nim_mah <= '5';
+
+
+   2. menampilkan mahasiswa selain antara 3 dan 5
+      select * from mahasiswa where nim_mah not between '3' and '5';
+      atau
+      select * from mahasiswa where nim_mah<'3' and nim_mah>'5';

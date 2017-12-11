@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effect Fade</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="div1"  style="height:150px; width:300px; background-color:darkgrey;">Paragraf 1</div>
+	<button id="btn1">fadeIn</button>
+	<button  id="btn2">fadeOut</button>
+
+	<hr/>
+	<button id="btn3">toggle</button>
+
+	<hr/>
+	<button id="btn4">"slow", 0.15</button>
+	<button id="btn5">"slow", 0.4</button>
+	<button id="btn6">"slow", 0.7</button>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				$("#div1").fadeIn("slow");
+			});
+			$("#btn2").click(function(){
+				$("#div1").fadeOut("slow");
+			});
+
+			//aksi 2
+			$("#btn3").click(function(){
+				$("#div1").fadeToggle();
+			});
+
+			//aksi 3
+			$("#btn4").click(function(){
+				$("#div1").fadeTo("slow", 0.15);
+			});
+			$("#btn5").click(function(){
+				$("#div1").fadeTo("slow", 0.4);
+			});
+			$("#btn6").click(function(){
+				$("#div1").fadeTo("slow", 0.7);
+			});
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+	<hr/>
+	<img src="01.png">
+</body>
+</html>

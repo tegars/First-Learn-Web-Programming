@@ -1,0 +1,82 @@
+<plaintext>
+
+#00
+MariaDB [latihan]> select * from data_diri;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.04 sec)
+
+
+
+#01 - ACS
+MariaDB [latihan]> select * from data_diri order by nama;
+atau
+MariaDB [latihan]> select * from data_diri order by nama asc;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.00 sec)
+
+
+
+
+#02 - DESC
+MariaDB [latihan]> select * from data_diri order by nama desc;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.00 sec)
+
+
+
+#03 - Order By 2 colom
+MariaDB [latihan]> select * from data_diri order by cita_cita, nama;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [latihan]> select * from data_diri order by cita_cita desc, nama desc;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.00 sec)
+
+
+

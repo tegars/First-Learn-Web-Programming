@@ -1,0 +1,70 @@
+#1
+Style Background gambar:
+	background-image:url(1.jpg)
+			: url(none)
+
+	background-repeat:repeat
+			: repeat
+			: repeat-x
+			: repeat-y
+			: no-repeat
+
+	background-position:center center
+			: top left, 
+			: top center, 
+			: top right,center left, center right, bottom left, bottom center, bottom right
+
+			: background-position:5px 5px	//posisi ko'ordinat
+
+Style Lain:
+	background-size: 100% 100%;				//sesuai ukuran border
+			: 80px 60px;
+			: auto							//sesuai gambar asli
+			: cover
+			: contain
+			: initial
+
+	background-clip: content-box;			//sesuai tulisan yang ada di dalam border
+			: padding-box					//sesuai padding border
+			: border-box
+
+
+
+#2
+Style Background:
+	background-color:
+		
+Teknik pemberian warna ada 3:
+
+Cara Pemberian Warna Background-color dalam CSS:
+1.	Nama Warna
+	contoh: red, blue, black.
+	
+2.	Format RGB (Red-Green-Blue)
+	a.	rgb(x,y,z) dimana nilai max dari x,y,z adalah 255 atau menggunakan persen dimana max x,y,z adalah 100%
+		contoh: rgb(255,0,0) ataupun rgb(x%,y%,z%)
+	b.	rgba(x,y,z,a) dimana nilai max dari x,y,z adalah 255 dan nilai max dari a(alpha atau (opacity/ ketebalan/ transparansi) adalah 1
+		contoh: rgba(255,0,0,0.5)
+	c.	#rrggbb dimana nilai max dari ff, gg, bb adalah FF(pewarnaan menggunakan format heksadesimal)
+		contoh: #FF0000
+		
+3.	Format HSL	(Hue-Saturation-Lightness)
+	a.	hsl(x,y,z) dimana nilai max dari x adalah 360 dan nilai max dari y,z adalah 100%
+		contoh: hsl(120,50%,50%)
+	b.	hsla(x,y,z,a) dimana nilai max dari x adalah 360 dan nilai max dari y,z adalah 100% dan nilai max dari a(alpha atau (opacity/ ketebalan/ transparansi) adalah 1
+		contoh: hsla(120,50%,50%,0.5)
+
+TEKNIK GRADIENTS / GRADASI
+1.	Linear Gradient (atas, bawah, kiri, kanan)
+	background: linear-gradient(to bottom, green , yellow)
+			: (to bottom left, green , yellow)
+			: (180deg, green , yellow)								//ini pakai angles
+			: (red, green, blue)									//multicolor
+			: (red, orange, yellow, green, blue, indigo, violet)
+			: (red 10%, green 85%, blue 90%)
+
+2. Radial Gradients (muter tengah
+	background: radial-gradient(red, green, blue)
+			: (red 5%, green 15%, blue 60%)
+			: background: radial-gradient(circle, red, yellow, green)		//ini otomatis lingkaran karena defaultnya kadang lonjong
+			: (red, yellow 10%, green 15%);

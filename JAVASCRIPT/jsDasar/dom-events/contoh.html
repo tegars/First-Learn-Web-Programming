@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Events</title>
+</head>
+<body onload="id1.innerHTML='tatag'">
+	<ol>
+		<li>onload</li>
+		<li>onclick</li>
+		<li>onchange</li>
+		<li>onmouseover/onmouseout</li>
+		<li>onmousedown/onmouseup</li>
+	</ol>
+
+
+	<hr/>
+	<h5 id="id1"></h5>
+
+
+	<hr/>
+	<h1 onclick="this.innerHTML='Swasono'">Tegar Klik</h1>
+	<h1 onclick="fungsi(this)">Tegar Klik</h1>
+	<script>
+		function fungsi(id){
+			id.innerHTML='Swasono';
+		}
+		function fungsi1(){
+			var x=document.getElementById("nama");
+			x.value= x.value.toUpperCase();
+		}
+		function mOver(obj){
+			obj.style.backgroundColor = "#1ec5e5";
+			obj.innerHTML= "Thank You";
+		}
+		function mOut(obj){
+			obj.style.backgroundColor="#D94A38";
+			obj.innerHTML= "Mouse Over Me";
+		}
+		function mDown(obj){
+			obj.style.backgroundColor = "#1ec5e5";
+    		obj.innerHTML = "Release Me";
+		}
+		function mUp(obj) {
+			obj.style.backgroundColor="#D94A38";
+			obj.innerHTML="Thank You";
+		}
+	</script>
+
+
+	<hr/>
+	Nama: <input type="text" id="nama" onchange="fungsi1()">
+
+	<hr/>
+	<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+		Mouse Over Me
+	</div>
+
+	<hr/>
+	<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+		Click Me
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<plaintext>
+#00
+Default:
+	- tidak support pada text dan blob
+
+#01
+create table teman6(nama text, alamat varchar(255) default 'malang');
+MariaDB [latihan]> insert into teman6(nama) values('tegar');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [latihan]> select * from teman6;
++-------+--------+
+| nama  | alamat |
++-------+--------+
+| tegar | malang |
++-------+--------+
+1 row in set (0.00 sec)
+
+
+
+#02 - add default
+MySQL way:
+	alter table teman6 alter alamat set default 'malang';
+Oracle way:
+	alter table teman6 modify alamat default 'malang';
+SQL Server, MS Access way:
+	alter table teman6 alter column alamat set default 'malang';
+
+
+#03 - drop default
+MySQL way:
+	alter table teman6 alter alamat drop default;
+Oracle, SQL Server, MS Access way:
+	alter table teman6 alter column alamat drop default;
+
+
+
+
+
+
+
+
+

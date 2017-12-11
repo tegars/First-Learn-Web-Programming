@@ -1,0 +1,9 @@
+Musik:
+	<audio controls="controls" height="50px" width="100px">
+	<source src="bahan.mp3" type="audio/mpeg" />
+	</audio>
+	
+Video:
+	<video controls="controls" width="320" height="240">
+	<source src="bahan/ayu.mp4" type="video/mp4" />
+	</video>

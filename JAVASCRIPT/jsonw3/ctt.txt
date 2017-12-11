@@ -1,0 +1,29 @@
+APA ITU JSON
+	JSON	: JavaScript Object Notation
+	JSON adalah alternative XML
+	JSON is syntax for storing and exchanging data
+
+---------------------------------------------------------------------
+PERBANDINGAN JSON DAN XML
+	01 Ini menggunakan JSON
+	{"employees":[
+		{"firstName":"John","lastName":"Doe"},
+		{"firstName":"Anna","lastName":"Smith"},
+		{"firstName":"Peter","lastName":"Jones"}
+	]}
+
+	02 Ini menggunakan XML
+	<employees>
+		<employee>
+			<firstName>John</firstName><lastName>Doe</lastName>
+		</employee>
+		<employee>
+			<firstName>Anna</firstName><lastName>Smith</lastName>
+		</employee>
+	</employees>
+
+---------------------------------------------------------------------
+Kelebihan JSON
+	The JSON format is syntactically identical to the code for creating JavaScript objects.
+
+	Because of this similarity, instead of using a parser (like XML does), a JavaScript program can use standard JavaScript functions to convert JSON data into native JavaScript objects.

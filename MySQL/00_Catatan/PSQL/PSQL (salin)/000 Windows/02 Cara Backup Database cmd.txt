@@ -1,0 +1,13 @@
+01. Dengan GUI
+
+02. Dengan Coman Prompt
+    Posisi harus di bin nya PSQL
+    a. Cara Backup
+	   pg_dump -U namaUser  namaDatabase > lokasiHasilFileSql
+	   pg_dump -U akses pertemuan3 > D:\testing.sql
+	   //testing.sql inilah hasilnya
+	   
+    b. Cara Restore
+	   Siapkan dulu database penampung nya
+	   psql -U user -d namaDatabaseTujuan/DatabasePenampung < lokasiFileBackup
+	   psql -U akses -d pertemuan3 < D:\testing.sql

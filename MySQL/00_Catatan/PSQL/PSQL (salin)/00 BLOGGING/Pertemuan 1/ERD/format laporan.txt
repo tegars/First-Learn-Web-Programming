@@ -1,0 +1,10 @@
+Untuk sistematika penulisan laporan meliputi hal seperti berikut :
+1.Dasar teori yang menjabarkan setiap sub pembahasan diambil dari sumber terkait minimal 2 sumber. Disertakan sumber terkait berupa alamat atau daftar pustaka bila dari buku. (Nilai 15)
+2.Hasil Praktikum (hasil semua percobaan) dan Tugas Rumah (Nilai 40)
+3.Evaluasi Perbandingan 2 DBMS yaitu PostgreSQL dan MySQL. baik dari kemudahan atau kelebihan dan kelemahannya. (Nilai 25)
+4.Kesimpulan. Meliputi rangkuman, kritik dan saran serta manfaat bagi pembaca. (Nilai 10)
+*Kata-kata dalam tulisan bebas asal sopan
+*Pelanggaran untuk laporan : 
+- Paste 100% akan langsung diberi nilai = 40 bila 2 orang lebih yang sama
+- Per poin/sub bab laporan terdapat tulisan yang sama yang dibuat oleh 4 lebih praktikan nilai akan hilang berdasarkan poin / sub bab laporan.
+- Pengumpulan H-2, melebihi hari yng sudah ditentukan -10 poin...

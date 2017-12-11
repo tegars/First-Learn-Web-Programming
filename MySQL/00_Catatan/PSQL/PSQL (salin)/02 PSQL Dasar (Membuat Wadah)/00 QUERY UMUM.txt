@@ -1,0 +1,42 @@
+MENCARI PETUNJUK
+a. Cara mencari petunjuk
+   \h kata_kunci
+   Contoh:
+   1. mencari petunjuk rename user
+      \h alter
+
+QUERY UMUM		
+1.	Melihat Waktu Sekarang
+	a.	Lengkap
+		select current_timestamp;
+	b.	Tanggal Saja
+		select current_date;
+	c.	Jam Saja
+		select current_time;
+	d.	Membandingkan Waktu
+		select extract (day from now() - cast ('1999-10-11' as "timestamp"));
+		select (cast ('2014-09-18' as "timestamp") - cast ('1999-10-11' as "timestamp"));
+		
+		
+QUERY ARITMATIKA 
+1.	Menghitung Aritmatika
+		select 9+2 ;
+	atau
+		select
+		9+2 atau 9/2
+		;
+	INI UNTUK CASTING DARI INT KE FLOAT
+		select
+		9/2
+		::float
+		;
+
+	
+INFORMASI (Yang ini tanpa titik koma)
+1.	Menghapus query yang salah(reset)
+	\r
+2.	Melihat PSQL yang terakhir digunakan
+	\p
+	
+3.	Melihat Semua Perintah psql
+	\? lalu enter

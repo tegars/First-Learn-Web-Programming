@@ -1,0 +1,35 @@
+1.	Border Standart
+	<table border="1">						//angka 1 diganti 0 agar tanpa border
+	<caption>...</caption>					//memberi judul
+	<tr> 									//membuat baris
+		<th>no</th> 						//membuat kolom
+		<th>nama</th>
+		<th>alamat>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>tegar swasono</td>
+		<td>kademangan</td>
+	</tr>
+	
+	</table>
+
+2.	Style Border
+	<table border="1" align=”center” cellspacing="0" cellpadding="10" style="semua attribut CSS bisa siterapkan disini">	
+											//align untuk mengatur ke rata an
+											//cellspacing untuk mengatur spasi antar sell
+											//cellpadding untuk jarak antara tulisan dan border
+	<tr>
+		<th width=”50”>no</th>				//width untuk mengatur lebar kolom
+		<th colspan=2>nama</th>				//Colspan untuk menggabung ke kanan
+		<th rowspan=2>alamat</th>			//Rowspan untuk menggabung ke bawah
+	</tr>
+	</table>
+	
+3.	Atribut border
+	bgcolor="#FF9900"						//memberi warna dalam tabel
+	background="1.jpg"						//memberi background gambar
+	rules="groups"							//menghilangkan garis di dalam tabel
+	frame="hsides"							//menghilangkan garis luar tabel					//jenis frame tabel yang tak ada garis luarnya
+	<colgroup>								//memberi garis kebawah								//untuk col atau kolom
+	<tbody>									//memberi garis ke kanan							//untuk raw atau baris

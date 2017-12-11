@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML CSS classes</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<style type="text/css">
+		.gaya1{
+			font-weight: bold;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<p id="p1">Paragraf 1</p>
+	<button id="btn1">addClass()</button>
+	<button id="btn2">removeClass()</button>
+	<button id="btn3">toggleClass()</button>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#btn1").click(function(){
+				$("#p1").addClass("gaya1");
+			});
+			$("#btn2").click(function(){
+				$("#p1").removeClass("gaya1");
+			});
+			$("#btn3").click(function(){
+				$("#p1").toggleClass("gaya1");
+			});
+
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

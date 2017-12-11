@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', []);
+	app1.controller('ctrl1', function($scope){
+
+		//nomor 1
+		$scope.count1=0;
+		//nomor2
+		$scope.count2=0;
+		//nomor 3
+		$scope.showMe=false;
+		$scope.myFunc= function(){
+			$scope.showMe= !$scope.showMe;
+		}
+		//nomor 4
+		$scope.myFunc4= function(myE){
+			$scope.x= myE.clientX;
+			$scope.y= myE.clientY;	
+		}
+		
+
+
+	});
+</script>
+<h2 align="center">01 Mouse Events</h2>
+<h3 ng-mousemove="count1= count1+1">Mouse Over Me !</h3>
+<h4>{{count1}}</h4>
+
+
+<hr/>
+<h2 align="center">02 ng-click Directive</h2>
+<button ng-click="count2= count2+1">Klik Me</button>
+<p>{{count2}}</p>
+
+
+<hr/>
+<h2 align="center">03 Toggle</h2>
+<button ng-click="myFunc()">Toggle</button>
+<div ng-show="showMe">
+	<p>Pilih 1</p>
+	<p>Pilih 2</p>
+	<p>Pilih 3</p>
+</div>
+
+
+<hr/>
+<h2 align="center">04 $event Object</h2>
+<h3 ng-mousemove="myFunc4($event)">Mouse Over Me!</h3>
+<p>Coordinate: {{x+', '+y}}</p>
+	
+
+	<hr/>
+	<img src="00.png">
+	<hr/>
+	<img src="01.png">
+</body>
+</html>

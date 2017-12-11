@@ -1,0 +1,5 @@
+Untuk Melihat Fungsi Sintak Dari:
+\h [comand]
+
+Contoh:
+\h alter

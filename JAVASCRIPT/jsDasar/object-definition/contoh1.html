@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic</title>
+</head>
+<body>
+	<script>
+		//BELAJAR MEMBUAT OBJEK
+		//cara 1
+		var orang= "tegar";
+
+		//cara 2 - variabel berisi variabel
+		var orang1= {
+			namaAwal:"tegar",
+			namaAkhir:"swasono",
+			umur:"21"
+		};
+
+		//cara 3 - object
+		var orang2= new Object();
+		orang2.namaAwal="tegar";
+		orang2.namaAkhir="swasono";
+		orang2.umur="21";
+
+		//cara 4 - fungsi
+		function orang3(awal, akhir, umur){
+			this.namaAwal= awal;
+			this.namaAkhir= akhir;
+			this.umur= umur;
+		}
+		var ayah= new orang3("ategar", "aswasono", "40");
+		var ibu= new orang3("itegar", "iswasono", "40");
+
+		//cara 5
+		var x1= new Object();
+		var x2= new String();
+		var x3= new Number();
+		var x4= new Boolean();
+		var x5= new Array();
+		var x6= new RegExp();
+		var x7= new Function();
+		var x8= new Date();
+		//cara penggunaan nya baca no-3
+	</script>
+</body>
+</html>

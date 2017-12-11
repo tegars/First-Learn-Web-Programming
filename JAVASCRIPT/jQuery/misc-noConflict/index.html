@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Misc - noConflict()</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<h2 align="center">Ada 3 Cara</h2>
+	<div id="div1" style="height:150px; width:300px; background-color:darkgrey;"></div>
+	<br/>
+	<button id="btn1">noConflict()</button>
+
+	<script type="text/javascript">
+		//cara ke 1
+		$.noConflict();
+		jQuery(document).ready(function(){
+			jQuery("#btn1").click(function(){
+				jQuery("div").toggle("slow");
+			});
+		});
+
+        //cara ke 2
+  //       var jq= $.noConflict();
+  //       jq(document).ready(function(){
+  //       	jq("#btn2").click(function(){
+  //       		jq("div").toggle("slow");
+  //       	});
+  //       });
+
+  //       //cara ke 3
+  //       $.noConflict();
+		// jQuery(document).ready(function($){
+  //   		$("#btn3").click(function(){
+  //       		$("div").toggle("slow");
+  //   		});
+		// });
+	</script>
+</body>
+</html>

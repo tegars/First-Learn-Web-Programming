@@ -1,0 +1,81 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from teman;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+13 rows in set (0.00 sec)
+
+
+
+#01 - 1=1 selalu benar
+MariaDB [latihan]> SELECT * FROM teman WHERE id = 43 or 1=1;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+13 rows in set (0.00 sec)
+//lihat apakah ada admin dengan id = 43, tidak ada tapi dia tetap berhasil masuk
+//sebagai admin yang paling atas dalam index
+
+
+
+#02 - ""="" selalu benar
+MariaDB [latihan]> SELECT * FROM teman WHERE id ="" or ""="" AND nama ="" or ""="";
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+13 rows in set (0.00 sec)
+
+
+
+
+#03 - Batched SQL Statements(menambahkan statement)
+select * from teman where id=1; drop table teman;
+
+
+
+
+#04 - Parameters for Protection
+ini berada pada level coding

@@ -1,0 +1,40 @@
+Cara Backup/ Eksport:
+1. psql -U postgres -h localhost nama_db > /home/awal/backup/dbku.sql
+   
+Cara Import:
+1. psql -U postgres -h localhost -d db_tujuan < /home/awal/backup/dbku.sql
+
+
+//--//
+
+Dengan Format yang terkompresi(jika database berukuran besar)
+1. pg_dump -U postgres -h localhost -Fc dbku > /home/awal/backup/dbku.backup
+
+Restore:
+1. Tetapi untuk melakukan restore harus menggunakan perintah “pg_restore”.
+   pg_restore -U postgres -h localhost -d dbku < /home/awal/backup/dbku.backup
+
+
+//--//
+
+1. hanya 1 tabel
+   Sedangkan untuk melakukan backup pada salah satu tabel di database gunakan option “-t namatabel” :
+   pg_dump -U postgres -h localhost -t tabeluser dbku > /home/awal/backup/dbku_tabeluser.sql
+
+   Misalkan 2 tabel
+   pg_dump -U postgres -h localhost -t nama_tabel -t nama_tabel dbku > /home/awal/backup/dbku_tabeluser.sql
+
+2. restore
+   Untuk mengetahui proses backup maupun restore yang sedang diproses tambahkan option “-v”.
+   pg_dump -U postgres -h localhost -v dbku < /home/awal/backup/dbku.sql
+
+
+//--//
+1. dari komputer lain
+   Contoh melakukan backup dan restore database “dbku” dikomputer lain dengan user “userku” dan port “5432″ :
+   pg_dump -U userku -h 192.168.1.9 -p 5432 -Fc -vb dbku > /home/awal/backup/dbku.backup
+
+2. restore
+   pg_restore -U userku -h 192.168.1.9 -p 5432 -v -d dbku < /home/awal/backup/dbku.backup
+
+

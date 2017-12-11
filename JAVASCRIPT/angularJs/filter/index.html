@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="myApp1" ng-controller="ctrl1">
+	<script type="text/javascript">
+		var app1= angular.module('myApp1', []);
+
+		app1.controller('ctrl1', function($scope){
+			//nomor 1
+			$scope.awal="Tegar";
+			$scope.akhir="Swasono";
+
+			//nomor 2, 6
+			$scope.mahasiswa= [
+				{nama: 'Tegar', alamat:'Malang'},
+				{nama: 'Fairus', alamat:'Lamongan'},
+				{nama: 'Dani', alamat:'Kediri'},
+				{nama: 'Tatak', alamat:'Pasuruan'},
+				{nama: 'Ayom', alamat:'Sidoarjo'},
+
+				{nama: 'Ari', alamat:'Blitar'},
+				{nama: 'Arif', alamat:'Pasuruan'}
+			];
+			$scope.orderByMe = function(x){
+				$scope.myOrderBy = x;
+			};
+
+			//nomor 3
+			$scope.harga= 50000;
+
+			//nomor 5
+			$scope.nama= [
+				'tegar',
+				'fairus',
+				'dani',
+				'ayom',
+				'tatak',
+				'ari',
+				'arif'
+			];
+
+		});
+
+		//nomor 7
+		app1.filter('myFormat', function() {
+		    return function(x) {
+		        var i, c, txt = "";
+		        x = x.split("")
+		        for (i = 0; i < x.length; i++) {
+		            c = x[i];
+		            if (i % 2 == 0) {
+		                c = c.toUpperCase();
+		            }
+		            txt += c;
+		        }
+		        return txt;
+		    };
+		});
+	</script>
+
+	<h2 align="center">01 Uppercase dan Lowercase</h2>
+	<div>
+		<p>ini contoh pakek uppercase {{akhir | uppercase}}</p>
+		<p>ini contoh pakek lowercase {{awal | lowercase}}</p>
+	</div>
+
+
+	<hr/>
+	<h2 align="center">02 Filter</h2>
+	<div>
+		<ul>
+			<li ng-repeat="x in mahasiswa|orderBy:'alamat'">
+				{{x.nama+', '+x.alamat}}
+			</li>
+		</ul>
+	</div>
+
+
+	<hr/>
+	<h2 align="center">03 Currency Filter</h2>
+	<h3>Harga {{harga|currency}}</h3>
+
+
+	<hr/>
+	<h2 align="center">04 Filter Filter - Mendapatkan nama yang memili karakter i</h2>
+	<div>
+		<ul ng-repeat="x in mahasiswa|filter:{nama:'i'}">
+			<li>
+				{{x.nama+", "+x.alamat}}
+			</li>
+		</ul>
+	</div>
+
+
+	<hr/>
+	<h2 align="center">05 filter array dengan input type text</h2>
+	<div>
+		<p><input type="text" ng-model="cari"></p>
+		<ul>
+			<li ng-repeat="x in nama|filter:cari">
+				{{x}}
+			</li>
+		</ul>
+	</div>
+
+
+	<hr/>
+	<h2 align="center">06 Mengurutkan berdasarkan nama atau alamat</h2>
+	<div>
+		<table border="1" width="100%" style="border-collapse:collapse;">
+			<tr>
+				<th ng-click="orderByMe('nama')">Nama</th>
+				<th ng-click="orderByMe('alamat')">Alamat</th>
+			</tr>
+			<tr ng-repeat="x in mahasiswa|orderBy:myOrderBy">
+				<td>{{x.nama}}</td>
+				<td>{{x.alamat}}</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<hr/>
+	<h2 align="center">07 Custom Filter</h2>
+	<ul>
+		<li ng-repeat="x in nama">
+			{{x|myFormat}}
+		</li>
+	</ul>
+
+
+	<hr/>
+	<img src="00.png">
+	<hr/>
+</body>
+</html>

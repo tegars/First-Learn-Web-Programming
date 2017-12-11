@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML - CSS</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p>INi paragraf 1</p>
+	<p>INi paragraf 2</p>
+	<p>INi paragraf 3</p>
+	<button id="btn1">Satu Style</button>
+	<button id="btn2">Banyak Style</button>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#btn1").click(function(){
+				$("p").css("background-color", "yellow");
+			});
+			$("#btn2").click(function(){
+				$("p").css({
+					"background-color": "#eee",
+					"font-weight": "bold",
+					"font-size": "200%"
+				});
+			});
+
+		});
+	</script>
+</body>
+</html>

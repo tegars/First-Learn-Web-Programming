@@ -1,0 +1,29 @@
+USER
+harus punya nama dan password
+1.	Membuat User + Pemberian Hak
+	CREATE USER nama_user;
+	HAK USER
+		superuser		: hak segalanya
+		createDB		: hak membuat database
+		create role		: 
+		replication		: 
+	
+	1.	HAK SUPERUSER
+			CREATE USER nama_user with superuser password 'passwormu';	
+			
+	2.	User dengan hak membuat database
+			CREATE USER nama_user with createDB password ‘passwormu’;
+			
+			
+						
+2.	Menghapus user
+	drop user nama_user;
+	
+3.	Mengganti nama user
+	alter user nama_lama rename to nama_baru;
+		
+4.	Melihat List User
+	\du
+
+5.	Mengganti password user
+	alter user nama_user with password 'pw_mu';

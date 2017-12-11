@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Preview Image Before Uploading using jQuery</title>
+    <style type="text/css">
+        img#imgPreview
+        {
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#fuImage').on('change', function () {
+            $("img#imgPreview").attr('src', ''); //First remove the image src if already selected
+            //To check if uploaded file is image only..
+            var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+            if ($.inArray($(this).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+                alert("Only image files are allowed!");
+                return false;
+            }
+            //To check if browser version IE <= 9, apply image filter type to support <= IE9..
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+             var img = $('img#imgPreview')[0];
+             img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = $(this).val();
+             img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').sizingMethod = 'scale';
+            } else {
+                //To check 'FileReader' is supported by browser or not..
+                if (typeof (FileReader) != 'undefined') {
+                    var frImage = new FileReader();
+                    frImage.onload = function (e) {
+                        $("img#imgPreview").attr('src', e.target.result);
+                    }
+                    frImage.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("Your browser does not support FileReader!");
+                }
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width: 300px;">
+        <strong>Select Image: </strong>
+        <input type="file" id="fuImage" />
+        <br />
+        <img id="imgPreview" alt="Preview Image" src="" width="300" height="250" />
+    </div>
+    </form>
+</body>
+</html>

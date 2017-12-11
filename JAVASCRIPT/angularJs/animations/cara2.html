@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animations</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script src="../js/angular-animate.min.js"></script>
+<style>
+div{
+	transition: all linear 0.5s;
+	background-color: lightblue;
+	height: 100px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.ng-hide {
+	height: 0;
+	width: 0;
+	background-color: transparent;
+	top:-200px;
+	left: 200px;
+}
+</style>
+
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', ['ngAnimate']);
+	app1.controller('ctrl1', function($scope){
+
+		
+	});
+</script>
+	<h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+<div ng-hide="myCheck"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+    	<a href="#" title="Dismissible popover" data-toggle="popover_user" data-target="#iseng" data-placement="bottom" data-trigger="focus"  data-content="#iseng">Click me</a>
+	</div>
+	<script>
+	$(document).ready(function(){
+	    $('[data-toggle="popover_user"]').popover();   
+	});
+	</script>
+
+	<div id="iseng" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Aceh D.I</h4>
+      			</div>
+      		</div>
+      	</div>
+    </div>
+</body>
+</html>

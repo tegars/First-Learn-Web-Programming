@@ -1,0 +1,73 @@
+FORM - Isian untuk user
+<form action="tes.php" method="GET">
+	element
+</form>
+-----------------------------------------------------------------
+1.	Type Text / Password
+	<form name="form1">
+		Ini tipe text<br>
+		<input type="text" name="firstname"><br>
+		Ini tipe password<br>
+		<input type="password" name="psswrd"><br>
+	</form>
+	
+	Attribut:
+	size="20"								//atur panjang
+	disabled="true"							//agar tidak bisa di edit
+	maxlength="3"							//isi maksimal dari form
+
+
+2.	Type Submit, type button
+	<form name="form1">
+		<input type="submit" value="ok"> <br>			// setelah di klik langsung refresh
+		<input type="submit" value="Search"> <br>
+		<input type="button" value="Search"> <br>		// jika di klik tidak me refresh
+	</form>
+
+
+3.	Type Radio Buttons
+	<form name="form1">
+		<input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female" checked>Female<br>
+	</form>
+
+
+4.	Type Checkbox									
+	<form name="form1">
+		<input type="checkbox" name="vehicle" value="Matematika">suka matematika <br>
+		<input type="checkbox" name="vehicle" value="Fisika">suka fisika
+	</form>
+
+
+5.	Drop Down
+	<form name="form1">
+		<select name="cars">
+		<option value="Toyota">Toyota</option>
+		<option value="Honda">Honda</option>
+		<option value="Mitsubishi">Mitsubishi</option>
+		<option value="Daihatsu">Daihatsu</option>
+		</select>
+	</form>
+-----------------------------------------------------------------
+# Agar Rapi pakek Sintaks gabungan form dan bolder
+	<form method="post" action="">
+	<table border="0">
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+	</form>
+	
+#Border sendiri
+<form action="action_page.php">
+	<fieldset>
+		<legend>Personal information:</legend>
+			First name:<br>
+			<input type="text" name="firstname" value="Mickey"><br>
+			Last name:<br>
+			<input type="text" name="lastname" value="Mouse"><br><br>
+			<input type="submit" value="Submit">
+		</fieldset>
+</form>
+

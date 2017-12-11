@@ -1,0 +1,5 @@
+<!--ini baris komentar mu-->
+atau
+<!--ini
+baris komentar
+mu-->

@@ -1,0 +1,3 @@
+01. letak save file
+    /opt/PostgreSQL/9.3
+

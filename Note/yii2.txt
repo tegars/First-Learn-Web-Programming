@@ -1,0 +1,8 @@
+
+
+Cara Install:
+	composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+	composer create-project --prefer-dist yiisoft/yii2-app-advanced basic
+	composer create-project yiisoft/yii2-app-basic basic 2.0.8
+	composer create-project yiisoft/yii2-app-advanced advanced 2.0.8
+	

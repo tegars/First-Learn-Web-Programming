@@ -1,0 +1,41 @@
+<plaintext>
+#00
+MariaDB [latihan]> select nama from m_ti;
++---------+
+| nama    |
++---------+
+| tegar   |
+| swasono |
+| tatag   |
+| fairus  |
+| dani    |
++---------+
+5 rows in set (0.00 sec)
+
+
+#01
+MariaDB [latihan]> select mid(nama, 1,3) from m_ti;
++----------------+
+| mid(nama, 1,3) |
++----------------+
+| teg            |
+| swa            |
+| tat            |
+| fai            |
+| dan            |
++----------------+
+5 rows in set (0.00 sec)
+
+
+#02
+MariaDB [latihan]> select mid(nama, 3,5) from m_ti;
++----------------+
+| mid(nama, 3,5) |
++----------------+
+| gar            |
+| asono          |
+| tag            |
+| irus           |
+| ni             |
++----------------+
+5 rows in set (0.00 sec)

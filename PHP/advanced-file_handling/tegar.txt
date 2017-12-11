@@ -1,0 +1,3 @@
+nama	: tegar swasono
+alamat	: malang
+hobi	: coding

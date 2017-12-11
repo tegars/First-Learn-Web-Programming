@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body>
+	<hr/>
+	01 ng-app<br/>
+	02 ng-init<br/>
+	03 ng-model<br/>
+	04 membuat sendiri - ini punya aturan khusus<br/>
+	<hr/>
+	ini adalah hasil dari ng-repeat=""
+	<br/>
+	<div ng-app="" ng-init="nama=['tegar', 'swasono', 'tatag']">
+		<ul>
+			<li ng-repeat="x in nama">{{x}}</li>
+		</ul>
+	</div>
+	<hr/>
+	langsung ke nomor 4
+	<hr/>
+	<div ng-app="app1">
+		<directive-1-gan></directive-1-gan>
+	</div>
+	<hr/>
+	<script type="text/javascript">
+		//no 1 di dalam <tag sendiri>
+		var modul1= angular.module("app1", []);
+	
+
+
+		//no 2 <div directive>
+
+		//no 3 <div class="directive">
+
+		//no 4 <!-- directive -->
+	</script>
+</body>
+</html>

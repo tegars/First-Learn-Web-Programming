@@ -1,0 +1,24 @@
+LIHAT BAGAN DI FOLDER ATAS:
+Wrapper berisi:
+	1. Header
+	2. Inner
+		1. Sidebar
+		2. Content
+	3. Footer
+
+Agar layout full atau margin adalah enol maka
+	<!--
+	body {									//inilah kodenya
+		margin: 0px;
+		padding: 0px;
+	}
+	.wrapper{	width:auto;
+			}
+			
+	.header	{	width:auto;
+				height:150px;
+				background-color:aqua;
+			}
+				
+	-->
+	

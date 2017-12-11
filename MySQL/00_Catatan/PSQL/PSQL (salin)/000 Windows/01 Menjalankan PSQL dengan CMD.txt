@@ -1,0 +1,18 @@
+1. Masuk dulu di tempat bin dari psql
+   cd C:\Program Files\PostgreSQL\9.2\bin
+
+	
+2.a. Masuk ke user saja
+     psql -U nama user
+     lalu masukkan password mu
+		
+  b. Masuk ke user dan Langsung koneksi ke database
+     psql -U nama_user namadatabase
+     lalu masukkan password mu
+
+		
+3. kalo berhasil muncul tulisan
+   a. nama_user=#										: jika hanya masuk ke user saja
+   b. namadatabase=#										: jika langsung koneksi ke database
+	
+4. Semua perintah PSQL udah bisa dijalanin tuh,..!!! HORE!!!

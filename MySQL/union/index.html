@@ -1,0 +1,79 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from m_ti;
++----------+---------+------------+-------+
+| nim      | nama    | alamat     | nilai |
++----------+---------+------------+-------+
+| 13650055 | tegar   | malang     | 100   |
+| 13650056 | swasono | pagelaran  | 90    |
+| 13650057 | tatag   | kademangan | 80    |
+| 13650058 | fairus  | lamongan   | 80    |
+| 13650059 | dani    | kediri     | 80    |
++----------+---------+------------+-------+
+5 rows in set (0.00 sec)
+
+MariaDB [latihan]> select * from m_ta;
++----------+----------+----------+-------+
+| nim      | nama     | alamat   | nilai |
++----------+----------+----------+-------+
+| 13660055 | taqiudin | pasuruan | 50    |
+| 13660056 | ayom     | sidoarjo | 70    |
+| 13660057 | ari      | pasuruan | 60    |
+| 13660058 | arif     | blitar   | 80    |
+| 13660059 | muharram | sidoarjo | 80    |
++----------+----------+----------+-------+
+5 rows in set (0.00 sec)
+
+#01 - union
+MariaDB [latihan]> select nilai from m_ti union select nilai from m_ta;
++-------+
+| nilai |
++-------+
+| 100   |
+| 90    |
+| 80    |
+| 50    |
+| 70    |
+| 60    |
++-------+
+6 rows in set (0.05 sec)
+
+
+#02 - union all
+MariaDB [latihan]> select nilai from m_ti union all select nilai from m_ta;
++-------+
+| nilai |
++-------+
+| 100   |
+| 90    |
+| 80    |
+| 80    |
+| 80    |
+| 50    |
+| 70    |
+| 60    |
+| 80    |
+| 80    |
++-------+
+10 rows in set (0.00 sec)
+
+#03 - union where 
+MariaDB [latihan]> select nilai from m_ti where alamat='pasuruan' union select nilai from m_ta where alamat='pasuruan';
++-------+
+| nilai |
++-------+
+| 50    |
+| 60    |
++-------+
+2 rows in set (0.00 sec)
+MariaDB [latihan]> select nama, nilai from m_ti where alamat='pasuruan' union select nama, nilai from m_ta where alamat='pasuruan';
++----------+-------+
+| nama     | nilai |
++----------+-------+
+| taqiudin | 50    |
+| ari      | 60    |
++----------+-------+
+2 rows in set (0.00 sec)
+
+
+

@@ -1,0 +1,6 @@
+MENAMPILKAN NAMA KOLOM SESUAI KEINGINAN
+   a. hanya 1 column 
+      select nama_kolom as nama_pengganti from nama_tabel;
+   b. jika 2 column
+      select nama_kolom as nama_pengganti, nama_kolom as nama_pengganti from nama_tabel;
+

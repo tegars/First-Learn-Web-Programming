@@ -1,0 +1,65 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from teman;
++----------+----------+--------------+
+| id       | nama     | alamat       |
++----------+----------+--------------+
+|        1 | anton33  | kademangan33 |
+|        2 | rojakan  | kademangan   |
+|        3 | piyan    | kademangan   |
+|        4 | jaka     | kademangan   |
+|        7 | tegar    | jakarta      |
+|        8 | asdfas   | asdfasdf     |
+|       10 | fairus   | lamongan     |
+|       11 | dani     | kediri       |
+|       13 | ayom     | sidoarjo     |
+|       16 | asdseg   | sdfg         |
+|       17 | sdfgsdfg | sdfgds       |
+|       21 | tt       | malang       |
+|       22 | tg       | pagelaran    |
++----------+----------+--------------+
+13 rows in set (0.00 sec)
+
+
+#01 
+MariaDB [latihan]> insert into teman(id, nama) select id, nama from mahasiswa;
+Query OK, 7 rows affected, 1 warning (0.00 sec)
+Records: 7  Duplicates: 0  Warnings: 1
+inilah hasilnya:
+	MariaDB [latihan]> select * from teman;
+	+----------+----------+--------------+
+	| id       | nama     | alamat       |
+	+----------+----------+--------------+
+	|        1 | anton33  | kademangan33 |
+	|        2 | rojakan  | kademangan   |
+	|        3 | piyan    | kademangan   |
+	|        4 | jaka     | kademangan   |
+	|        7 | tegar    | jakarta      |
+	|        8 | asdfas   | asdfasdf     |
+	|       10 | fairus   | lamongan     |
+	|       11 | dani     | kediri       |
+	|       13 | ayom     | sidoarjo     |
+	|       16 | asdseg   | sdfg         |
+	|       17 | sdfgsdfg | sdfgds       |
+	|       21 | tt       | malang       |
+	|       22 | tg       | pagelaran    |
+	| 13650055 | tegar    |              |
+	| 13650056 | swasono  |              |
+	| 13650057 | tatag    |              |
+	| 13650058 | dodo     |              |
+	| 13660058 | fairus   |              |
+	| 13660059 | dani     |              |
+	| 13670070 | ari      |              |
+	+----------+----------+--------------+
+	20 rows in set (0.00 sec)
+
+
+
+#02 - With Where
+MariaDB [latihan]> insert into teman(id, nama) select id, nama from mahasiswa  where alamat='malang';
+
+
+
+
+
+

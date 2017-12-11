@@ -1,0 +1,27 @@
+XML		= eXtensible Markup Language				//di khususkan untuk mengolah informasi
+HTML	= HyperText Markup Language					//di khusukan hanya untuk menampilkan informasi
+XHTML	= eXtensible HyperText Markup Language		//gabungan antara html dan xml		//banyak aturan dan ribet
+
+Perbedaan Penulisan XHTML dan HTML
+XHTML
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN”			
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”>			
+<html xmlns="http://www.w3.org/1999/xhtml">						
+<head>
+<title></title>
+</head>
+<body>
+</body>
+</html>
+
+HTML
+<!DOCTYPE HTML>			//data tipe deklarasi(DTD)		//mendeklarasikan bahasa dan versi apa yang digunakan oleh dokument
+<html lang="en">		//deklarasi dari XML
+<head>
+<title></title>
+</head>
+<body>
+</body>
+</html>
+
+

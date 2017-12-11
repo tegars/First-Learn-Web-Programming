@@ -1,0 +1,103 @@
+#ISI SETTINGAN APACHE SAYA
+
+# Virtual Hosts
+#
+# Required modules: mod_log_config
+
+# If you want to maintain multiple domains/hostnames on your
+# machine you can setup VirtualHost containers for them. Most configurations
+# use only name-based virtual hosts so the server doesn't need to worry about
+# IP addresses. This is indicated by the asterisks in the directives below.
+#
+# Please see the documentation at 
+# <URL:http://httpd.apache.org/docs/2.4/vhosts/>
+# for further details before you try to setup virtual hosts.
+#
+# You may use the command line option '-S' to verify your virtual host
+# configuration.
+
+#
+# VirtualHost example:
+# Almost any Apache directive may go into a VirtualHost container.
+# The first VirtualHost section is used for all requests that do not
+# match a ServerName or ServerAlias in any <VirtualHost> block.
+#
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host.example.com
+    DocumentRoot "/opt/lampp/docs/dummy-host.example.com"
+    ServerName dummy-host.example.com
+    ServerAlias www.dummy-host.example.com
+    ErrorLog "logs/dummy-host.example.com-error_log"
+    CustomLog "logs/dummy-host.example.com-access_log" common
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@dummy-host2.example.com
+    DocumentRoot "/opt/lampp/docs/dummy-host2.example.com"
+    ServerName dummy-host2.example.com
+    ErrorLog "logs/dummy-host2.example.com-error_log"
+    CustomLog "logs/dummy-host2.example.com-access_log" common
+</VirtualHost>
+
+
+#server localhost
+<VirtualHost *:80>
+    ServerAdmin your_email@domain_name.com
+    DocumentRoot /opt/lampp/htdocs
+    ServerName localhost
+    ServerAlias www.mysite.local
+    ErrorLog logs/mysite.local-error_log
+    CustomLog logs/mysite.local-access_log common
+</VirtualHost>
+#server code.dev
+<VirtualHost *:80>
+    ServerAdmin your_email@domain_name.com
+    DocumentRoot /opt/lampp/htdocs/code
+    ServerName code.dev
+    ServerAlias www.mysite.local
+    ErrorLog logs/mysite.local-error_log
+    CustomLog logs/mysite.local-access_log common
+</VirtualHost>
+#
+<VirtualHost *:80>
+    ServerAdmin your_email@domain_name.com
+    DocumentRoot /opt/lampp/htdocs/app_kecil
+    ServerName app_kecil.dev
+    ServerAlias www.mysite.local
+    ErrorLog logs/mysite.local-error_log
+    CustomLog logs/mysite.local-access_log common
+</VirtualHost>
+#server yii2.dev
+<VirtualHost *:80>
+    ServerAdmin your_email@domain_name.com
+    DocumentRoot /opt/lampp/htdocs/yii2
+    ServerName yii2.dev
+    ServerAlias www.mysite.local
+    ErrorLog logs/mysite.local-error_log
+    CustomLog logs/mysite.local-access_log common
+</VirtualHost>
+
+ <VirtualHost *:80>
+       ServerName blog.dev
+       DocumentRoot "/opt/lampp/htdocs/yii2/blog/web/"
+
+       <Directory "/opt/lampp/htdocs/yii2/blog/web/">
+           # use mod_rewrite for pretty URL support
+           RewriteEngine on
+           # If a directory or a file exists, use the request directly
+           RewriteCond %{REQUEST_FILENAME} !-f
+           RewriteCond %{REQUEST_FILENAME} !-d
+           # Otherwise forward the request to index.php
+           RewriteRule . index.php
+
+           # use index.php as index file
+           DirectoryIndex index.php
+
+           # ...other settings...
+       </Directory>
+   </VirtualHost>
+
+
+
+
+

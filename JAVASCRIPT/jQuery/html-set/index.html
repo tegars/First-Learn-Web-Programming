@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Set</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<style type="text/css">
+		p{
+			color:green;
+		}
+	</style>
+</head>
+<body>
+	<p id="p1">INi paragraf 1</p>
+	<p id="p2">Ini paragraf 2</p>
+	<button id="btn1">text()</button>
+	<button id="btn2">html()</button>
+
+	<hr/>
+	nama: <input type="text" value="testing"><br/>
+	<button id="btn3">val()</button>
+
+	<hr/>
+	<a href="http://www.w3schools.com/" title="menuju w3school">Link google w3schooll berubah jadi google</a><br/>
+	<button id="btn4">attr() - Rubah attribut link</button>
+
+	<hr/>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				$("#p1").text("Hai tegar");
+			});
+			$("#btn2").click(function(){
+				$("#p2").html("<b>Ini swasono</b>");
+			});
+
+			//aksi 2
+			$("#btn3").click(function(){
+				$("input").val("swasono");
+			});
+
+			$("#btn4").click(function(){
+				$("a").attr({
+					"href": "https://www.google.co.id/",
+					"title" : "google sam"
+				});
+			});
+
+		});
+	</script>
+</body>
+</html>

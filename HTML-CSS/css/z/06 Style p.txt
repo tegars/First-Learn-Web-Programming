@@ -1,0 +1,30 @@
+Style <p>:
+	color:red;							//warna tulisan
+	font-style:italic;					//italic
+	font-weight:bold; 					//tebal
+	font-decoration:underline;			//garis bawah
+		: line-through					//garis pada tulisan
+		: overline						//atas tulisan
+
+	font-family:chiller;				//jenis tulisan
+	background-color:green;				//background tulisan
+	text-transform:uppercase;			//tulisan otomatis huruf besar
+	
+	text-align:center;					//kerataan
+		: center
+		: justify
+	font-size:22px;						//ukuran tulisan
+	letter-spacing:2px;					//jarak antar huruf
+	word-spacing:30px;					//jarak antar tulisan
+	line-height:36px;					//jarak antar baris
+	text-indent:50px;					//fungsi tab
+	
+	text-shadow:3px 2px red;			//memberi bayangan 					// 3 adalah horisontal dan 2 adalah vertikal
+	text-shadow: 2px 2px 5px red;		//5 adalah ukuran blur dari bayangan
+	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;							// double shadow
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;		// triple shadow
+
+
+
+
+

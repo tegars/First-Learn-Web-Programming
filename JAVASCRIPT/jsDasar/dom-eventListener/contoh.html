@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom EventListener</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<button id="myBtn">Klik Me</button>
+	<script>
+		//AKSI MOUSE
+		// onload
+		// onclick
+		// onchange
+		// onmouseover/onmouseout
+		// onmousedown/onmouseup
+
+		//AKSI WINDOW
+		//resize
+
+		//MENGHAPUS AKSI
+		//document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+		document.getElementById("myBtn").addEventListener("click", displayDate);
+		function displayDate(){
+			document.getElementById("demo").innerHTML= Date();
+		}
+	</script>
+	
+	<hr/>
+	<p>Silahkan ubah ukuran windows</p>
+	<p id="demo1"></p>
+	<script>
+		window.addEventListener("resize", function(){
+		    document.getElementById("demo1").innerHTML = Math.random();
+		});
+	</script>
+
+	<hr/>
+	<button id="btn2">Klik Me</button>
+	<p id="demo2"></p>
+	<script>
+		document.getElementById("btn2").addEventListener("click", function(){jumlah(5,7)});
+		function jumlah(a, b){
+			var hasil= a*b;
+			document.getElementById("demo2").innerHTML=hasil;
+		}
+	</script>
+
+	<hr/>
+
+</body>
+</html>

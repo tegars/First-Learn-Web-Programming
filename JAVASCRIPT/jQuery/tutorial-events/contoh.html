@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Events</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<hr/>
+	<img src="01.png">
+
+	<hr/>
+	<p id="p1">paragraf satu - click</p>
+
+	<hr/>
+	<p id="p2">paragraf dua - dblclick</p>
+	
+	<hr/>
+	<p id="p3">paragraf tiga - mouseenter</p>
+	
+	<hr/>
+	<p id="p4">paragraf empat - mouseleave</p>
+	
+	<hr/>
+	<p id="p5">paragraf lima - mousedown - mouse jatuh</p>
+	
+	<hr/>
+	<p id="p6">paragraf enam - mouseup - mouse diangkat - coba tekan lama</p>
+	
+	<hr/>
+	<p id="p7">paragraf tujuh - hover</p>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#p1").click(function(){
+				$(this).hide();
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p2").dblclick(function(){
+				alert("hasil klik double");
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p3").mouseenter(function(){
+				alert("Mouse Entered\natau Mouse masuk");
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p4").mouseleave(function(){
+				alert("Mouse Leave \nMouse keluar");
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p5").mousedown(function(){
+				alert("Mouse Down \nMouse Jatuh/ terklik atau lainya");
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p6").mouseup(function(){
+				alert("Mouse naik \n setelah terklik");
+			});
+		});
+
+		$(document).ready(function(){
+			$("#p7").hover(function(){
+				alert("Kamu Masuk p");
+			},function(){
+				alert("Kamu Meninggalkan p");
+			});
+		});
+	</script>
+
+	<hr/>
+	<hr/>
+
+	
+</body>
+</html>

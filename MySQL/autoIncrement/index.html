@@ -1,0 +1,28 @@
+<plaintext>
+#00
+auto_increment by default start from number 1
+
+#01
+MySQL Way:
+	create table teman(id int(10) not null auto_increment, teman text);
+	alter table teman auto_increment=100; // agar start mulai 100
+
+Oracle Way:
+	CREATE SEQUENCE seq_person MINVALUE 1 START WITH 1 INCREMENT BY 1 CACHE 10;
+
+SQL Server way:
+	create table teman(id int(10) not null identity(1,1), teman text);
+
+MS Access way:
+	create table teman(id int(10) not null autoincrement, teman text);	
+
+
+
+
+
+
+
+
+
+
+

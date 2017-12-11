@@ -1,0 +1,63 @@
+USER
+MySQL
+1. user biasa tidak diberi hak APAPUN
+   tidak bisa melihat apapun(user, database, tabel, dll)
+   sehingga perlu diberi HAK
+				 
+   Tidak diberi kewenangan apapun:
+   - tidak bisa membuat database
+   - tidak bisa membuat tabel
+					
+			
+2. PEMBERIAN HAK ADA 2 
+   edit hak user di database user milik mysql (misal ingin hak super user)
+   edit hak  user oleh pemilik database atau dari user superuser(grant)
+   GRANT ITU UNTUK ISI TABEL
+
+					
+3. ketika posisi menggunakan database posisi dibawah ini tidak berubah
+   mysql>
+				
+4. Bisa exit dari user
+			
+				
+			
+PostgreSQL	
+1. user biasa diberi kewenangan
+   berupa hak melihat :
+   - user
+   - database
+   - tabel
+   - TAPI TIDAK DIBERI HAK EDIT APAPUN
+			
+   Diberi kewenangan membuat:
+   - database
+   - table
+   - grant untuk user lain
+					
+					
+2. PEMBERIAN HAK ADA 2
+   dimulai saat pembuatan user (misal ingin hak super user)
+   edit hak  user oleh pemilik database atau dari user superuser(grant)
+   GRANT ITU UNTUK ISI TABEL
+					
+3. ketika posisi menggunakan database simbol posisi dibawah ini berubah menjadi nama database
+   nama database>	
+				
+4. Tidak bisa exit dari user
+   melainkan close psql comand
+				
+				
+YANG HANYA DIMILIKI POSTGRE:
+menawarkan tambahan tambahan yang signifikan yaitu:
+	- class
+	- inheritance
+	- type
+	- function
+		
+Kelebihan yang tidak dimiliki DBMS lainya:
+	- constraint
+	- triggers
+	- rule 
+	- transaction integrity
+		

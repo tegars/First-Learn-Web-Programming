@@ -1,0 +1,10 @@
+Mengkopikan tabel + isinya:
+select * into tabel_baru from mahasiswa;
+
+
+Mengkopi kolom + isinya:
+select nim, nama into tabel_baru from mahasiswa;
+
+
+
+

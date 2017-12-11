@@ -1,0 +1,36 @@
+#01 intro
+#02 Repository Clone
+#03 Push dan Pull
+#04 Branch dan Merge
+#05 Fork
+#06 .gitignore
+
+---------------------------------------------------------------------------------------------------------
+Buat repository
+	tetap harus di github.com
+
+Clone dari github
+	git clone https://github.com/tegars/latihan.git belajarGithub (dengan nama baru)
+	git clone https://github.com/tegars/latihan.git
+
+Push(dorong)
+	git push origin master
+	lalu di suruh memasukkan user dan pw github
+
+Pull(tarik)
+	git pull
+
+Branch
+	git checkout -D baru
+	git push origin baru
+
+Merge
+	harus di github.com
+
+Fork
+	mengkopi project ke akun kita
+
+.gitignore
+	
+
+

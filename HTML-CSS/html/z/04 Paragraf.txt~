@@ -1,0 +1,35 @@
+1.	Heading
+	<h1>...</h1>				//maksimal h6			//h1>h2>h3>...
+
+2.	Paragraf baru
+	<p>...</p>
+	atau
+	<br/>
+
+3. 	Line break
+	<b>...</b>						//tebal	
+	<i>...</i>						//miring
+	<u>...</u>						//garis bawah
+	<strong>...</strong>			//tebal
+	<strike>...</strike>			//tulisan di coret tengah
+
+4.	Membuat garis horisontal
+	<hr/>
+	<hr color="red" size="5" />		//jika ukuran garis dan warna di ganti
+	
+5.	Style font
+	<font color="...">...</font>
+	<font size="...">...</font>
+
+6.	Attribut
+	face="chiller"				//mengganti jenis huruf
+	arial
+	
+	
+	
+	
+	
+	
+	
+	
+	

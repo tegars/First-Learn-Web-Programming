@@ -1,0 +1,11 @@
+Penentuan Style perbaris:
+	<html><head><title>cobak lagi</title></head>
+	<body>
+		<p style="color:red; font-style:italic">
+		kalimat kamu disini
+		
+		<p style="color:blue; font-weight:bold">
+		yang ini kalimatku
+		
+	</body>
+	</html>

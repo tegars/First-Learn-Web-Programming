@@ -1,0 +1,4 @@
+01. letak save file
+    /opt/PostgreSQL/9.3
+
+    pw: abc123

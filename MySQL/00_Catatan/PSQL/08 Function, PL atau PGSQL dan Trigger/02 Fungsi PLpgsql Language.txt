@@ -1,0 +1,49 @@
+INI BAHASA PL/pgSQL
+
+BIKIN FUNGSI DULU
+Struktur:
+CREATE FUNCTION identifier (argument) RETURNS type AS'
+DECLARE
+	declaration;
+	[...]
+BEGIN
+	statement;
+	[...]
+END;
+'LANGUAGE' plpgsql';
+
+PANGGIL FUNGSI NYA
+select identifier(argument);
+
+
+Contoh membuat fungsi hello dengan nilai balik bertipe text
+CREATE FUNCTION hello () RETURNS text AS '
+DECLARE
+	berkata TEXT; (deklarasi variabel berkata bertipe TEXT)
+BEGIN
+	berkata := ''Hello Tegar ''; (inisialisasi variabel berkata)
+	RETURN berkata; (mengembalikan nilai fungsi)
+END;
+' LANGUAGE 'plpgsql';
+
+
+Contoh Luas segitiga //real bisa diganti float
+CREATE FUNCTION luas (real, real) RETURNS int AS '
+DECLARE
+	alas ALIAS FOR $1;
+	tinggi ALIAS FOR $2;
+BEGIN
+	RETURN alas*tinggi*0.5;
+END;
+'LANGUAGE 'plpgsql';	
+
+select luas(2,4);
+
+
+ 
+
+
+
+
+
+

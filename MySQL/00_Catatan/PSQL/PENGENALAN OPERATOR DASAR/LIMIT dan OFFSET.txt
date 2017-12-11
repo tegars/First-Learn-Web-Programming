@@ -1,0 +1,6 @@
+LIMIT dan OFFSET
+   untuk membatasi output
+   a. hanya ditampilkan 2
+      select * from mahasiswa limit 2;
+   b. di hilangkan 2 (misalkan data ada 7 maka yang ditampilkan 5)
+      select * from mahasiswa offset 2;

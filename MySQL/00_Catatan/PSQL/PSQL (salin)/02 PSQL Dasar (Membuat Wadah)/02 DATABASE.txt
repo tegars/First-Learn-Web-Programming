@@ -1,0 +1,20 @@
+DATABASE
+harus punya nama saja
+1.	Membuat Database baru
+	CREATE DATABASE Nama_database;
+	
+2.	Koneksi Database
+	\c Nama_database;
+	
+3.	Menghapus database
+	DROP DATABASE Nama_database;
+	
+4.	Mengubah nama database
+	alter database nama_lama rename to nama_baru;
+
+5.	Melihat Daftar Daftar Database
+	\l
+	
+	
+//semua user bisa melihat database dan semua isinya
+//tapi tidak bisa merubah isi dari database itu

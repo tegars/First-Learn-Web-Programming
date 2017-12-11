@@ -1,0 +1,20 @@
+ATURAN:
+	- kolom 	: boleh tanpa tanda petik
+	- value		: harus ada tanda petik
+	- di akhiri titik koma	: untuk banyak perintah
+	
+	
+DML (Data Manipulation Language):
+	1.	insert
+	2.	delete
+	3.	update
+	4.	select
+DDL (Data Definition Language):
+	1.	alter
+	2.	create
+	3.	drop
+	
+DCL (Data Control Language):
+	1. Grand
+	2. Revoke
+	

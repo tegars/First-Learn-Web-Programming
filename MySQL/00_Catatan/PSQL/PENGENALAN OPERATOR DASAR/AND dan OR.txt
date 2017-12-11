@@ -1,0 +1,6 @@
+AND dan OR
+Jika ingin ada 2 syarat where
+   a. memenuhi 2 syarat
+      select * from namatabel where namakolom = 'pencarian 1' and namakolom = 'pencarian 2';
+   b. memenuhi salah satu syarat sudah cukup
+      select * from namatabel where namakolom = 'pencarian 1' or namakolom = 'pencarian 2';

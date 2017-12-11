@@ -1,0 +1,72 @@
+<plaintext>
+Operators in the WHERE clause:
+	=				: equal
+	<> atau !=		: not equal
+	>				: lebih dari
+	<				: kurang dari
+	>=				: lebih dari sama dengan
+	<=				: kurang dari sama dengan
+	between			: diantara
+	like			: next chapter 
+	in				: next chapter
+
+
+
+
+#00
+MariaDB [latihan]> select * from data_diri;
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  7 | dani      | P             | 2,     | Desainer   | saya kan menjadi desainer              |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
++----+-----------+---------------+--------+------------+----------------------------------------+
+6 rows in set (0.04 sec)
+
+
+
+#01
+MariaDB [latihan]> select * from data_diri where jenis_kelamin="L";
++----+-----------+---------------+--------+------------+----------------------------------------+
+| id | nama      | jenis_kelamin | minat  | cita_cita  | keterangan                             |
++----+-----------+---------------+--------+------------+----------------------------------------+
+|  1 | tegar     | L             | 1,2,3, | Dosen      | saya adalah tegar swasono sammmm!!!    |
+|  2 | swasono99 | L             | 1,2,   | Programmer | saya akan jadi programmer tingkat dewa |
+|  3 | tatag     | L             | 1,     | Dosen      | saya akan menjadi dosen                |
+|  8 | testing   | L             | 1,2,3, | Guru       | sdgfdfs                                |
+| 35 | fairus    | L             | 1,2,   | Dosen      | asdfasdf                               |
++----+-----------+---------------+--------+------------+----------------------------------------+
+5 rows in set (0.00 sec)
+
+
+
+#02
+MariaDB [latihan]> select * from data_diri where id>2;
++----+---------+---------------+--------+-----------+---------------------------+
+| id | nama    | jenis_kelamin | minat  | cita_cita | keterangan                |
++----+---------+---------------+--------+-----------+---------------------------+
+|  3 | tatag   | L             | 1,     | Dosen     | saya akan menjadi dosen   |
+|  7 | dani    | P             | 2,     | Desainer  | saya kan menjadi desainer |
+|  8 | testing | L             | 1,2,3, | Guru      | sdgfdfs                   |
+| 35 | fairus  | L             | 1,2,   | Dosen     | asdfasdf                  |
++----+---------+---------------+--------+-----------+---------------------------+
+4 rows in set (0.04 sec)
+
+
+
+#03
+MariaDB [latihan]> select * from data_diri where id=3;
++----+-------+---------------+-------+-----------+-------------------------+
+| id | nama  | jenis_kelamin | minat | cita_cita | keterangan              |
++----+-------+---------------+-------+-----------+-------------------------+
+|  3 | tatag | L             | 1,    | Dosen     | saya akan menjadi dosen |
++----+-------+---------------+-------+-----------+-------------------------+
+1 row in set (0.00 sec)
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Http</title>
+	<script type="text/javascript" src="../../../js/jquery.min.js"></script>
+</head>
+<body>
+	<ol>
+		<li>Membuat array dari objek - Create an array of objects.</li>
+		<li>Membuat fungsi javascript untuk menampilkan array - Create a JavaScript function to display the array.</li>
+		<li>Membuat file txt - mengambil data dari internet</li>
+		<li>Membaca file txt - menggunakan XMLHttpRequest</li>
+	</ol>
+	<hr/>
+	<div id="id01"></div>
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		var url = "myTutorials.txt";
+
+		xmlhttp.onreadystatechange = function() {
+		    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		        var myArr = JSON.parse(xmlhttp.responseText);
+		        myFunction(myArr);
+		    }
+		};
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+
+		function myFunction(arr) {
+		    var out = "";
+		    var i;
+		    for(i = 0; i < arr.length; i++) {
+		        out += '<a href="' + arr[i].url + '">' + 
+		        arr[i].display + '</a><br>';
+		    }
+		    document.getElementById("id01").innerHTML = out;
+		}
+	</script>
+
+</body>
+</html>

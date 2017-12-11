@@ -1,0 +1,53 @@
+USER
+1. Melihat User lengkap rincian
+   SELECT * FROM mysql.user;
+
+
+2. Melihat User hanya nama password host
+   SELECT user, password, host FROM mysql.user;
+
+
+3. Menghapus User
+   a. hapus user lokal
+      DROP USER nama_user;
+
+   b. misalkan user dibuatkan khusus untuk komputer ber IP 192.168.0.4
+      DROP USER 'nama_user'@'192.168.0.4';	
+
+	
+4. Membuat User
+   a. user tidak memiliki hak apapun termasuk bikin database dan user tanpa password dan lokasi otomatis localhost
+      CREATE USER 'nama_user'; 
+
+   b. user + password
+      CREATE USER 'nama_user' IDENTIFIED BY 'password';
+
+   c. localhost itu jika user HANYA DALAM 1 KOMPUTER
+      CREATE USER 'nama_user'@'localhost' IDENTIFIED BY 'password_mu';
+
+   d. user bisa di buka oleh komputer ber IP 192.168.0.4
+      CREATE USER 'nama_user'@'192.168.0.4' IDENTIFIED BY 'password_mu';
+   
+   e. user bisa di buka oleh semua komputer dengan semua IP sampai 192.168.0.255
+      localhost atau 192.168.0.4 adalah alamat user
+      CREATE USER 'nama_user'@'192.168.0.%' IDENTIFIED BY 'password_mu';
+
+   f. bikin user superuser
+      
+	
+5. Mengganti nama user
+   RENAME USER 'nama_lama' to 'nama_baru';
+   RENAME USER 'nama_lama'@'localhost' to 'nama_baru'@'localhost';
+	
+
+6. Mengubah hak user langsung di data record yang terdapat dalam database mysql default
+   1. melihat semua database defauld mysql
+      SHOW DATABASES;
+   2. masuk database mysql
+      USE mysql;
+   3. nah nanti akan ketemu tabel user dan tabel itulah yang menampung semua identitas user baik nama dan hak hak nya
+	
+	
+7. Keluar User
+   exit; 
+

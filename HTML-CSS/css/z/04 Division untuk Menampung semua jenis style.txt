@@ -1,0 +1,13 @@
+Division dapat menampung semua style(paragraf ataupun border tak masalah)
+<html><head><title>cobak lagi</title>
+	<style type="text/css">
+	<!--.box1	{border: 1px solid red;}
+		.box2	{border: 1px dashed red;}		
+	-->
+	</style></head>
+	
+<body>
+	<div class="box1">ini border pertama</div>
+	<div class="box2">ini border kedua</div>	
+</body>
+</html>

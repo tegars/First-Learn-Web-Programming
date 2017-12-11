@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validation</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', []);
+	app1.controller('ctrl1', function($scope){
+
+
+	});
+</script>
+<hr/>
+<h2 align="center">01 Required</h2>
+<form name="form1">
+	<input type="text" name="input1" ng-model="input1" required>
+</form>
+<p>inputanmu adalah : {{form1.input1.$valid}}</p>
+
+
+<hr/>
+<h2 align="center">02 Inputan Email</h2>
+<form name="form2">
+	<input type="email" name="input2" ng-model="input2">
+</form>
+<p>inputan email mu adalah : {{form2.input2.$valid}}</p>
+
+
+<hr/>
+<h2 align="center">03 CSS Classes</h2>
+<form name="form3">
+	<input name="input3" ng-model="input3" required>
+</form>
+
+
+<hr/>
+<h2 align="center"></h2>
+
+
+
+<hr/>
+<img src="00.png">
+<hr/>
+<img src="01.png">
+<hr/>
+<img src="02.png">
+</body>
+</html>

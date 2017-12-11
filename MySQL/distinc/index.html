@@ -1,0 +1,46 @@
+<plaintext>
+In a table, a column may contain many duplicate value, and sometimes you only want to list the different values
+
+#01
+MariaDB [latihan]> select * from teman;
++----+----------+------------+
+| id | nama     | alamat     |
++----+----------+------------+
+|  1 | anton    | kademangan |
+|  2 | rojakan  | kademangan |
+|  3 | piyan    | kademangan |
+|  4 | jaka     | kademangan |
+|  7 | tegar    | jakarta    |
+|  8 | asdfas   | asdfasdf   |
+| 10 | fairus   | lamongan   |
+| 11 | dani     | kediri     |
+| 12 | tatak    | pasuruan   |
+| 13 | ayom     | sidoarjo   |
+| 14 | ari      | blitar     |
+| 15 | arif     | pasuruan   |
+| 16 | asdseg   | sdfg       |
+| 17 | sdfgsdfg | sdfgds     |
+| 20 | tatak    | pasuruan   |
++----+----------+------------+
+15 rows in set (0.05 sec)
+
+MariaDB [latihan]> select distinct alamat from teman;
++------------+
+| alamat     |
++------------+
+| kademangan |
+| jakarta    |
+| asdfasdf   |
+| lamongan   |
+| kediri     |
+| pasuruan   |
+| sidoarjo   |
+| blitar     |
+| sdfg       |
+| sdfgds     |
++------------+
+10 rows in set (0.00 sec)
+
+
+#02
+

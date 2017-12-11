@@ -1,0 +1,5 @@
+1.	Background Warna
+	<body bgcolor="red">
+	
+2.	Background Gambar
+	<body background="1.jpg">

@@ -1,0 +1,46 @@
+#01
+C:\Windows\System32\drivers\etc\hosts
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+127.0.0.1		localhost
+127.0.0.1		code.dev
+
+
+#02
+D:\Xampp\apache\conf\httpd.conf
+hapus # dari
+Include conf/extra/httpd-vhosts.conf
+
+
+#03
+D:\Xampp\apache\conf\extra\httpd-vhosts.conf
+#localhost
+<VirtualHost *:80>
+    ServerAdmin admin@localhost.com
+    DocumentRoot "D:/xampp/htdocs"
+    ServerName localhost
+    ServerAlias localhost
+    <Directory "D:/xampp/htdocs">
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+#code.dev
+<VirtualHost *:80>
+	ServerAdmin admin@code.dev
+    DocumentRoot "D:\xampp\htdocs\code"
+    ServerName code.dev
+    ServerAlias code.dev
+    ErrorLog logs/code.dev.log
+    CustomLog logs/code.dev.log combined
+	<Directory "D:\xampp\htdocs\code">
+	    Options Indexes FollowSymLinks Includes ExecCGI
+	    AllowOverride All
+	    Order allow,deny
+	    Allow from all
+	    Require all granted
+	</Directory>
+</VirtualHost>

@@ -1,0 +1,24 @@
+REGEXP - REGular EXPression
+   simbolnya = ~
+   Mencocokan data Gak peduli data berada di awal atau akhir
+   Daftar simbol regexp
+   - []		: 
+   - [^]	: 
+   - ?		: 
+   - +		:  
+   - *		: 
+   - {x}	: 
+   - {x,y}	: 
+   - !		: 
+   - ^		: 
+   - ()		: 
+   - $		: 
+   
+   a. mencari nama yang mengandung bi atau bu (ingat mengandung bi bukan b dan i) //berlaku untuk a sampai d
+      select * from mahasiswa where nama_mah ~ 'bi|bu';
+   b. mencari nama yang mengandung bi atau bu atau ba
+      select * from mahasiswa where nama_mah ~ 'b[iua]';
+   c. Mencari nama yang mengandung na
+      select * from mahasiswa where nama_mah ~ 'na?';
+   d. Mencari nama yang mengandung na..a  (maksudnya 2 titik adalah 2 huruf terserah)
+      select * from mahasiswa where nama_mah ~ 'ni..a';

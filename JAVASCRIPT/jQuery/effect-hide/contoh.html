@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effect Hide/ Show</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p>Ini Paragraf 1</p>
+	<p>Ini Paragraf 2</p>
+	<h2>Fungsi Show dan Hide</h2>
+	<button id="btn1">Hide</button>
+	<button id="btn2">Show</button>
+
+	<hr/>
+	<h2>Show dan Hide dengan Speed</h2>
+	<button id="btn3">Effect Hide</button>
+	<button id="btn4">Effect Show</button>
+
+	<hr/>
+	<h2>Toggle</h2>
+	<button id="btn5">Toggle</button>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// "300" bisa diganti dengan "slow" atau "fast"
+
+			//aksi 1
+			$("#btn1").click(function(){
+				$("p").hide();
+			});
+
+			$("#btn2").click(function(){
+				$("p").show();
+			});
+
+			//aksi 2
+			$("#btn3").click(function(){
+				$("p").hide("slow");
+			});
+			$("#btn4").click(function(){
+				$("p").show(300);
+			});
+
+			//aksi 3
+			$("#btn5").click(function(){
+				$("p").toggle("slow");
+			});
+
+		});
+
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Get</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<p>Ini adalah <b>paragraf 1</b></p>
+	<button id="btn1">text()</button>
+	<button id="btn2">html()</button>
+
+	<hr/>
+	nama: <input type="text"><br/>
+	<button id="btn3">val()</button>
+
+	<hr/>
+	<a href="coba.html" id="coba">Link coba</a><br/>
+	<button id="btn4">Attr() - mendapatkan nilai berdasarkan attribut</button>
+
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				alert($("p").text());
+			});
+
+			//aksi 2
+			$("#btn2").click(function(){
+				alert($("p").html());
+			});
+
+			//aksi 3
+			$("#btn3").click(function(){
+				alert($("input").val());
+			});
+
+			//aksi 4
+			$("#btn4").click(function(){
+				alert($("#coba").attr("href"));
+			});
+
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

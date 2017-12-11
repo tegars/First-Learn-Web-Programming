@@ -1,0 +1,4 @@
+QUERY UMUM
+1. Melihat Semua Perintah yang ada:
+   help atau \h
+

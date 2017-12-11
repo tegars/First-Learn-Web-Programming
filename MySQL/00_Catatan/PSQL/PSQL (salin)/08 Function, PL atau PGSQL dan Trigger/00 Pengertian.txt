@@ -1,0 +1,29 @@
+PostgreSQL Procedural Language(PL):
+Ada empat bahasa (Procedural Langguage) yang tersedia dalam database PostgreSQL :
+1. PL/pgSQL
+2. PL/TCL
+3. PL/Perl
+4. PL/Python
+
+FUNGSI TAMBAHAN:
+1. Menampilkan isi kolom huruf besar semua (hanya bisa 1 kolom)
+   select upper (nama_kolom) from nama_tabel;
+   
+2. menampilkan Huruf besar di awal tulisan
+   select initcap (nama_kolom) from nama_tabel;
+  
+
+FUNGSI:
+nama fungsi boleh sama tapi parameter, tipe data dan jumlahnya harus berbeda 
+
+1. melihat fungsi fungsi yang ada dalam database:
+   \df
+
+2. Menghapus fungsi
+   drop function nama_fungsi(tipe_data_input);
+   
+3. Perhitungan pakek :=
+   penyimpanan pakek select into simpan nama_akan_disimpan
+   
+4. Mengganti struktur fungsi
+   create or replace function nama_fungsi (nilai integer)

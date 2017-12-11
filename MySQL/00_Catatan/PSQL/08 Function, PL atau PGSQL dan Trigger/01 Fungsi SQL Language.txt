@@ -1,0 +1,14 @@
+CREATE FUNCTION kali (FLOAT, FLOAT, FLOAT) RETURNS FLOAT AS '
+SELECT 
+	($1 + $2) * $3;
+'LANGUAGE 'sql';
+
+select kali(2,3,1);
+
+//bigint adalah tipe data bisa diganti int
+CREATE FUNCTION jumlah_mahasiswa() RETURNS bigint AS '
+SELECT 
+	count(*) as jumlah_pegawai from pegawai;
+'LANGUAGE 'sql';
+
+Select jumlah_pegawai();

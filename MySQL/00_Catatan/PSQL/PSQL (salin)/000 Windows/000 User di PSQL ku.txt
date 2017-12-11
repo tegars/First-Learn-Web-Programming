@@ -1,0 +1,15 @@
+1.	SUPERUSER
+	nama user	: postgres
+	pw			: abc123
+
+2.	PRAK RD
+	nama user	: praktikum
+	pw			: praktikum123
+	
+3.	COBAK
+	nama user	: cobak
+	pw			: cobak123
+	
+4.	COBAK punya hak superuser
+	nama user	: akses
+	pw			: akses123 

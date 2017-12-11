@@ -1,0 +1,37 @@
+1.	membuat list angka
+	<ol>
+		<li>cabai</li>
+		<li>tomat</li>
+	</ol>
+	
+2.	Membuat list bulleting
+	<ul>
+		<li>cabai</li>
+		<li>tomat</li>
+	</ul>
+	
+3.	Fungsi Tab
+	<dt>tomat</dt>
+		<dd>cabai</dd>
+	
+	
+#4	
+Membuat List Huruf
+<ol type="A">
+ <li>Apples</li>
+ <li>Bananas</li>
+ <li>Lemons</li>
+ <li>Oranges</li>
+</ol>  
+   
+
+
+# 5
+Membuat list I
+<ol type="I">
+ <li>Apples</li>
+ <li>Bananas</li>
+ <li>Lemons</li>
+ <li>Oranges</li>
+</ol>  
+

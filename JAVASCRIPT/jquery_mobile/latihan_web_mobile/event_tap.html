@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="jquery/jquery-1.8.3.min.js"></script>
+<script src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script>
+$(document).on("pageinit","#pagetap",function(){
+	$("p").on("tap",function(){
+		$(this).hide();	
+	})
+});
+</script>
+</head>
+</head>
+
+<body>
+<div data-role="page" id="pagetap">
+  <div data-role="header">
+    <h1>Event Tap</h1>
+  </div>
+  <div data-role="content">
+    <p>Tap teks ini.. maka teks ini menghilang</p>
+    <p>Tap teks ini... teks ini juga akan menghilang</p>
+    <p>Tap teks ini... ini juga menghilang</p>
+  </div>
+  <div data-role="footer">
+    <h1>&copy;Copyright 2014</h1>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tutorial Events</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	Nama: <input type="text" name="nama"><br/>
+	Alamat: <input type="text" name="alamat">
+
+	<hr/>
+	<p>Ini adalah paragraf - klikk saya</p>
+	<p>Ini adalah paragraf - klikk saya</p>
+	<p>Ini adalah paragraf - klikk saya</p>
+
+	<hr/>
+	<h2>Ini heading 5</h2>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//fungsi ke satu
+			$("input").focus(function(){
+				$(this).css("background-color", "#cccccc");
+			});
+			$("input").blur(function(){
+        		$(this).css("background-color", "#ffffff");
+    		});
+
+
+    		//fungsi ke dua
+    		$("p").on("click", function(){
+    			$(this).hide();
+    		});
+
+    		//fungsi ke tiga
+    		$("h2").on({
+    			mouseenter: function(){
+    				$(this).css("background-color", "lightgray");
+    			},
+    			mouseleave: function(){
+    				$(this).css("background-color", "lightblue");
+    			},
+    			click: function(){
+    				$(this).css("background-color", "yellow");
+    			}
+    		});
+		});
+	</script>
+
+
+</body>
+</html>

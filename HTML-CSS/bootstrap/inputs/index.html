@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INilah adalah FORM</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<style type="text/css" src="../js/jquery.min.js"></style>
+	<style type="text/css" src="../js/bootstrap.min.js"></style>
+</head>
+<body>
+	<div class="container">
+		<hr/>
+		<img src="00.png">
+		<hr/>
+
+		<h2 align="center">01 Input</h2>
+			<div class="form-group">
+				<label>Nama</label>
+				<input type="text" class="form-control" placeholder="ini type text">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" placeholder="ini type password">
+			</div>
+
+			<hr/>
+			<input type="number" class="form-control" placeholder="ini type number">
+			<input type="email" class="form-control" placeholder="ini type email - akan eror ketika di submit">
+
+			<hr/>
+		<h2 align="center">02 Textarea</h2>
+			<div class="form-group">
+				<label>Comment:</label>	
+				<textarea class="form-control" rows="6" style="resize:none;"></textarea>
+			</div>
+
+			<hr/>
+		<h2 align="center">03 Checkbox</h2>
+			<div class="form-group">
+				<label>MataKuliah</label><br/>
+				<label class="checkbox-inline"><input type="checkbox" value="" name="matkul1">Daspro</label>
+				<label class="checkbox-inline"><input type="checkbox" value="" name="matkul2">Madas</label>
+				<label class="checkbox-inline"><input type="checkbox" value="" name="matkul3">Desain Basis Data</label>
+			</div>
+			<hr/>
+			<div class="checkbox">
+				<label><input type="checkbox" value="">daspro</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" value="">madas</label>
+			</div>
+			<div class="checkbox">
+				<label><input type="checkbox" value="">Desain basis data</label>
+			</div>
+
+
+			<hr/>
+		<h2 align="center">04 Radio Button</h2>
+			<div class="form-group">
+				<label>Jenis Kelamin</label><br/>
+				<label class="radio-inline"><input type="radio" name="jenisKelamin">Laki Laki</label>
+				<label class="radio-inline"><input type="radio" name="jenisKelamin">Perempuan</label>
+			</div>
+			<hr/>
+			<div class="radio">
+				<label><input type="radio" name="matkul">Daspro</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="matkul">Madas</label>
+			</div>
+			<div class="radio">
+				<label><input type="radio" name="matkul">Desain Basis Data</label>
+			</div>
+			
+
+
+			<hr/>
+		<h2 align="center">05 Select</h2>
+			<div class="form-group">
+				<label>Pilih mata kuliahmu</label>
+				<select class="form-control" name="matkulmu">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+
+			<hr/>
+			<label></label>
+
+			<hr/>
+			<div class="form-group">
+				<label>tekan control untuk multi pilih</label>
+				<select class="form-control" multiple>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<hr/>
+	</div>
+	<hr/>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traversing - Ancestors</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<style type="text/css">
+		.ancestors * { 
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body class="ancestors">body (great-great-grandparent)
+	<h2 align="center">Parents()</h2>
+	<div style="width:500px;">div (great-grandparent)
+    	<ul>ul (grandparent)  
+      		<li>li (direct parent)
+        		<span>span</span>
+      		</li>
+    	</ul>   
+  	</div>
+</body>
+	<script>
+		$(document).ready(function(){
+			$("span").parents().css({"color": "red", "border": "2px solid red"});
+		});
+	</script>
+<!-- The outer red border, before the body element, is the html element (also an ancestor) -->
+</html>

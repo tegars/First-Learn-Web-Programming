@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image</title>
+</head>
+<body>
+
+<p>Image to use:</p>
+
+<img id="scream" width="220" height="277" src="scream.jpg" alt="The Scream">
+
+
+<canvas id="canvas1"  width="240" height="297" style="border: 1px solid grey;"></canvas>
+
+
+
+<script type="text/javascript">
+	window.onload= function(){
+		var canvas1= document.getElementById('canvas1');
+		var ctx1= canvas1.getContext('2d');
+		var img1= document.getElementById('scream');
+		ctx1.drawImage(img1, 10, 10);	
+	}
+	
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Elemets</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<script type="text/javascript">
+		//CATATAN
+		//01-remove style
+		//document.getElementById("tab2").removeAttribute("href");
+
+	</script>
+	<b>01 mendapatkan nilai ById</b>
+	<p id="satu">Hallo Tegar</p>
+	<script>
+		var coba1= document.getElementById("satu");
+		var coba2= coba1.innerHTML;
+	</script>
+	
+
+	<hr/>
+	<b>02 mendapatkan nilai ByTagName</b>
+	<p>hallo swasono</p>
+	<p>hallo tatag</p>
+	<script>
+		var coba3= document.getElementsByTagName("p");
+		var coba4= coba3[0].innerHTML;
+		var coba5= coba3[1].innerHTML;
+	</script>
+
+
+	<hr/>
+	<b>03 mendapatkan nilai di dalamnya id contoh div</b>
+	<div id="area1">
+		<p>area1-tegar</p>
+	</div>
+	<script>
+		var coba6= document.getElementById("area1");
+		var coba7= coba6.getElementsByTagName("p");
+		var coba8= coba7[0].innerHTML;
+	</script>
+
+
+	<hr/>
+	<b>04 mendapatkan nilai ByClass</b>
+	<button class="btn">a</button>
+	<script>
+		var coba9= document.getElementsByClassName("btn");
+	</script>
+	
+
+	<hr/>
+	<b>05 mendapatkan nilai ByQuerySelectorAll</b>
+	<p class="satu">a</p>
+	<p class="satu">b</p>
+	<p class="dua">c</p>
+	<script>
+		var coba10= document.querySelectorAll("p.satu");
+		var coba11= document.querySelectorAll("p.dua");
+	</script>
+
+	<hr/>
+	<button class="" id="class1">class dipanggil dari javascript</button>
+	<script>
+		document.getElementById("class1").setAttribute("class", "btn btn-info");
+	</script>
+
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

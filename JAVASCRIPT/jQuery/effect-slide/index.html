@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Effect Slide</title>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+	<div style="background-color:darkgrey; widht:300px; height:150px;"></div>
+	<button id="btn1">slideUp</button>
+	<button id="btn2">slideDown</button>
+
+	<hr/>
+	<button id="btn3">slideToggle</button>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//aksi 1
+			$("#btn1").click(function(){
+				$("div").slideUp("slow");
+			});
+			$("#btn2").click(function(){
+				$("div").slideDown("slow");
+			});
+
+			//aksi 2
+			$("#btn3").click(function(){
+				$("div").slideToggle("slow");
+			});
+		});
+	</script>
+
+	<hr/>
+	<img src="00.png">
+</body>
+</html>

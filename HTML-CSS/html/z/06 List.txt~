@@ -1,0 +1,20 @@
+1.	membuat list angka
+	<ol>
+		<li>cabai</li>
+		<li>tomat</li>
+	</ol>
+	
+2.	Membuat list bulleting
+	<ul>
+		<li>cabai</li>
+		<li>tomat</li>
+	</ul>
+	
+3.	Fungsi Tab
+	<dt>tomat</dt>
+		<dd>cabai</dd>
+	
+	
+	
+
+

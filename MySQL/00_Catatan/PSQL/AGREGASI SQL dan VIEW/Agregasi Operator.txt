@@ -1,0 +1,48 @@
+ nim_mah | nama_mah | alamat_mah  |    no_telp    |  gender   | id_fak 
+---------+----------+-------------+---------------+-----------+--------
+       1 | tegar    | malang      | 085111111111  | lakilaki  |      1
+       2 | swasono  | kediri      | 085222222222  | lakilaki  |      2
+       3 | tono     | jombang     | 085333333333  | lakilaki  |      2
+       4 | toni     | nganjuk     | 085333333333  | lakilaki  |      1
+       5 | tika     | ponorogo    | 085444444444  | perempuan |      1
+       6 | tini     | tulungagung | 085555555555  | perempuan |      2
+       7 | rika     | blitar      | 0854555555555 | perempuan |      1
+
+1. COUNT
+select count(gender) from mahasiswa;
+ count 
+-------
+     3
+     4
+(2 rows)
+
+2. SUM
+select sum(nim_mah) from mahasiswa;
+ sum 
+-----
+  28
+(1 row)
+
+3. MAX
+select MAX(nim_mah) from mahasiswa;
+ max 
+-----
+   7
+(1 row)
+
+4. MIN
+select MAX(nim_mah) from mahasiswa;
+ max 
+-----
+   7
+(1 row)
+
+5. AVG
+select AVG(nim_mah) from mahasiswa;
+        avg         
+--------------------
+ 4.0000000000000000
+(1 row)
+
+
+

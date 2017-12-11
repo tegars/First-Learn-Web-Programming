@@ -1,0 +1,98 @@
+<plaintext>
+#00
+MariaDB [latihan]> select * from teman;
++----+----------+--------------+
+| id | nama     | alamat       |
++----+----------+--------------+
+|  1 | anton33  | kademangan33 |
+|  2 | rojakan  | kademangan   |
+|  3 | piyan    | kademangan   |
+|  4 | jaka     | kademangan   |
+|  7 | tegar    | jakarta      |
+|  8 | asdfas   | asdfasdf     |
+| 10 | fairus   | lamongan     |
+| 11 | dani     | kediri       |
+| 13 | ayom     | sidoarjo     |
+| 16 | asdseg   | sdfg         |
+| 17 | sdfgsdfg | sdfgds       |
+| 21 | tt       | malang       |
+| 22 | tg       | pagelaran    |
++----+----------+--------------+
+13 rows in set (0.00 sec)
+
+
+
+#01 - SQL % Wildcard
+MariaDB [latihan]> select * from teman where nama like 'a%';
++----+---------+--------------+
+| id | nama    | alamat       |
++----+---------+--------------+
+|  1 | anton33 | kademangan33 |
+|  8 | asdfas  | asdfasdf     |
+| 13 | ayom    | sidoarjo     |
+| 16 | asdseg  | sdfg         |
++----+---------+--------------+
+4 rows in set (0.00 sec)
+
+MariaDB [latihan]> select * from teman where nama like '%aka%';
++----+---------+------------+
+| id | nama    | alamat     |
++----+---------+------------+
+|  2 | rojakan | kademangan |
+|  4 | jaka    | kademangan |
++----+---------+------------+
+2 rows in set (0.00 sec)
+
+
+
+#02 - SQL _ Wildcard
+MariaDB [latihan]> select * from teman where nama like 'a_';
+Empty set (0.00 sec)
+
+MariaDB [latihan]> select * from teman where nama like '_aka';
++----+------+------------+
+| id | nama | alamat     |
++----+------+------------+
+|  4 | jaka | kademangan |
++----+------+------------+
+1 row in set (0.00 sec)
+
+MariaDB [latihan]> select * from teman where nama like 'tega_';
++----+-------+---------+
+| id | nama  | alamat  |
++----+-------+---------+
+|  7 | tegar | jakarta |
++----+-------+---------+
+1 row in set (0.00 sec)
+
+
+
+
+#03 - SQL [charlist] Wildcard
+select * from teman where nama like '[a]%'; - TIDAK SUPPORT DI MYSQL
+
+
+MySQL WAY:
+MariaDB [latihan]>  select * from teman where nama rlike '[t%]'; //mencari yang mengandung huruf t
++----+---------+--------------+
+| id | nama    | alamat       |
++----+---------+--------------+
+|  1 | anton33 | kademangan33 |
+|  7 | tegar   | jakarta      |
+| 21 | tt      | malang       |
+| 22 | tg      | pagelaran    |
++----+---------+--------------+
+4 rows in set (0.00 sec)
+MariaDB [latihan]>  select * from teman where nama rlike '[t%]' and nama rlike '[a%]'; //mencari yang mengandung huruf t dan a
++----+---------+--------------+
+| id | nama    | alamat       |
++----+---------+--------------+
+|  1 | anton33 | kademangan33 |
+|  7 | tegar   | jakarta      |
++----+---------+--------------+
+2 rows in set (0.00 sec)
+
+
+
+
+

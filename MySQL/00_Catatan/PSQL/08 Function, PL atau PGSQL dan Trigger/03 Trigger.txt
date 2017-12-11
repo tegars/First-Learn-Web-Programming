@@ -1,0 +1,40 @@
+Trigger
+Menjalankan fungsi disaat kita INSERT, UPDATE DAN DELETE data
+memiliki tipe data khusus yaitu OPAQUE
+Memiliki variabel khusus
+NEW : insert atau update
+OLD	: update atau delete
+
+
+CREATE TRIGGER nama_trigger
+BEFORE
+	INSERT
+	ON nama_tabel
+	FOR EACH ROW
+EXECUTE PROCEDURE fungsi_dipanggil();
+
+
+Buat fungsi huruf besar semua
+CREATE FUNCTION huruf_besar() RETURNS opaque AS'
+BEGIN
+	NEW.nama_kolom := UPPER(NEW.nama_kolom);
+	RETURN NEW;
+END;'
+LANGUAGE 'plpgsql';
+
+
+
+CREATE TRIGGER total1
+BEFORE
+	INSERT
+	ON transaksi
+	FOR EACH ROW
+EXECUTE PROCEDURE total();
+
+
+CREATE TRIGGER tanggal1
+BEFORE
+	INSERT
+	ON transaksi
+	FOR EACH ROW
+EXECUTE PROCEDURE tanggal();

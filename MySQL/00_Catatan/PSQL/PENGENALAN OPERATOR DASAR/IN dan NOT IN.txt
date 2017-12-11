@@ -1,0 +1,6 @@
+IN dan NOT IN
+   pencocokan data jika kata_kunci banyak
+   a. Menampilkan mahasiswa yang memiliki nim 2,4,dan 7
+      select * from mahasiswa where nim_mah in (2,4,7);
+   b. Menampilkan mahasiswa yang memiliki nim selain 2,4,dan 7
+      select * from mahasiswa where nim_mah not in (2,4,7);

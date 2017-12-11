@@ -1,0 +1,14 @@
+<plaintext>
+
+MariaDB [latihan]> select * from customer left join order1 on customer.id_customer=order1.id_customer;
++-------------+---------+--------------+------------+----------+-------------+-------------+---------------+
+| id_customer | nama    | alamat       | kontak     | id_order | id_customer | id_karyawan | id_pengiriman |
++-------------+---------+--------------+------------+----------+-------------+-------------+---------------+
+|           1 | tegar   | 085331230202 | malang     |        1 |           1 |           3 |             1 |
+|           1 | tegar   | 085331230202 | malang     |        2 |           1 |           3 |             2 |
+|           1 | tegar   | 085331230202 | malang     |        3 |           1 |           3 |             3 |
+|           2 | swasono | 085331232443 | pagelaran  |        4 |           2 |           2 |             4 |
+|           2 | swasono | 085331232443 | pagelaran  |        5 |           2 |           3 |             5 |
+|           3 | tatag   | 085331234243 | kademangan |        6 |           3 |           1 |             6 |
+|           4 | teswa   | 083333234243 | pagelaran  |     NULL |        NULL |        NULL |          NULL |
++-------------+---------+--------------+------------+----------+-------------+-------------+---------------+

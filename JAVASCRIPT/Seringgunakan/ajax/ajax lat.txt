@@ -1,0 +1,19 @@
+$.ajax({
+    type: 'POST',
+    url: 'http://askmhs.xyz/auth/login',
+    data: data1,
+    contentType: 'application/json;',
+    success: function(msg){
+        alert('wow'+msg);
+    },
+    error: function (pesan) {
+        alert(pesan);
+    }
+});
+http://askmhs.xyz/auth/login
+.done(function(respon){
+    console.log(respon);
+})
+
+
+dataType: 'json',

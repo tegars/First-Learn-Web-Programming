@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', []);
+	app1.controller('ctrl1', function($scope){
+		//nomor 1
+		$scope.awal="John";
+
+
+	});
+</script>
+
+<hr/>
+<h2 align="center">01 Input type text</h2>
+<input type="text" ng-model="awal">
+<p>{{awal}}</p>
+
+
+<hr/>
+<h2 align="center">02 Checkbox</h2>
+<form>
+	Check to show a text baru:
+	<input type="checkbox" ng-model="myVar0">
+</form>
+<h1 ng-show="myVar0">text baru</h1>
+
+
+<hr/>
+<h2 align="center">03 RadioButtons</h2>
+<form>
+	Pilih..
+	<input type="radio" ng-model="myVar" value="dogs">dogs
+	<input type="radio" ng-model="myVar" value="tuts">tutorials
+	<input type="radio" ng-model="myVar" value="cars">cars
+</form>
+<div ng-switch="myVar">
+	<div ng-switch-when="dogs">
+		<h1>Dogs</h1>
+	</div>
+	<div ng-switch-when="tuts">
+		<h1>tuts</h1>
+	</div>
+	<div ng-switch-when="cars">
+		<h1>cars</h1>
+	</div>
+</div>
+
+
+<hr/>
+<h2 align="center">04 Selectbox</h2>
+<form>
+  	Select a topic:
+  	<select ng-model="myVar2">
+	    <option value="">
+    	<option value="dogs">Dogs
+    	<option value="tuts">Tutorials
+    	<option value="cars">Cars
+  	</select>
+</form>
+<div ng-switch="myVar2">
+  	<div ng-switch-when="dogs">
+     	<h1>Dogs</h1>
+     	<p>Welcome to a world of dogs.</p>
+  	</div>
+  	<div ng-switch-when="tuts">
+    	<h1>Tutorials</h1>
+     	<p>Learn from examples.</p>
+  	</div>
+  	<div ng-switch-when="cars">
+    	<h1>Cars</h1>
+     	<p>Read about cars.</p>
+  	</div>
+</div>
+
+
+
+</body>
+</html>

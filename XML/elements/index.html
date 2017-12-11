@@ -1,0 +1,88 @@
+<plaintext>
+01. What is an XML Element? || element, content dan attribut
+	Contoh 1:
+	<price>29.99</price>
+	An element can contain:
+	text
+	attributes
+	other elements
+	or a mix of the above
+
+	Contoh 2:
+	<bookstore>
+	  <book category="children">
+	    <title>Harry Potter</title>
+	    <author>J K. Rowling</author>
+	    <year>2005</year>
+	    <price>29.99</price>
+	  </book>
+	  <book category="web">
+	    <title>Learning XML</title>
+	    <author>Erik T. Ray</author>
+	    <year>2003</year>
+	    <price>39.95</price>
+	  </book>
+	</bookstore>
+	In the example above:
+	<title>, <author>, <year>, and <price> have text content because they contain text (like 29.99).
+	<bookstore> and <book> have element contents, because they contain elements.
+	<book> has an attribute (category="children").
+
+
+02. Empty XML Elements
+	adalah elements tanpa content
+	cara penulisan:
+		1. <element></element>
+		2. <element />
+
+
+03. XML Naming Rules / Aturan Penamaan XML
+	Element names are case-sensitive
+	Element names must start with a letter or underscore
+	Element names cannot start with the letters xml (or XML, or Xml, etc)
+	Element names can contain letters, digits, hyphens, underscores, and periods
+	Element names cannot contain spaces
+
+
+04. Best Naming Practices / Cara penamaan terbaik
+	Create descriptive names, like this: <person>, <firstname>, <lastname>.
+	Create short and simple names, like this: <book_title> not like this: <the_title_of_the_book>.
+	Avoid "-". If you name something "first-name", some software may think you want to subtract "name" from "first".
+	Avoid ".". If you name something "first.name", some software may think that "name" is a property of the object "first".
+	Avoid ":". Colons are reserved for namespaces (more later).
+	Non-English letters like éòá are perfectly legal in XML, but watch out for problems if your software doesn't support them.
+
+
+05. Naming Styles / Gaya Penulisan
+	Style		Example		Description
+	-----------------------------------------------
+	Lower case	<firstname>	All letters lower case
+	Upper case	<FIRSTNAME>	All letters upper case
+	Underscore	<first_name>	Underscore separates words
+	Pascal case	<FirstName>	Uppercase first letter in each word
+	Camel case	<firstName>	Uppercase first letter in each word except the first
+
+06. XML Elements are Extensible / XML dapat di perluas - Satu element punya element lagi
+	<note>
+	  <date>2008-01-10</date>
+	  <to>Tove</to>
+	  <from>Jani</from>
+	  <heading>Reminder</heading>
+	  <body>Don't forget me this weekend!</body>
+	</note>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

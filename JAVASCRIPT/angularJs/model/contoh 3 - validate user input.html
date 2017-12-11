@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate User Input</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body>
+	<form ng-app=""  name="myForm">
+		Email:
+		<input type="email" name="myAddress" ng-model="text">
+		<span ng-show="myForm.myAddress.$error.email">Not a valid email address</span>
+
+	</form>
+</body>
+</html>

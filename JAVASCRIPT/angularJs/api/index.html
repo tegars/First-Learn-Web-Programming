@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="ctrl1">
+<script type="text/javascript">
+	var app1= angular.module('app1', []);
+	app1.controller('ctrl1', function($scope){
+
+		$scope.x1= "John";
+		//nomor 1
+		$scope.x2= angular.lowercase($scope.x1);
+		//nomor 2
+		$scope.x3= angular.uppercase($scope.x1);
+		//nomor 4
+		$scope.x4= angular.isString($scope.x1);
+		//nomor 5
+		$scope.x5= angular.isNumber($scope.x1);
+
+
+
+	});
+</script>
+
+
+<hr/>
+<h2 align="center">01 angular.lowercase()</h2>
+<p>{{x1}}</p>
+<p>{{x2}}</p>
+
+
+<hr/>
+<h2 align="center">02 angular.uppercase()</h2>
+<p>{{x1}}</p>
+<p>{{x3}}</p>
+
+<hr/>
+<h2 align="center">03 angular.isString()</h2>
+<p>{{x1}}</p>
+<p>{{x4}}</p>
+
+
+<hr/>
+<h2 align="center">04 angular.isNumber()</h2>
+<p>{{x1}}</p>
+<p>{{x5}}</p>
+
+
+
+</body>
+</html>

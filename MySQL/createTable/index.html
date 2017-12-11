@@ -1,0 +1,19 @@
+<plaintext>
+#01 - buat table
+create table fakultas(id_fak int(10), nama_fak text);
+
+#2 - buat table + primary key
+create table fakultas(id_fak int(10) not null, nama_fak text, primary key(id_fak));
+
+#03 - table + foreign key
+create table mahasiswa(id_mah int(10), id_fak int(10) not null references fakultas, nama_mah text, alamat_mah text, primary key(id_mah, id_fak));
+
+#04 - melihat semua table
+show tables;						: MySQL
+
+#04 - rincian table
+declare mahasiswa;					: MySQL
+
+
+
+

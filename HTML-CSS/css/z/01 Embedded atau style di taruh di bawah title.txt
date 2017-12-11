@@ -1,0 +1,35 @@
+Embedded ada 2:
+1.	Diterapkan di seluruh body
+	<html><head><title>Embedded Style</title>
+		<style type="text/css">
+		<!--
+		p, a{color: red;font-style: italic;}
+		-->
+		</style>
+		</head>
+	<body>
+		<p>
+		kalimat nomor satu. Ini menggunakan emmbedded yang style nya di terpakan di seluruh body
+		<p>
+		kalimat nomor dua
+		<a href="1.html">cobak</a>
+	</body>
+	</html>
+
+2.	Per item yang di pilih di body
+	pakek .		class
+	pakek #		id
+	
+	<html><head><title>Embedded Style</title>
+		<style type="text/css">
+		<!--.style1 {color: red;font-style: italic;}
+			#style2 {color: gold;font-weight: bold;}-->
+		</style>
+		</head>
+	<body>
+		<p class="style1">
+		kalimat nomor satu
+		<p id="style2">
+		kalimat nomor dua
+	</body>
+	</html>

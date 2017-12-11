@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Invocation</title>
+</head>
+<body>
+	
+<p id="demo"></p>
+	<script>
+		function myFunction() {
+		    return this;
+		}
+		document.getElementById("demo").innerHTML = myFunction(); 
+	</script>
+</body>
+</html>

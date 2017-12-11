@@ -1,0 +1,23 @@
+DBMS : Database Management system
+	1. MS. Access		windows			kecil	
+	2. SQL Server		windows
+	3. My SQL			open source		kecil - menengah			
+	4. Postgre			open source			
+	5. Oracle			open source		besar
+	
+Bahasa Yang Digunakan:
+QUERY atau SQL(Structure Query Language)
+	SEQUEL		: Structure English Query language
+	SQl 86		: 
+	SQL	92		: 
+	SQL 99		: 
+	SQL - 2003	:  
+	
+Istilah:
+	field
+	record
+	row
+	column
+	
+	
+	 

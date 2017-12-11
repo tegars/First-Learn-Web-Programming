@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplication Status</title>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+</head>
+<body>
+		<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+
+Email:
+<input type="email" name="myAddress" ng-model="myText" required>
+<p>Edit the e-mail address, and try to change the status.</p>
+<h1>Status</h1>
+		Valid: {{myForm.myAddress.$valid}}<br/>
+		Dirty: {{myForm.myAddress.$dirty}}<br/>
+		Touched: {{myForm.myAddress.$touched}}<br/>
+
+
+	</form>
+</body>
+</html>

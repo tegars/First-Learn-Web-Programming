@@ -1,0 +1,24 @@
+TABEL YANG BERHUBUNGAN:
+1. primary key
+   create table fakultas(id_fak int, nama_fak text, primary key(id_fak));
+	
+2. foreign key
+   create table mahasiswa(nim_mah int, nama_mah text, alamat_mah text, id_fak int
+   not null references fakultas, primary key(nim_mah, id_fak));
+
+
+TAMBAHAN:
+1. Menambahkan primary key
+   alter table nama_tabel add primary key(nama_column)
+
+2. Menghapus primary key
+   alter table nama_tabel drop constraint tegar_pkey
+
+3. Menambah foreign key
+   ALTER TABLE nama_tabelnya ADD FOREIGN KEY (nama_attribut_yg_dijadikan_p_key)
+   REFERENCES nama_tabel_yg_direference(nama_attribut_pd_tabel_yg _diriferrence);
+
+
+
+	
+

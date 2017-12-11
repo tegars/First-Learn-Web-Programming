@@ -1,0 +1,19 @@
+<plaintext>
+#00 - Menghitung jumlah record dari table
+MariaDB [latihan]> select count(*) from m_ti;
++----------+
+| count(*) |
++----------+
+|        5 |
++----------+
+1 row in set (0.00 sec)
+
+
+#01 - spesifik pada column
+MariaDB [latihan]> select count(nilai) from m_ti;
++--------------+
+| count(nilai) |
++--------------+
+|            5 |
++--------------+
+1 row in set (0.00 sec)

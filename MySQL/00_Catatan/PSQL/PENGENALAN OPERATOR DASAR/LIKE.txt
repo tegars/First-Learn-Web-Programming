@@ -1,0 +1,12 @@
+LIKE
+Untuk pencarian data secara rinci
+Misalkan kita hanya ingin mencari data yang ber inisial huruf A
+Operator yang berfungsi:
+- LIKE 'A%'		: di awali huruf A
+- LIKE '%A'		: di akhiri huruf A
+- LIKE '_A%'		: huruf A pada posisi ke dua
+- LIKE 'A%I%'		: diawali huruf A yang mengandung huruf I
+- NOT LIKE 'A%'		: tidak di awali dengan huruf A
+	
+Misalkan kita hanya ingin mencari data yang diawali huruf R, maka:
+select * from nama_tabel where nama_kolom LIKE'R%';

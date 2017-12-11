@@ -1,0 +1,40 @@
+OPERATOR JAVA BERLAKU
+	=	: sama dengan
+	!=	: tidak sama dengan
+
+1.	Memasukkan data
+	tipe data text	: ada ini '' nya
+	tipe data int	: tanpa ''
+	insert into mahasiswa values(12, 'edi', 'malang', '0856453428', 1);
+	
+2.	Menampilkan field
+	a.	menampilkan data nim dan nama
+		select nim, nama from mahasiswa;
+		
+	b.	jika ingin menampilkan semuanya
+		select * from mahasiswa;			
+		
+	c.	menampilkan berdasarkan nim yang diinginkan saja
+		select nama_kolom_yg_ditampilkan from nama_tabel where nama_kolom=katakunci;
+		
+	d.	Menampilkan dari 2 tabel
+		select semua_column from tabel1, tabel2 where tabel1.column_foreign=tabel2.column_foreign;
+		
+3.	Menghapus field
+	delete from nama_tabel where nama_kolom=katakunci;
+	
+4.	Meng update data
+	update nama_tabel set nama_kolom=isidata where namakolom=katakunci;
+	
+5.	Mengurutkan data
+	a.	ascending
+		select * from nama_tabel order by nama_kolom;
+	b.	descending
+		select * from nama_tabel order by nama_kolom desc;
+	c.	berdasarkan beberapa kolom
+		select * from nama_tabel order by nama_kolom asc, nama_kolom desc;
+	d.	berdasarkan nomor kolom(dimulai dari kiri)
+		select * from nama_tabel order by nomor_kolom desc;
+		
+
+		

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gradients</title>
+</head>
+<body>
+<hr/>
+<h2 align="center">Using createLinearGradient()</h2>
+<hr/>
+<canvas id="myCanvas1" width="200" height="100" style="border:1px solid #c3c3c3;"></canvas>
+
+<hr/>
+<h2 align="center">Using createRadialGradient()</h2>
+<hr/>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #c3c3c3;"></canvas>
+
+
+<script type="text/javascript">
+	//#01
+	var c1= document.getElementById('myCanvas1');
+	var ctx1= c1.getContext('2d');
+
+	//create gradient
+	var grd1= ctx1.createLinearGradient(0,0,200,0);
+	grd1.addColorStop(0, 'red');
+	grd1.addColorStop(1, 'white');
+
+
+	// fill with gradient
+	ctx1.fillStyle= grd1;
+	ctx1.fillRect(10,10,150,80);
+
+
+	//#02
+	var c2= document.getElementById('myCanvas2');
+	var ctx2= c2.getContext('2d');
+
+	//create gradient
+	var grd2= ctx2.createRadialGradient(75,50,5,90,60,100);
+	grd2.addColorStop(0, 'red');
+	grd2.addColorStop(1, 'white');
+
+
+	// fill with gradient
+	ctx2.fillStyle= grd2;
+	ctx2.fillRect(10,10,150,80);
+</script>
+</body>
+</html>
